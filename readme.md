@@ -8,7 +8,7 @@ We also use Ryan Hipples’ game architecture with scriptable objects to achieve
 
 
 
-**You can download the latest compiled build from the [release tab](https://github.com/AlexJanson/LekAanDek/releases) **
+*You can download the latest compiled build from the [release tab](https://github.com/AlexJanson/LekAanDek/releases)*
 
 
 
@@ -40,7 +40,7 @@ We use [ClickUp](https://share.clickup.com/b/h/4-8800058-2/03584f32b5e8b71) for 
 
 
 ## Documentation
-
+***Caution!** The documentation is in Dutch!*
 - [Git standards](https://mediacollegeamsterdam.sharepoint.com/:w:/t/ExamenGAGD2020-2021-Team07/ERnUn5C_MzJKk9b_r7wKIDEB9XmRxdmWx9B12gM7L3ACMg?e=XehSLW)
 
 - [Haalbaarheids analyse](https://mediacollegeamsterdam.sharepoint.com/:w:/t/ExamenGAGD2020-2021-Team07/ERqsWQKY1UREvVp6yLTmnRQBv2MECZgq3VgQXX2Wq9wxrg?e=JCYWLi)
