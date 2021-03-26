@@ -1,4 +1,4 @@
-# Lek Aan Dek*
+# **Lek Aan Dek**
 
 ###### *This project is part of the final exam.*
 
@@ -8,7 +8,7 @@ We also use Ryan Hipples’ game architecture with scriptable objects to achieve
 
 
 
-*You can download the latest compiled build from the [release tab](https://github.com/AlexJanson/LekAanDek/releases) *
+**You can download the latest compiled build from the [release tab](https://github.com/AlexJanson/LekAanDek/releases) **
 
 
 
@@ -64,4 +64,4 @@ We use [ClickUp](https://share.clickup.com/b/h/4-8800058-2/03584f32b5e8b71) for 
 
 
 
-###### *This readme is still under development and requires an update for the scripts.*
+###### **This readme is still under development and requires an update for the scripts.**
