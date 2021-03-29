@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Beweegmaatje.Collections
+namespace LekAanDek.Collections
 {
     public class Collection<T> : BaseCollection, IEnumerable<T>
     {

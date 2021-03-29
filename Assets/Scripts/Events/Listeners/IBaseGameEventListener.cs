@@ -1,4 +1,4 @@
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     public interface IBaseGameEventListener<T>
     {

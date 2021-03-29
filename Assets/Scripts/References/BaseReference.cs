@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Beweegmaatje.Variables
+namespace LekAanDek.Variables
 {
     [Serializable]
     public class BaseReference<TBase, TVariable> : BaseReference where TVariable : BaseVariable<TBase>

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     [CreateAssetMenu(fileName = "DoubleEvent.asset", menuName = "Events/Double")]
     public sealed class DoubleEvent : BaseGameEvent<double>

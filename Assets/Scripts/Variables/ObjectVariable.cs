@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Beweegmaatje.Variables
+namespace LekAanDek.Variables
 {
     [CreateAssetMenu(fileName = "ObjectVariable", menuName = "Variables/Object")]
     public class ObjectVariable : BaseVariable<Object>

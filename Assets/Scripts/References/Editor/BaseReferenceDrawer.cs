@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 
-namespace Beweegmaatje.Variables
+namespace LekAanDek.Variables
 {
     [CustomPropertyDrawer(typeof(BaseReference), true)]
     public class BaseReferenceDrawer : PropertyDrawer

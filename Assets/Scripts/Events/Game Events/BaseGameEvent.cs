@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     public abstract class BaseGameEvent<T> : ScriptableObject
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Beweegmaatje.Variables
+namespace LekAanDek.Variables
 {
     [CreateAssetMenu(fileName = "UIntVariable", menuName = "Variables/UInt")]
     public class UIntVariable : BaseVariable<uint>

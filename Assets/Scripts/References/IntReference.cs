@@ -1,6 +1,6 @@
 using System;
 
-namespace Beweegmaatje.Variables
+namespace LekAanDek.Variables
 {
     [Serializable]
     public class IntReference : BaseReference<int, IntVariable>

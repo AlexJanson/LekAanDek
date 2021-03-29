@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     [CreateAssetMenu(fileName = "VoidEvent.asset", menuName = "Events/Void")]
     public sealed class VoidEvent : BaseGameEvent<Void>

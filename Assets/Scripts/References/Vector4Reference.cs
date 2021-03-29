@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Beweegmaatje.Variables
+namespace LekAanDek.Variables
 {
     [Serializable]
     public class Vector4Reference : BaseReference<Vector4, Vector4Variable>

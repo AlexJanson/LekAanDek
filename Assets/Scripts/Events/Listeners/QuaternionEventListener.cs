@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     public sealed class QuaternionEventListener : BaseGameEventListener<Quaternion, QuaternionEvent, UnityQuaternionEvent>
     {

@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     [CustomEditor(typeof(BaseGameEvent<>), editorForChildClasses: true)]
     public class EventEditor : Editor

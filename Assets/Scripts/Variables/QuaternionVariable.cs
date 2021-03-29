@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Beweegmaatje.Variables
+namespace LekAanDek.Variables
 {
     [CreateAssetMenu(fileName = "QuaternionVariable", menuName = "Variables/Quaternion")]
     public class QuaternionVariable : BaseVariable<Quaternion>

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Beweegmaatje.Variables
+namespace LekAanDek.Variables
 {
     [System.Serializable]
     public class ObjectReference : BaseReference<Object, ObjectVariable>

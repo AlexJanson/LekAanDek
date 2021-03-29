@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Type = System.Type;
 
-namespace Beweegmaatje.Collections
+namespace LekAanDek.Collections
 {
     public abstract class BaseCollection : ScriptableObject, IEnumerable
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     [Serializable]
     public struct Void

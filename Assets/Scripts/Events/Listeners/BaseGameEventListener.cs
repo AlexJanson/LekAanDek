@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     public abstract class BaseGameEventListener<T, E, UER> : MonoBehaviour,
         IBaseGameEventListener<T> where E : BaseGameEvent<T> where UER : UnityEvent<T>

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     [CreateAssetMenu(fileName = "UIntEvent.asset", menuName = "Events/UInt")]
     public sealed class UIntEvent : BaseGameEvent<uint>

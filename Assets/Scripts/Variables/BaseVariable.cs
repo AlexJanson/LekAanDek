@@ -1,7 +1,7 @@
 using UnityEngine;
 using Type = System.Type;
 
-namespace Beweegmaatje.Variables
+namespace LekAanDek.Variables
 {
     public class BaseVariable<T> : ScriptableObject
     {

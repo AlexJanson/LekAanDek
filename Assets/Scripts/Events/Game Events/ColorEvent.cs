@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Beweegmaatje.Events
+namespace LekAanDek.Events
 {
     [CreateAssetMenu(fileName = "ColorEvent.asset", menuName = "Events/Color")]
     public sealed class ColorEvent : BaseGameEvent<Color>
