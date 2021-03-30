@@ -61,14 +61,5 @@ namespace LekAanDek.Timer
             if (_endTime == true)
                 timer.TimerEnd();
         }
-
-        void OnGUI()
-        {
-            string minutes = Mathf.Floor(_currentTime / 60).ToString("00");
-            string seconds = (_currentTime % 60).ToString("00");
-            string niceTime = string.Format("{0:00}:{1:00}", minutes, seconds);
-
-            GUI.Label(new Rect(10, 10, 250, 100), niceTime);
-        }
     }
 }

@@ -20,14 +20,11 @@ namespace LekAanDek.Timer
         
         public void AlarmStarted()
         {
-            Debug.Log("Alarm");
             alarmStarted.Raise();
         }
 
         public void TimerEnd()
         {
-            //call scene manager to switch to end scene
-            Debug.Log("GAME OVER");
             timerEnd.Raise();
         }
     }
