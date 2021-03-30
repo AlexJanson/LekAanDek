@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 230610428}
   - component: {fileID: 230610429}
+  - component: {fileID: 230610430}
   m_Layer: 0
   m_Name: timeManager
   m_TagString: Untagged
@@ -167,6 +168,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 11400000, guid: 31c0ad6086d59d441be0a9d7260bcd43, type: 2}
+--- !u!114 &230610430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230610427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a12c81e1b2d7c24d9e2165be682315a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 3ca689a1a48b3d342a41303061e4af6e, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 230610429}
+        m_TargetAssemblyTypeName: LekAanDek.Timer.Timer, Assembly-CSharp
+        m_MethodName: StartCounting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1519657103
 GameObject:
   m_ObjectHideFlags: 0
