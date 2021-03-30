@@ -4,6 +4,10 @@ using UnityEngine;
 
 namespace LekAanDek.Timer
 {
+
+    /// <summary>
+    /// This script is used to countdown time and call for Alarm and End events when the time is low
+    /// </summary>
     public class Timer : MonoBehaviour
     {
         [SerializeField]

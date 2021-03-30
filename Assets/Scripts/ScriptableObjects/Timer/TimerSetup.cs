@@ -6,6 +6,11 @@ using LekAanDek.Events;
 
 namespace LekAanDek.Timer
 {
+
+    /// <summary>
+    /// This is a scriptable object that holds multiple values for the timer and events that will fire a Raise when requested
+    /// </summary>
+
     [CreateAssetMenu(fileName = "New Timer", menuName = "ScriptableObjects/SOTimer")]
     public class TimerSetup : ScriptableObject
     {
@@ -16,7 +21,6 @@ namespace LekAanDek.Timer
 
         public VoidEvent alarmStarted;
         public VoidEvent timerEnd;
-        //currenTime.value
         
         public void AlarmStarted()
         {
