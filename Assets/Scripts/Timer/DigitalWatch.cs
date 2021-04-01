@@ -28,9 +28,13 @@ namespace LekAanDek.Timer
         [Tooltip("Show 'TI:ME' instead of '00:00'.")]
         [SerializeField]
         private bool _enableTimeText;
-        [Tooltip("The text that shows up.")]
+        [Tooltip("The text that shows up. Use <br> for a new line.")]
+        //This is done because \n doesn't work in a string as it doesn't process the newline
         [SerializeField]
-        private string _timeText = "TI:JD";
+        private string _timeText = "TI<br>¨<br>JD";
+        [Tooltip("How the dots are displayed. Use <br> for a new line.")]
+        [SerializeField]
+        private string[] _dotStyle = { "<br> <br>", "<br>¨<br>" };
 
         protected override void Update()
         {
@@ -66,7 +70,7 @@ namespace LekAanDek.Timer
         {
             _watchMaterial.color = _timeOverColor;
             if (_enableTimeText)
-                _text.text = _timeText;
+                _text.text = _timeText.Replace("<br>", "\n");
         }
 
         //Blinking
@@ -76,9 +80,9 @@ namespace LekAanDek.Timer
         }
         IEnumerator Blink()
         {
-            dots = " ";
+            dots = _dotStyle[0].Replace("<br>", "\n");
             yield return new WaitForSeconds(1f);
-            dots = ":";
+            dots = _dotStyle[1].Replace("<br>", "\n");
         }
         private void BlinkHandler()
         {
