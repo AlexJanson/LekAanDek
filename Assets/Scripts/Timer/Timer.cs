@@ -17,7 +17,7 @@ namespace LekAanDek.Timer
         private float _currentTime;
         private float _alarmTime;
 
-        private bool _countingDown = true;
+        private bool _countingDown = false;
         private bool _soundAlarm = false;
         private bool _endTime = false;
      
@@ -35,6 +35,11 @@ namespace LekAanDek.Timer
         {
             if (_countingDown == true)
                 CountDown();
+        }
+
+        public void StartCounting()
+        {
+            _countingDown = true;
         }
 
         private void CountDown()
