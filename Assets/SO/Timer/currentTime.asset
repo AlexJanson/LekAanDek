@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: currentTime
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  _value: 0
+  _value: 600

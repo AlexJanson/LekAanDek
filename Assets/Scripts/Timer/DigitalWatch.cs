@@ -43,21 +43,12 @@ namespace LekAanDek.Timer
             base.Update();
         }
 
-        private void Start()
-        {
-            _watchMaterial.color = _defaultColor;
-        }
+        private void Start() => _watchMaterial.color = _defaultColor;
 
-        protected override void DisplayTime()
-        {
-            _text.text = CalculateTime();
-        }
+        protected override void DisplayTime() => _text.text = CalculateTime();
 
         //Start blinking when the timer starts
-        private void StartBlinking()
-        {
-            _blink = true;
-        }
+        private void StartBlinking() => _blink = true;
 
         protected override void RunningOut()
         {
@@ -74,10 +65,7 @@ namespace LekAanDek.Timer
         }
 
         //Blinking
-        private void Blinker()
-        {
-            StartCoroutine(Blink());
-        }
+        private void Blinker() => StartCoroutine(Blink());
         IEnumerator Blink()
         {
             dots = _dotStyle[0].Replace("<br>", "\n");

@@ -43,33 +43,37 @@ namespace LekAanDek.Timer
             _textMaterial.color = _defaultColor;
         }
 
-        protected override void DisplayTime()
-        {
-            _text.text = CalculateTime();
-        }
 
         protected override void RunningOut()
         {
             _textMaterial.color = _alarmColor;
             if (_removeDisplay)
                 _display.SetActive(false);
+            _textMaterial.color = _alarmColor;
             base.RunningOut();
         }
 
         public override void EventOutOfTime()
         {
-            if (time >= 0)
+            if (time > 0)
+            {
                 _textMaterial.color = _defaultColor;
+                if (_removeDisplay)
+                    _display.SetActive(true);
+            }
+            else
+            {
+                _textMaterial.color = _alarmColor;
+                if (_removeDisplay)
+                    _display.SetActive(false);
+            }
             outOfTime = true;
         }
 
-        private void Blinker()
-        {
-            if (_removeDisplay)
-                _display.SetActive(false);
-            _textMaterial.color = _alarmColor;
-            StartCoroutine(BlinkText());
-        }
+        protected override void DisplayTime() => _text.text = CalculateTime();
+
+        private void Blinker() => StartCoroutine(BlinkText());
+
         IEnumerator BlinkText()
         {
             if (outOfTime)
