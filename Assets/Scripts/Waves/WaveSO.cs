@@ -3,12 +3,16 @@ using LekAanDek.Variables;
 
 namespace LekAanDek.Waves
 {
+    /// <summary>
+    /// Provides mathematical function for calculating the wave height.
+    /// </summary>
     [CreateAssetMenu(menuName = "Custom/WaveSO", fileName = "WaveSO")]
     public class WaveSO : ScriptableObject
     {
         public FloatReference waveLength;
         public FloatReference amplitude;
 
+        // Formula for calculating the wave height at a given position.
         public float GetWaveHeight(Vector3 position)
         {
             float k = 2 * Mathf.PI / waveLength;
