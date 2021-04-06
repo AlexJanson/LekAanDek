@@ -19,10 +19,7 @@ namespace LekAanDek.Timer
             base.Update();
         }
 
-        protected override void DisplayTime()
-        {
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(((int)time / _startTime * 360), 0, 0), _handSpeed * Time.deltaTime);
-        }
+        protected override void DisplayTime() => transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.Euler(((int)time / _startTime * 360), 0, 0), _handSpeed * Time.deltaTime);
 
         protected override void RunningOut()
         {
