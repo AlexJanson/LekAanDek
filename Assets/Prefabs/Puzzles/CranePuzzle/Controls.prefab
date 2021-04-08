@@ -349,8 +349,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _joyStickTop: {fileID: 748654028755028540}
-  _verticalTilt: 0
-  _horizontalTilt: 0
+  _craneRight: {fileID: 11400000, guid: d527bedad226a5a40be98dc0144fad20, type: 2}
+  _craneLeft: {fileID: 11400000, guid: 2286ba3042806ac46a33492a6be84fe0, type: 2}
 --- !u!1 &748654028755028541
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +525,18 @@ PrefabInstance:
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartWinchDown
       objectReference: {fileID: 0}
+    - target: {fileID: 8221764315014372001, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
+      propertyPath: _winchUp
+      value: 
+      objectReference: {fileID: 11400000, guid: 522e10edd0846404fa283cdb256503a8, type: 2}
+    - target: {fileID: 8221764315014372001, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
+      propertyPath: _winchDown
+      value: 
+      objectReference: {fileID: 11400000, guid: f1ccbf358dec3c14394e5cb0722534ec, type: 2}
+    - target: {fileID: 8221764315014372001, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
+      propertyPath: _winchStop
+      value: 
+      objectReference: {fileID: 11400000, guid: 9783627ca88635c419f0d21e57f20273, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
 --- !u!4 &751526242535957078 stripped
@@ -595,6 +607,18 @@ PrefabInstance:
       propertyPath: onButtonDown.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 8681343360320779906}
+    - target: {fileID: 8221764315014372001, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
+      propertyPath: _winchUp
+      value: 
+      objectReference: {fileID: 11400000, guid: 522e10edd0846404fa283cdb256503a8, type: 2}
+    - target: {fileID: 8221764315014372001, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
+      propertyPath: _winchDown
+      value: 
+      objectReference: {fileID: 11400000, guid: f1ccbf358dec3c14394e5cb0722534ec, type: 2}
+    - target: {fileID: 8221764315014372001, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
+      propertyPath: _winchStop
+      value: 
+      objectReference: {fileID: 11400000, guid: 9783627ca88635c419f0d21e57f20273, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88075a54c7fb1484ba25db394b612917, type: 3}
 --- !u!4 &751526242763066059 stripped
