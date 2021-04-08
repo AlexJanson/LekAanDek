@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LekAanDek.Variables;
 
 namespace LekAanDek.Timer
 {
@@ -14,7 +15,7 @@ namespace LekAanDek.Timer
         private TimerSetup timer;
 
         private float _startTime;
-        private float _currentTime;
+        private FloatVariable _currentTime;
         private float _alarmTime;
 
         private bool _countingDown = false;
@@ -27,7 +28,7 @@ namespace LekAanDek.Timer
             _startTime = timer.startTime * 60;
             _alarmTime = timer.alarmTime * 60;
             timer.currentTime.Value = _startTime;
-            _currentTime = timer.currentTime.Value;
+            _currentTime = timer.currentTime;
         }
 
         // Update is called once per frame
@@ -44,14 +45,14 @@ namespace LekAanDek.Timer
 
         private void CountDown()
         {
-            _currentTime -= Time.deltaTime;
+            _currentTime.Value -= Time.deltaTime;
 
-            if (_soundAlarm == false && _currentTime <= _alarmTime)
+            if (_soundAlarm == false && _currentTime.Value <= _alarmTime)
                 Alarm();
 
-            if (_endTime == false && _currentTime <= 0)
+            if (_endTime == false && _currentTime.Value <= 0)
             {
-                _currentTime = 0;
+                _currentTime.Value = 0;
                 End();
             }
         }
