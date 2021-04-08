@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LekAanDek.CranePuzzle
+namespace LekAanDek.Puzzles.Crane
 {
     /// <summary>
     /// This class handles all the winching logic for the crane, moving the object up and down

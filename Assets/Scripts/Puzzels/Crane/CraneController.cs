@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LekAanDek.CranePuzzle
+namespace LekAanDek.Puzzles.Crane
 {
     /// <summary>
     /// This class controls the left and right rotation of the crane
@@ -22,15 +22,9 @@ namespace LekAanDek.CranePuzzle
         }
 
         // Rotates the crane left
-        public void RotateLeft(float inputSpeed)
-        {
-            _crane.Rotate(new Vector3(0, -_speed, 0));
-        }
+        public void RotateLeft(float inputSpeed) => _crane.Rotate(new Vector3(0, -_speed, 0));
 
         // Rotates the crane right
-        public void RotateRight(float inputSpeed)
-        {
-            _crane.Rotate(new Vector3(0, _speed, 0));
-        }
+        public void RotateRight(float inputSpeed) => _crane.Rotate(new Vector3(0, _speed, 0));
     }
 }

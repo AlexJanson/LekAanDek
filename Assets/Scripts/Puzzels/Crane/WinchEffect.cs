@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LekAanDek.Events;
 
-namespace LekAanDek.CranePuzzle
+namespace LekAanDek.Puzzles.Crane
 {
     /// <summary>
     /// This class handles the winching events for the winch class
@@ -19,19 +19,10 @@ namespace LekAanDek.CranePuzzle
         [SerializeField]
         private VoidEvent _winchStop;
 
-        public void StartWinchUp()
-        {
-            _winchUp.Raise();
-        }
+        public void StartWinchUp() => _winchUp.Raise();
 
-        public void StartWinchDown()
-        {
-            _winchDown.Raise();
-        }
+        public void StartWinchDown() => _winchDown.Raise();
 
-        public void OnButtonUp()
-        {
-            _winchStop.Raise();
-        }
+        public void OnButtonUp() => _winchStop.Raise();
     }
 }

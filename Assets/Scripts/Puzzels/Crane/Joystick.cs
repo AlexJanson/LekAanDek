@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LekAanDek.Events;
 
-namespace LekAanDek.CranePuzzle
+namespace LekAanDek.Puzzles.Crane
 {
     /// <summary>
     /// This class handles the joystick logic to move the crane left and right
@@ -22,6 +22,12 @@ namespace LekAanDek.CranePuzzle
         [SerializeField]
         private FloatEvent _craneLeft;
 
+        // Rotation constants
+        private const int _leftYRot = 270;
+        private const int _rightYRot = 270;
+        private const float _startingRotation = 270;
+        private const float _maxRotation = 359;
+
         // Update is called once per frame
         void Update()
         {
@@ -29,14 +35,14 @@ namespace LekAanDek.CranePuzzle
             _yRot = Mathf.Round(this.transform.rotation.eulerAngles.y);
 
             // IF joystick is facing right
-            if (_horizontalTilt >270 && _horizontalTilt < 359 && _yRot == 270)
+            if (_horizontalTilt > _startingRotation && _horizontalTilt < _maxRotation && _yRot == _leftYRot)
             {
                 _horizontalTilt = Mathf.Abs(_horizontalTilt - 360);
                 // Turn crane left
                 _craneLeft.Raise(_horizontalTilt);
             }
             // IF joystick is facing left
-            else if (_horizontalTilt > 270 && _horizontalTilt < 359 && _yRot == 90)
+            else if (_horizontalTilt > _startingRotation && _horizontalTilt < _maxRotation && _yRot == _rightYRot)
             {
                 // Turn crane right
                 _craneRight.Raise(_horizontalTilt);
