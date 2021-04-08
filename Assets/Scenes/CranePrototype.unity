@@ -751,6 +751,10 @@ PrefabInstance:
       propertyPath: _attachedObject
       value: 
       objectReference: {fileID: 591219543}
+    - target: {fileID: 4241548414634628428, guid: e084ec3fd60c87b409f3aa805a88ef1e, type: 3}
+      propertyPath: _speed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4241548414634628430, guid: e084ec3fd60c87b409f3aa805a88ef1e, type: 3}
       propertyPath: m_Name
       value: Crane
