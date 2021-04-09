@@ -60,7 +60,7 @@ namespace LekAanDek.WaterCannon
             }
             else
             {
-               // puzzleStarted = false;
+                //puzzleStarted = false;
             }
 
             float _leftDist = Vector3.Distance(_hands[0].transform.position, _handles[0].transform.position);
