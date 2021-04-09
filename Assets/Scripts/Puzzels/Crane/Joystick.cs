@@ -24,7 +24,7 @@ namespace LekAanDek.Puzzles.Crane
 
         // Rotation constants
         private const int _leftYRot = 270;
-        private const int _rightYRot = 270;
+        private const int _rightYRot = 90;
         private const float _startingRotation = 270;
         private const float _maxRotation = 359;
 
