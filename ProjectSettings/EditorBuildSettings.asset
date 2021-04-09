@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/CranePrototype.unity
+    path: Assets/Scenes/Features/CranePrototype.unity
     guid: c6fd25327779cc34885be7e2c227ec83
   - enabled: 1
-    path: Assets/Scenes/MovementShowcase.unity
+    path: Assets/Scenes/Features/MovementShowcase.unity
     guid: 0772da52d8dcb5f4a98138a6833e48cd
   m_configObjects:
     Unity.XR.OpenVR.Settings: {fileID: 11400000, guid: b38fe80798d701c449d6864cb2935298, type: 2}
