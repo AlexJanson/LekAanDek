@@ -44,6 +44,7 @@ namespace LekAanDek.KeyCode
 
         public void InputKey(string _input)
         {
+            print(_input);
             if (_currentInput.Value.Length < _correctCode.Value.Length)
                 _currentInput.Value = _currentInput.Value + _input;
             else
