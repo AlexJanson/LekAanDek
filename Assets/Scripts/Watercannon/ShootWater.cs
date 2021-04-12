@@ -25,8 +25,10 @@ namespace LekAanDek.Puzzles.WaterCannon
         [SerializeField]
         private SteamVR_Action_Boolean _trigger;
         [SerializeField]
-        private SteamVR_Input_Sources _inputSource = SteamVR_Input_Sources.Any;//which controller
-                                                                             // Use this for initialization
+        private SteamVR_Input_Sources _leftHand = SteamVR_Input_Sources.LeftHand;
+        [SerializeField]
+        private SteamVR_Input_Sources _rightHand = SteamVR_Input_Sources.RightHand;
+
         private bool _includeChildren = true;
 
         private void Start()
@@ -36,7 +38,7 @@ namespace LekAanDek.Puzzles.WaterCannon
 
         private void Update()
         {
-            if (_trigger.GetState(_inputSource))
+            if (_trigger.GetState(_leftHand) && _trigger.GetState(_rightHand))
             {
                 FiringWater();
             }
