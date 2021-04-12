@@ -38,8 +38,6 @@ namespace LekAanDek.Puzzles.WaterCannon
             {
                 _lineRenderer.enabled = false;
             }
-            Debug.Log("Puzzle started = " + _cm.puzzleStarted);
-            Debug.Log(_lineRenderer.enabled);
         }
 
         private void DrawLine()
