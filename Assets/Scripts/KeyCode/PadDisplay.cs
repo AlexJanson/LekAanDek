@@ -37,13 +37,9 @@ namespace LekAanDek.KeyCode
             int tmp1 = Mathf.Abs(_correctCode.Value.Length - _currentCode.Value.Length);
             string tmp2 = "";
             for (int i = 0; i < Mathf.Abs(tmp1 - _correctCode.Value.Length); i++)
-            {
                 tmp2 = tmp2 + $"{_currentCode.Value[i]} ";
-            }
             for (int i = 0; i < tmp1; i++)
-            {
                 tmp2 = tmp2 + $"<color=#{(_colors.List.Count >= _correctCode.Value.Length ? ColorUtility.ToHtmlStringRGB(_colors[i + _currentCode.Value.Length]) : "000000")}>{emptyPoints}</color>";
-            }
             return tmp2;
         }
 
