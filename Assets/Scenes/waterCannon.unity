@@ -149,12 +149,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261781253}
-  m_LocalRotation: {x: -0.21643952, y: -0, z: -0, w: 0.97629607}
-  m_LocalPosition: {x: 0, y: 0, z: 0.37800002}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.97629607, z: 0.21643952, w: 0}
+  m_LocalPosition: {x: 0, y: -0.49199998, z: -0.00999999}
+  m_LocalScale: {x: 2, y: 1.6969199, z: 1.0980599}
   m_Children: []
-  m_Father: {fileID: 2014836518}
-  m_RootOrder: 0
+  m_Father: {fileID: 2036204827}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -25, y: 0, z: 0}
 --- !u!199 &261781255
 ParticleSystemRenderer:
@@ -5046,7 +5046,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.8, z: 0.5}
   m_Children: []
   m_Father: {fileID: 2014836518}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &475138012
 BoxCollider:
@@ -5602,15 +5602,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462450403}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.378}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: -0.49199998, z: -0.00999999}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 675221656}
   - {fileID: 721985196}
   - {fileID: 763135740}
-  m_Father: {fileID: 2014836518}
-  m_RootOrder: 1
+  m_Father: {fileID: 2036204827}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1462450405
 MonoBehaviour:
@@ -5839,7 +5839,6 @@ GameObject:
   - component: {fileID: 2014836518}
   - component: {fileID: 2014836520}
   - component: {fileID: 2014836521}
-  - component: {fileID: 2014836519}
   - component: {fileID: 2014836522}
   m_Layer: 0
   m_Name: WaterCannon
@@ -5856,54 +5855,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014836517}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5150253, z: 1.238}
+  m_LocalPosition: {x: 0, y: 0.5150253, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 261781254}
-  - {fileID: 1462450404}
   - {fileID: 2036204827}
   - {fileID: 475138011}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2014836519
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014836517}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f32883eed859804dbb0c5fedac91496, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  axisOfRotation: 0
-  childCollider: {fileID: 850670452}
-  linearMapping: {fileID: 0}
-  hoverLock: 0
-  limited: 1
-  frozenDistanceMinMaxThreshold: {x: 0.1, y: 0.2}
-  onFrozenDistanceThreshold:
-    m_PersistentCalls:
-      m_Calls: []
-  minAngle: -45
-  freezeOnMin: 1
-  onMinAngle:
-    m_PersistentCalls:
-      m_Calls: []
-  maxAngle: 45
-  freezeOnMax: 1
-  onMaxAngle:
-    m_PersistentCalls:
-      m_Calls: []
-  forceStart: 0
-  startAngle: 0
-  rotateGameObject: 1
-  debugPath: 0
-  dbgPathLimit: 50
-  debugText: {fileID: 0}
-  outAngle: 0
 --- !u!135 &2014836520
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6168,8 +6127,10 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 850670450}
+  - {fileID: 261781254}
+  - {fileID: 1462450404}
   m_Father: {fileID: 2014836518}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!54 &2036204830
 Rigidbody:
@@ -6236,6 +6197,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 315068744145680163, guid: f1a967b0a0f22bd4bb5fdbef61781010, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 315068744145680165, guid: f1a967b0a0f22bd4bb5fdbef61781010, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 315068744145680167, guid: f1a967b0a0f22bd4bb5fdbef61781010, type: 3}
