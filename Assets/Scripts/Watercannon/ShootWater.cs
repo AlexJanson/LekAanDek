@@ -38,7 +38,7 @@ namespace LekAanDek.Puzzles.WaterCannon
 
         private void Update()
         {
-            if (_trigger.GetState(_leftHand) && _trigger.GetState(_rightHand))
+            if (_trigger.GetState(_leftHand) || _trigger.GetState(_rightHand))
             {
                 FiringWater();
             }
@@ -50,7 +50,7 @@ namespace LekAanDek.Puzzles.WaterCannon
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
         {
-
+            Debug.Log("Shooting Water");
             if(_cm.puzzleStarted == true)
             {
                 _system.Play(_includeChildren);
@@ -59,6 +59,7 @@ namespace LekAanDek.Puzzles.WaterCannon
             {
                 _system.Stop(_includeChildren, ParticleSystemStopBehavior.StopEmitting);
             }
+
             InitializeIfNeeded();
             // GetParticles is allocation free because we reuse the _particles buffer between updates
             int numParticlesAlive = _system.GetParticles(_particles);
