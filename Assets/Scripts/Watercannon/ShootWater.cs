@@ -40,6 +40,10 @@ namespace LekAanDek.Puzzles.WaterCannon
             {
                 FiringWater();
             }
+            else
+            {
+                _system.Stop(_includeChildren, ParticleSystemStopBehavior.StopEmitting);
+            }
         }
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
