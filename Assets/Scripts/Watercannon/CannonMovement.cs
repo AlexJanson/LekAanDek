@@ -48,9 +48,9 @@ namespace LekAanDek.Puzzles.WaterCannon
             }
             else
             {
-               puzzleStarted = false;
+               //puzzleStarted = false;
             }
-
+      
             if (puzzleStarted == true)
                 RotatingCannon();
         }
