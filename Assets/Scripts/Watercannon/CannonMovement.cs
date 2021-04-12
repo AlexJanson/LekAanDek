@@ -28,7 +28,7 @@ namespace LekAanDek.WaterCannon
         private Vector3 _directionRightHandle;
 
         [SerializeField]
-        private SteamVR_Action_Boolean _grabPinch; //Grab Pinch is the trigger, select from inspecter
+        private SteamVR_Action_Boolean _grabPinch; 
         [SerializeField]
         private SteamVR_Input_Sources _leftHand = SteamVR_Input_Sources.LeftHand;
         [SerializeField]
@@ -42,7 +42,9 @@ namespace LekAanDek.WaterCannon
         private void Update()
         {
 
-            if (_grabPinch.GetStateDown(_leftHand) && _grabPinch.GetStateDown(_rightHand))
+            
+
+            if (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand))
             {
                 puzzleStarted = true;
             }
@@ -57,7 +59,7 @@ namespace LekAanDek.WaterCannon
             float _rightDist = Vector3.Distance(_hands[1].transform.position, _handles[1].transform.position);
 
 
-            if (_leftDist < 1.5f && _rightDist < 1.5f && puzzleStarted == true)
+            if (_leftDist < 0.5f && _rightDist < .5f && puzzleStarted == true)
                 RotatingCannon();
         }
 
