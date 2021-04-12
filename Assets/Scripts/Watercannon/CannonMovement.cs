@@ -51,11 +51,13 @@ namespace LekAanDek.WaterCannon
                puzzleStarted = false;
             }
 
+            Debug.Log(puzzleStarted);
+
             float _leftDist = Vector3.Distance(_hands[0].transform.position, _handles[0].transform.position);
             float _rightDist = Vector3.Distance(_hands[1].transform.position, _handles[1].transform.position);
 
 
-            if (_leftDist < 0.55f && _rightDist < 0.55f && puzzleStarted == true)
+            if (_leftDist < 1.5f && _rightDist < 1.5f && puzzleStarted == true)
                 RotatingCannon();
         }
 
