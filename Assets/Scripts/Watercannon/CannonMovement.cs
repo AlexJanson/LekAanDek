@@ -42,9 +42,10 @@ namespace LekAanDek.WaterCannon
         private void Update()
         {
 
-            
+            float _leftDist = Vector3.Distance(_hands[0].transform.position, _handles[0].transform.position);
+            float _rightDist = Vector3.Distance(_hands[1].transform.position, _handles[1].transform.position);
 
-            if (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand))
+            if (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand) && _leftDist < 0.7f && _rightDist < 0.7f)
             {
                 puzzleStarted = true;
             }
@@ -55,11 +56,8 @@ namespace LekAanDek.WaterCannon
 
             Debug.Log(puzzleStarted);
 
-            float _leftDist = Vector3.Distance(_hands[0].transform.position, _handles[0].transform.position);
-            float _rightDist = Vector3.Distance(_hands[1].transform.position, _handles[1].transform.position);
 
-
-            if (_leftDist < 0.5f && _rightDist < .5f && puzzleStarted == true)
+            if (puzzleStarted == true)
                 RotatingCannon();
         }
 
