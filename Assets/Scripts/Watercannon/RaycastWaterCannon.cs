@@ -13,11 +13,11 @@ namespace LekAanDek.Puzzles.WaterCannon
         [SerializeField]
         private BoolVariable _startedWCPuzzle;
 
-        [SerializeField]
+        [SerializeField] [Tooltip ("Place an invisible cube here and that wil be the starting point of the line")]
         private Transform _point1;
-        [SerializeField]
+        [SerializeField] [Tooltip ("Place an invisible cube here and that wil be the middle point of the line wich you can use to deside the hight of the line")]
         private Transform _point2;
-        [SerializeField]
+        [SerializeField] [Tooltip ("Place an invisible cube here and that wil be the last point of the line")]
         private Transform _point3;
 
         [SerializeField]
