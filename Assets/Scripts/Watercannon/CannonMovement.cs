@@ -55,8 +55,8 @@ namespace LekAanDek.Puzzles.WaterCannon
                 RotatingCannon();
         }
 
-        // in this function an transform will be placed between the left and the right hand and it wil stay in between them
-        // the water cannon wil rotate towards the transform so that it will look like you are rotating the cannon with your hands
+        // in this function an gameobject will be placed between the left and the right hand and it wil stay in between them
+        // the water cannon wil rotate towards the gameobject so that it will look like you are rotating the cannon with your hands
         private void RotatingCannon()
         {  
             _rotationTarget.transform.position = 0.5f * (_hands[0].transform.position + _hands[1].transform.position);

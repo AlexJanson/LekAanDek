@@ -50,6 +50,8 @@ namespace LekAanDek.Puzzles.WaterCannon
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
         {
+            Debug.Log("Shooting water");
+            Debug.Log(_system.enableEmission);
             if(_cm.puzzleStarted == true)
             {
                 _system.enableEmission = true;
