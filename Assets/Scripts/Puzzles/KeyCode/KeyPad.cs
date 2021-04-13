@@ -14,7 +14,7 @@ namespace LekAanDek.KeyCode
         [SerializeField] [Tooltip("The correct code to unlock")]
         private StringVariable _correctCode;
         [SerializeField] [Tooltip("An event to unlock the door and update the display")]
-        private VoidEvent _unlockDoor, _update;
+        private VoidEvent _unlockDoor, _displayUpdate;
         [SerializeField] [Tooltip("A bool to tell the display wether the attempt was succesful or not")]
         private BoolEvent _attemptSuccesful;
         //Local bool to stop it from tracking once it's over.
@@ -31,7 +31,7 @@ namespace LekAanDek.KeyCode
                     _currentInput.Value = _currentInput.Value.Remove(_currentInput.Value.Length - 1);
                 else
                     _attemptSuccesful.Raise(false);
-                _update.Raise();
+                _displayUpdate.Raise();
             }
         }
 
@@ -50,7 +50,7 @@ namespace LekAanDek.KeyCode
                     _attemptSuccesful.Raise(false);
                     Clear();
                 }
-                _update.Raise();
+                _displayUpdate.Raise();
             }
         }
 
@@ -62,14 +62,14 @@ namespace LekAanDek.KeyCode
                     _currentInput.Value = _currentInput.Value + _input;
                 else
                     _attemptSuccesful.Raise(false);
-                _update.Raise();
+                _displayUpdate.Raise();
             }
         }
 
         public void Clear()
         {
             _currentInput.Value = "";
-            _update.Raise();
+            _displayUpdate.Raise();
         }
     }
 }
