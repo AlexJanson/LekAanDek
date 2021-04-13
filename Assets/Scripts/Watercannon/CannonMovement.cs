@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using LekAanDek.Variables;
 using UnityEngine;
 using Valve.VR;
 
@@ -11,6 +10,9 @@ namespace LekAanDek.Puzzles.WaterCannon
     public class CannonMovement : MonoBehaviour
     {
         [SerializeField]
+        private BoolVariable startedWCPuzzle;
+
+        [SerializeField]
         private GameObject[] _hands;
         [SerializeField]
         private GameObject[] _handles;
@@ -18,8 +20,6 @@ namespace LekAanDek.Puzzles.WaterCannon
         private GameObject _waterCannon;
         [SerializeField]
         private GameObject _rotationTarget;
-
-        public bool puzzleStarted = false;
 
         [SerializeField]
         private float _rotSpeed = 100.0f;
@@ -41,17 +41,10 @@ namespace LekAanDek.Puzzles.WaterCannon
             float _leftDist = Vector3.Distance(_hands[0].transform.position, _handles[0].transform.position);
             float _rightDist = Vector3.Distance(_hands[1].transform.position, _handles[1].transform.position);
 
-            //This checks if the player is pressing the grib button and if the players hands are close enough to the handels
-            if (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand) && _leftDist < 0.7f && _rightDist < 0.7f)
-            {
-                puzzleStarted = true;
-            }
-            else
-            {
-               puzzleStarted = false;
-            }
+            //This checks if the player is pressing the grib button and if the players hands are close enough to the handel
+            startedWCPuzzle.Value = (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand) && _leftDist < 0.7f && _rightDist < 0.7f) ? true : false;
       
-            if (puzzleStarted == true)
+            if (startedWCPuzzle.Value == true)
                 RotatingCannon();
         }
 

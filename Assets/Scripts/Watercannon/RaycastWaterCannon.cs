@@ -1,6 +1,6 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LekAanDek.Variables;
 
 namespace LekAanDek.Puzzles.WaterCannon
 {
@@ -11,7 +11,7 @@ namespace LekAanDek.Puzzles.WaterCannon
     {
 
         [SerializeField]
-        private CannonMovement _cm;
+        private BoolVariable startedWCPuzzle;
 
         [SerializeField]
         private Transform _point1;
@@ -29,7 +29,7 @@ namespace LekAanDek.Puzzles.WaterCannon
         // Update is called once per frame
         void Update()
         {
-            if (_cm.puzzleStarted == true)
+            if (startedWCPuzzle.Value == true)
             {
                 _lineRenderer.enabled = true;
                 DrawLine();

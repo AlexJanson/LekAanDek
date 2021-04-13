@@ -1,7 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Valve.VR;
+using LekAanDek.Variables;
 
 namespace LekAanDek.Puzzles.WaterCannon
 {
@@ -12,6 +11,9 @@ namespace LekAanDek.Puzzles.WaterCannon
     public class ShootWater : MonoBehaviour
     {
         [SerializeField]
+        private BoolVariable startedWCPuzzle;
+
+        [SerializeField]
         private ParticleSystem _system;
 
         private ParticleSystem.Particle[] _particles;
@@ -20,46 +22,25 @@ namespace LekAanDek.Puzzles.WaterCannon
         private float _drift = -0.05f;
 
         [SerializeField]
-        private CannonMovement _cm;
-
-        [SerializeField]
         private SteamVR_Action_Boolean _trigger;
         [SerializeField]
         private SteamVR_Input_Sources _leftHand = SteamVR_Input_Sources.LeftHand;
         [SerializeField]
         private SteamVR_Input_Sources _rightHand = SteamVR_Input_Sources.RightHand;
 
-        private bool _includeChildren = true;
-
-        private void Start()
-        {
-            _system.enableEmission = false;
-        }
+        private void Start() => _system.enableEmission = false;
 
         private void Update()
         {
             if (_trigger.GetState(_leftHand) || _trigger.GetState(_rightHand))
-            {
                 FiringWater();
-            }
             else
-            {
               _system.enableEmission = false;
-            }
         }
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
-        {
-            Debug.Log("Shooting water");
-            Debug.Log(_system.enableEmission);
-            if(_cm.puzzleStarted == true)
-            {
-                _system.enableEmission = true;
-            }
-            else
-            {
-                _system.enableEmission = false;
-            }
+        { 
+            _system.enableEmission = (startedWCPuzzle.Value) ? true : false;
 
             InitializeIfNeeded();
             // GetParticles is allocation free because we reuse the _particles buffer between updates

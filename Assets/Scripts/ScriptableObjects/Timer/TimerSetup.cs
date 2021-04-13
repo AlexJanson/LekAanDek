@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using LekAanDek.Variables;
 using LekAanDek.Events;
