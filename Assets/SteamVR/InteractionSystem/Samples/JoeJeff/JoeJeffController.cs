@@ -23,6 +23,7 @@ namespace Valve.VR.InteractionSystem.Sample
         private SteamVR_Input_Sources hand;
         private Interactable interactable;
 
+
         private void Start()
         {
             interactable = GetComponent<Interactable>();
