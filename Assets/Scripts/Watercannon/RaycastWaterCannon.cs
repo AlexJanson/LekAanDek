@@ -11,7 +11,7 @@ namespace LekAanDek.Puzzles.WaterCannon
     {
 
         [SerializeField]
-        private BoolVariable startedWCPuzzle;
+        private BoolVariable _startedWCPuzzle;
 
         [SerializeField]
         private Transform _point1;
@@ -29,7 +29,7 @@ namespace LekAanDek.Puzzles.WaterCannon
         // Update is called once per frame
         void Update()
         {
-            if (startedWCPuzzle.Value == true)
+            if (_startedWCPuzzle.Value == true)
             {
                 _lineRenderer.enabled = true;
                 DrawLine();

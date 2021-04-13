@@ -11,7 +11,7 @@ namespace LekAanDek.Puzzles.WaterCannon
     public class ShootWater : MonoBehaviour
     {
         [SerializeField]
-        private BoolVariable startedWCPuzzle;
+        private BoolVariable _startedWCPuzzle;
 
         [SerializeField]
         private ParticleSystem _system;
@@ -40,7 +40,7 @@ namespace LekAanDek.Puzzles.WaterCannon
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
         { 
-            _system.enableEmission = (startedWCPuzzle.Value) ? true : false;
+            _system.enableEmission = (_startedWCPuzzle.Value) ? true : false;
 
             InitializeIfNeeded();
             // GetParticles is allocation free because we reuse the _particles buffer between updates

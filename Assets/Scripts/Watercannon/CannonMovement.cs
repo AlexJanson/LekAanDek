@@ -10,7 +10,7 @@ namespace LekAanDek.Puzzles.WaterCannon
     public class CannonMovement : MonoBehaviour
     {
         [SerializeField]
-        private BoolVariable startedWCPuzzle;
+        private BoolVariable _startedWCPuzzle;
 
         [SerializeField]
         private GameObject[] _hands;
@@ -42,9 +42,9 @@ namespace LekAanDek.Puzzles.WaterCannon
             float _rightDist = Vector3.Distance(_hands[1].transform.position, _handles[1].transform.position);
 
             //This checks if the player is pressing the grib button and if the players hands are close enough to the handel
-            startedWCPuzzle.Value = (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand) && _leftDist < 0.7f && _rightDist < 0.7f) ? true : false;
+            _startedWCPuzzle.Value = (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand) && _leftDist < 0.7f && _rightDist < 0.7f) ? true : false;
       
-            if (startedWCPuzzle.Value == true)
+            if (_startedWCPuzzle.Value == true)
                 RotatingCannon();
         }
 
