@@ -32,14 +32,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Time: 208.16829
+    - Time: 266.52097
     - Vector1_345ff3452f3648ffb603afefd27147ee: 0.5
     - Vector1_4d6865560ac94439b369e08bb2eecbde: 1
     - Vector1_528d4e3c20084e3ab3305c3e07ec7421: 5
     - Vector1_685b3f9e0c57427683694e7dab73fd47: 1.6
     - Vector1_6e8c7ef119514315b556ba2ceb2d51a9: 0
     - Vector1_cc43185d240e4f2a923bb01e35dc35d7: 0.1
-    - _Amplitude: 0.4
+    - _Amplitude: 0.1
     - _WaveLength: 50
     m_Colors:
     - Color_0d735133de7442668fe97cac4df08c05: {r: 0.505651, g: 0.84840953, b: 0.8584906, a: 1}
