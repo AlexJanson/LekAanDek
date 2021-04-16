@@ -9,7 +9,7 @@ namespace LekAanDek.Timer
     public class Timer : MonoBehaviour
     {
         [SerializeField]
-        private TimerSetup timer;
+        private TimerSetup _timer;
 
         private float _startTime;
         private FloatVariable _currentTime;
@@ -22,12 +22,12 @@ namespace LekAanDek.Timer
         // Start is called before the first frame update
         void Start()
         {
-            _countingDown = timer.countingDown;
+            _countingDown = _timer.countingDown;
             _countingDown.Value = false;
-            _startTime = timer.startTime * 60;
-            _alarmTime = timer.alarmTime * 60;
-            timer.currentTime.Value = _startTime;
-            _currentTime = timer.currentTime;
+            _startTime = _timer.startTime * 60;
+            _alarmTime = _timer.alarmTime * 60;
+            _timer.currentTime.Value = _startTime;
+            _currentTime = _timer.currentTime;
         }
 
         // Update is called once per frame
@@ -55,7 +55,7 @@ namespace LekAanDek.Timer
         {
             _soundAlarm = true;
             if (_soundAlarm == true)
-                timer.AlarmStarted();
+                _timer.AlarmStarted();
         }
 
         private void End()
@@ -63,7 +63,7 @@ namespace LekAanDek.Timer
             _endTime = true;
             _countingDown.Value = false;
             if (_endTime == true)
-                timer.TimerEnd();
+                _timer.TimerEnd();
         }
     }
 }
