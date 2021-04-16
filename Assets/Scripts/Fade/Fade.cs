@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using LekAanDek.Variables;
 
-namespace LekAanDek.UI.FadeOut
+namespace LekAanDek.UI
 {
     /// <summary>
     /// This script is used to fade an image out at the start of the scene
