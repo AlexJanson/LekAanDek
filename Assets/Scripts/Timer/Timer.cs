@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using LekAanDek.Variables;
 
 namespace LekAanDek.Timer
 {
-
     /// <summary>
     /// This script is used to countdown time and call for Alarm and End events when the time is low
     /// </summary>
@@ -18,13 +15,15 @@ namespace LekAanDek.Timer
         private FloatVariable _currentTime;
         private float _alarmTime;
 
-        private bool _countingDown = false;
+        private BoolVariable _countingDown;
         private bool _soundAlarm = false;
         private bool _endTime = false;
      
         // Start is called before the first frame update
         void Start()
         {
+            _countingDown = timer.countingDown;
+            _countingDown.Value = false;
             _startTime = timer.startTime * 60;
             _alarmTime = timer.alarmTime * 60;
             timer.currentTime.Value = _startTime;
@@ -34,13 +33,8 @@ namespace LekAanDek.Timer
         // Update is called once per frame
         void Update()
         {
-            if (_countingDown == true)
+            if (_countingDown.Value == true)
                 CountDown();
-        }
-
-        public void StartCounting()
-        {
-            _countingDown = true;
         }
 
         private void CountDown()
@@ -67,7 +61,7 @@ namespace LekAanDek.Timer
         private void End()
         {
             _endTime = true;
-            _countingDown = false;
+            _countingDown.Value = false;
             if (_endTime == true)
                 timer.TimerEnd();
         }
