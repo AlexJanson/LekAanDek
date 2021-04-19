@@ -22,9 +22,9 @@ namespace LekAanDek
 
         [SerializeField]
         private BoolVariable _timerPaused;
-
         [SerializeField]
         private BoolVariable _startedWcPuzzle;
+
         // Start is called before the first frame update
         void Start()
         {
