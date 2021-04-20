@@ -6,7 +6,7 @@ using Valve.VR;
 using Valve.VR.InteractionSystem;
 using LekAanDek.Variables;
 
-namespace LekAanDek
+namespace LekAanDek.UI
 {
     public class PauseMenu : MonoBehaviour
     {
@@ -25,9 +25,13 @@ namespace LekAanDek
         [SerializeField]
         private BoolVariable _startedWcPuzzle;
 
+        [SerializeField]
+        private Hand[] _hands;
+
         // Start is called before the first frame update
         void Start()
         {
+            _hands = FindObjectsOfType<Hand>();
             _teleport = FindObjectsOfType<Teleport>();
             _interactable = FindObjectsOfType<Interactable>();
             _pauseMenuCs.enabled = false;
@@ -55,6 +59,10 @@ namespace LekAanDek
             for (int j = 0; j < _interactable.Length; j++)
             {
                 _interactable[j].enabled = false;
+            }
+            for (int a = 0; a < _hands.Length; a++)
+            {
+                _hands[a].enabled = false;
             }
         }
     }
