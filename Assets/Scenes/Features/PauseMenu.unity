@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 658330093728956910, guid: b39333dcc7ca82c4b8e22c46aadb3ae9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2221059204782738260, guid: b39333dcc7ca82c4b8e22c46aadb3ae9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2386179980904769133, guid: b39333dcc7ca82c4b8e22c46aadb3ae9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3368859975239540791, guid: b39333dcc7ca82c4b8e22c46aadb3ae9, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -572,6 +584,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1005432915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 748654028648645447, guid: 4b1ec6544235ab54199b1a79fad2afdd, type: 3}
+  m_PrefabInstance: {fileID: 378806770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1445380462
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +624,8 @@ MonoBehaviour:
   _teleport: []
   _interactable: []
   _hands: []
-  _joyStick: {fileID: 675070535}
+  _joyStick: {fileID: 1005432915}
+  _joyStickHead: {fileID: 675070535}
   _keyPad: {fileID: 2038979468}
   _timerPaused: {fileID: 11400000, guid: f946ca6ab56f2414da1187b0c1ba1143, type: 2}
   _startedWcPuzzle: {fileID: 11400000, guid: 851c89749ead36540b02216c970256b4, type: 2}

@@ -24,7 +24,10 @@ namespace LekAanDek.UI
         private Hand[] _hands;
 
         [SerializeField]
-        private Collider _joyStick;
+        private GameObject _joyStick;
+
+        [SerializeField]
+        private Collider _joyStickHead;
 
         [SerializeField]
         private GameObject _keyPad;
@@ -34,10 +37,13 @@ namespace LekAanDek.UI
         [SerializeField]
         private BoolVariable _startedWcPuzzle;
 
+        private Quaternion _joyStickRot;
+
 
         // Start is called before the first frame update
         void Start()
         {
+            _joyStickRot = _joyStick.transform.rotation;
             _hands = FindObjectsOfType<Hand>();
             _teleport = FindObjectsOfType<Teleport>();
             _interactable = FindObjectsOfType<Interactable>();
@@ -56,18 +62,28 @@ namespace LekAanDek.UI
         private void GamePaused()
         {
 
+            var col = _keyPad.GetComponentsInChildren<Collider>();
+
             //Time.timeScale = 0f;
             _pauseMenuCs.enabled = true;
 
             MonoBehaviour[] keyPadScripts = _keyPad.GetComponents<MonoBehaviour>();
+            //keyPadScripts = _keyPad.GetComponentsInChildren<MonoBehaviour>();
             _timerPaused.Value = false;
             _startedWcPuzzle.Value = false;
 
-            _joyStick.enabled = false;
+            _joyStickHead.enabled = false;
+            _joyStick.transform.rotation = _joyStickRot;
 
             foreach(MonoBehaviour script in keyPadScripts)
             {
                 script.enabled = false;
+            }
+
+            for (var index = 0; index < col.Length; index++)
+            {
+                var colliderItem = col[index];
+                colliderItem.enabled = false;
             }
 
             for (int i = 0; i < _teleport.Length; i++)
@@ -78,7 +94,6 @@ namespace LekAanDek.UI
             {
                 _interactable[j].enabled = false;
             }
-           
         }
     }
 }
