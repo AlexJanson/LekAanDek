@@ -466,6 +466,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e084ec3fd60c87b409f3aa805a88ef1e, type: 3}
+--- !u!135 &675070535 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 748654028755028531, guid: 4b1ec6544235ab54199b1a79fad2afdd, type: 3}
+  m_PrefabInstance: {fileID: 378806770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &899609245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -601,11 +606,11 @@ MonoBehaviour:
   _pauseMenuCs: {fileID: 1445380465}
   _teleport: []
   _interactable: []
+  _hands: []
+  _joyStick: {fileID: 675070535}
+  _keyPad: {fileID: 2038979468}
   _timerPaused: {fileID: 11400000, guid: f946ca6ab56f2414da1187b0c1ba1143, type: 2}
   _startedWcPuzzle: {fileID: 11400000, guid: 851c89749ead36540b02216c970256b4, type: 2}
-  _hands:
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &1445380464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1173,3 +1178,8 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2038979468 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6561952852534427799, guid: b39333dcc7ca82c4b8e22c46aadb3ae9, type: 3}
+  m_PrefabInstance: {fileID: 277352805}
+  m_PrefabAsset: {fileID: 0}

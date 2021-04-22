@@ -21,12 +21,19 @@ namespace LekAanDek.UI
         private Interactable[] _interactable;
 
         [SerializeField]
+        private Hand[] _hands;
+
+        [SerializeField]
+        private Collider _joyStick;
+
+        [SerializeField]
+        private GameObject _keyPad;
+
+        [SerializeField]
         private BoolVariable _timerPaused;
         [SerializeField]
         private BoolVariable _startedWcPuzzle;
 
-        [SerializeField]
-        private Hand[] _hands;
 
         // Start is called before the first frame update
         void Start()
@@ -48,9 +55,20 @@ namespace LekAanDek.UI
 
         private void GamePaused()
         {
+
+            //Time.timeScale = 0f;
             _pauseMenuCs.enabled = true;
+
+            MonoBehaviour[] keyPadScripts = _keyPad.GetComponents<MonoBehaviour>();
             _timerPaused.Value = false;
             _startedWcPuzzle.Value = false;
+
+            _joyStick.enabled = false;
+
+            foreach(MonoBehaviour script in keyPadScripts)
+            {
+                script.enabled = false;
+            }
 
             for (int i = 0; i < _teleport.Length; i++)
             {
@@ -60,10 +78,7 @@ namespace LekAanDek.UI
             {
                 _interactable[j].enabled = false;
             }
-            for (int a = 0; a < _hands.Length; a++)
-            {
-                _hands[a].enabled = false;
-            }
+           
         }
     }
 }
