@@ -42,7 +42,7 @@ namespace LekAanDek.Puzzles.WaterCannon
             float _rightDist = Vector3.Distance(_hands[1].transform.position, _handles[1].transform.position);
 
             //This checks if the player is pressing the grib button and if the players hands are close enough to the handel
-            //_startedWCPuzzle.Value = (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand) && _leftDist < 0.7f && _rightDist < 0.7f) ? true : false;
+            _startedWCPuzzle.Value = (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand) && _leftDist < 0.7f && _rightDist < 0.7f) ? true : false;
       
             if (_startedWCPuzzle.Value == true)
                 RotatingCannon();
@@ -54,7 +54,7 @@ namespace LekAanDek.Puzzles.WaterCannon
         {  
             _rotationTarget.transform.position = 0.5f * (_hands[0].transform.position + _hands[1].transform.position);
 
-            _rotationTarget.transform.position = new Vector3(_rotationTarget.transform.position.x, _rotationTarget.transform.position.y, _rotationTarget.transform.position.z - 0.5f);
+            _rotationTarget.transform.position = new Vector3(_rotationTarget.transform.position.x, _rotationTarget.transform.position.y, _rotationTarget.transform.position.z - 0.7f);
 
             _direction = (_rotationTarget.transform.position - _waterCannon.transform.position).normalized;
 
