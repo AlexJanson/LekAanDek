@@ -21,6 +21,9 @@ namespace LekAanDek.Puzzles.WaterCannon
         private Transform _point3;
 
         [SerializeField]
+        private Transform _cannonRot;
+
+        [SerializeField]
         private LineRenderer _lineRenderer;
 
         [SerializeField]
@@ -29,6 +32,7 @@ namespace LekAanDek.Puzzles.WaterCannon
         // Update is called once per frame
         void Update()
         {
+            ChangeDistance();
             if (_startedWCPuzzle.Value == true)
             {
                 _lineRenderer.enabled = true;
@@ -67,6 +71,13 @@ namespace LekAanDek.Puzzles.WaterCannon
             {
                 Gizmos.DrawLine(Vector3.Lerp(_point1.position, _point2.position, ratio), Vector3.Lerp(_point2.position, _point3.position, ratio));
             }
+        }
+
+        private void ChangeDistance()
+        {
+            float posY = 5 + _cannonRot.transform.rotation.x;
+            Debug.Log(posY);
+            _point2.transform.position = new Vector3(_point2.transform.position.x, posY, _point2.transform.position.z);
         }
 
     }
