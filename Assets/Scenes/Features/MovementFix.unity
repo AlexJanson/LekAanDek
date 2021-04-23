@@ -791,6 +791,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1067825022, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
+      propertyPath: _wallLayer.m_Bits
+      value: 4096
+      objectReference: {fileID: 0}
     - target: {fileID: 3318770412979016323, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
       propertyPath: m_RootOrder
       value: 0
