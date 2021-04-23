@@ -19,16 +19,24 @@ namespace LekAanDek.UI
         [SerializeField]
         private BoolVariable _fading;
 
+        private float _waitingTime = 0.0f;
+
         // Start is called before the first frame update
         void Start()
         {
             _fading.Value = false;
             _fadeImage.canvasRenderer.SetAlpha(1.0f);
-            FadeImageOut();
         }
 
         private void Update()
         {
+            _waitingTime = _waitingTime + Time.deltaTime;
+            
+            if(_waitingTime >= 2)
+            {
+                FadeImageOut();
+            }
+
             if (_fading.Value == true)
             {
                 FadeImageIn();
