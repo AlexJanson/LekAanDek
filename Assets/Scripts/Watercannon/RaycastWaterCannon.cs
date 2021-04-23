@@ -76,7 +76,6 @@ namespace LekAanDek.Puzzles.WaterCannon
         private void ChangeDistance()
         {
             float posY = 5 + _cannonRot.transform.rotation.x;
-            Debug.Log(posY);
             _point2.transform.position = new Vector3(_point2.transform.position.x, posY, _point2.transform.position.z);
         }
 

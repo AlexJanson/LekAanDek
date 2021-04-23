@@ -40,13 +40,15 @@ namespace LekAanDek.Puzzles.WaterCannon
         [SerializeField]
         private SteamVR_Input_Sources _rightHand = SteamVR_Input_Sources.RightHand;
 
+        private void Start() => _startedWCPuzzle.Value = false;
+
         private void Update()
         {
             float _leftDist = Vector3.Distance(_hands[0].transform.position, _handles[0].transform.position);
             float _rightDist = Vector3.Distance(_hands[1].transform.position, _handles[1].transform.position);
 
             //This checks if the player is pressing the grib button and if the players hands are close enough to the handel
-            //_startedWCPuzzle.Value = (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand) && _leftDist < 0.7f && _rightDist < 0.7f) ? true : false;
+            _startedWCPuzzle.Value = (_grabPinch.GetState(_leftHand) && _grabPinch.GetState(_rightHand) && _leftDist < 0.7f && _rightDist < 0.7f) ? true : false;
       
             if (_startedWCPuzzle.Value == true)
                 RotatingCannon();
@@ -66,13 +68,25 @@ namespace LekAanDek.Puzzles.WaterCannon
 
             _waterCannon.transform.rotation = Quaternion.RotateTowards(_waterCannon.transform.rotation, _lookRotation, Time.deltaTime * _rotSpeed);
 
-            if (_waterCannon.transform.rotation.y <= 135.0f)
+            /*if (_waterCannon.transform.rotation.y <= 135.0f)
             {
-                _waterCannon.transform.rotation.y 
+                _waterCannon.transform.rotation = new Quaternion(_waterCannon.transform.rotation.x, 135.0f, _waterCannon.transform.rotation.z, 0);
             }
-                
+            else if (_waterCannon.transform.rotation.y >= 225.0f)
+            {
+                _waterCannon.transform.rotation = new Quaternion(_waterCannon.transform.rotation.x, 225.0f, _waterCannon.transform.rotation.z, 0);
+            }
+            else if (_waterCannon.transform.rotation.x <= -35.0f)
+            {
+                _waterCannon.transform.rotation = new Quaternion(-35.0f, _waterCannon.transform.rotation.y, _waterCannon.transform.rotation.z, 0);
+            }
+            else if (_waterCannon.transform.rotation.x <= 35.0f)
+            {
+                _waterCannon.transform.rotation = new Quaternion(35.0f, _waterCannon.transform.rotation.y, _waterCannon.transform.rotation.z, 0);
+            }*/
 
-            
+
+
         }
     }
 }
