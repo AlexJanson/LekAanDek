@@ -11,15 +11,16 @@ namespace LekAanDek.Player
         private Transform _VRHead;
         [SerializeField]
         private LayerMask _floorLayer;
+        [SerializeField]
+        private float _rayLength = 3f;
 
         // Update is called once per frame
         void Update()
         {
             RaycastHit hit;
-            float distance = 3f;
             Vector3 targetLocation;
             // Raycast to floor to find correct height
-            if(Physics.Raycast(_VRHead.position, Vector3.down, out hit, distance, _floorLayer))
+            if(Physics.Raycast(_VRHead.position, Vector3.down, out hit, _rayLength, _floorLayer))
             {
                 // Hit point
                 targetLocation = hit.point;

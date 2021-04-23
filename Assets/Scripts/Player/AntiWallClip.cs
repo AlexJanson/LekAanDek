@@ -32,20 +32,17 @@ namespace LekAanDek.Player
             // Check if player is close to the wall and store position if they are
             if (Physics.CheckSphere(_VRHead.position, _saveDistance, _wallLayer) && !_isInCollider)
             {
-                Debug.Log("first sphere entered");
                 _lastPos = _VRHead.position;
                 _isInCollider = true;
             }
             // Reset check if player moves away from the wall
             else if (!Physics.CheckSphere(_VRHead.position, _saveDistance, _wallLayer) && _isInCollider)
             {
-                Debug.Log("RESET");
                 _isInCollider = false;
             }
             // Move player back to previously stored position if they get even closer to the wall
             else if (Physics.CheckSphere(_VRHead.position, _teleportDistance, _wallLayer) && _isInCollider)
             {
-                Debug.Log("PUSHBACK");
                 Vector3 dir = (_VRHead.position - _lastPos).normalized;
                 transform.position = transform.position - dir * _pushBackDistance;
                 _isInCollider = false;
