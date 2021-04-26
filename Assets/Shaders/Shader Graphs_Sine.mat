@@ -8,12 +8,12 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Shader Graphs_Sine
-  m_Shader: {fileID: -6465566751694194690, guid: a5b1dc4fa3afb5640a573abfb899a453, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 4c7655105c522e64fbaba93706eb988d, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -32,9 +32,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Time: 21.7503
+    - Time: 266.52097
+    - Vector1_345ff3452f3648ffb603afefd27147ee: 0.5
+    - Vector1_4d6865560ac94439b369e08bb2eecbde: 1
+    - Vector1_528d4e3c20084e3ab3305c3e07ec7421: 5
+    - Vector1_685b3f9e0c57427683694e7dab73fd47: 1.6
     - Vector1_6e8c7ef119514315b556ba2ceb2d51a9: 0
-    - _Amplitude: 0.4
+    - Vector1_cc43185d240e4f2a923bb01e35dc35d7: 0.1
+    - _Amplitude: 0.1
     - _WaveLength: 50
-    m_Colors: []
+    m_Colors:
+    - Color_0d735133de7442668fe97cac4df08c05: {r: 0.505651, g: 0.84840953, b: 0.8584906, a: 1}
+    - Color_99c4700e4b9949b4b2b839bc77ecba1f: {r: 0.37753648, g: 0.7253016, b: 0.7924528, a: 0}
+    - Color_c3a8f64018394ec5baa3a2e8393c192b: {r: 0.3372549, g: 1.458824, b: 1.85098, a: 0}
   m_BuildTextureStacks: []
