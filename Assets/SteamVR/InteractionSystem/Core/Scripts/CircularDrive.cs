@@ -153,10 +153,11 @@ namespace Valve.VR.InteractionSystem
 
 			if ( transform.parent )
 			{
-				worldPlaneNormal = transform.parent.localToWorldMatrix.MultiplyVector( worldPlaneNormal ).normalized;
-			}
+                worldPlaneNormal = transform.parent.localToWorldMatrix.MultiplyVector(worldPlaneNormal).normalized;
+            }
 
-			if ( limited )
+
+            if ( limited )
 			{
 				start = Quaternion.identity;
 				outAngle = transform.localEulerAngles[(int)axisOfRotation];
