@@ -1,3 +1,4 @@
+using LekAanDek.Events;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,14 +40,16 @@ namespace LekAanDek.UI
 
         private Quaternion _joyStickRot;
 
+        [SerializeField]
+        private BoolEvent _pausedGame;
 
         // Start is called before the first frame update
         void Start()
         {
-            _joyStickRot = _joyStick.transform.rotation;
+           /* _joyStickRot = _joyStick.transform.rotation;
             _hands = FindObjectsOfType<Hand>();
             _teleport = FindObjectsOfType<Teleport>();
-            _interactable = FindObjectsOfType<Interactable>();
+            _interactable = FindObjectsOfType<Interactable>();*/
             _pauseMenuCs.enabled = false;
         }
 
@@ -57,17 +60,20 @@ namespace LekAanDek.UI
             {
                 GamePaused();
             }
+
         }
 
         private void GamePaused()
         {
-
-            var col = _keyPad.GetComponentsInChildren<Collider>();
+        
+            _pausedGame.Raise(true);
+            
+            //var col = _keyPad.GetComponentsInChildren<Collider>();
 
             //Time.timeScale = 0f;
             _pauseMenuCs.enabled = true;
 
-            MonoBehaviour[] keyPadScripts = _keyPad.GetComponents<MonoBehaviour>();
+            /*MonoBehaviour[] keyPadScripts = _keyPad.GetComponents<MonoBehaviour>();
             //keyPadScripts = _keyPad.GetComponentsInChildren<MonoBehaviour>();
             _timerPaused.Value = false;
             _startedWcPuzzle.Value = false;
@@ -93,7 +99,12 @@ namespace LekAanDek.UI
             for (int j = 0; j < _interactable.Length; j++)
             {
                 _interactable[j].enabled = false;
-            }
+            }*/
+        }
+
+        public void RestartGame()
+        {
+            Debug.Log("Game restarted");
         }
     }
 }
