@@ -67,26 +67,6 @@ namespace LekAanDek.Puzzles.WaterCannon
             _lookRotation = Quaternion.LookRotation(_direction);
 
             _waterCannon.transform.rotation = Quaternion.RotateTowards(_waterCannon.transform.rotation, _lookRotation, Time.deltaTime * _rotSpeed);
-
-            /*if (_waterCannon.transform.rotation.y <= 135.0f)
-            {
-                _waterCannon.transform.rotation = new Quaternion(_waterCannon.transform.rotation.x, 135.0f, _waterCannon.transform.rotation.z, 0);
-            }
-            else if (_waterCannon.transform.rotation.y >= 225.0f)
-            {
-                _waterCannon.transform.rotation = new Quaternion(_waterCannon.transform.rotation.x, 225.0f, _waterCannon.transform.rotation.z, 0);
-            }
-            else if (_waterCannon.transform.rotation.x <= -35.0f)
-            {
-                _waterCannon.transform.rotation = new Quaternion(-35.0f, _waterCannon.transform.rotation.y, _waterCannon.transform.rotation.z, 0);
-            }
-            else if (_waterCannon.transform.rotation.x <= 35.0f)
-            {
-                _waterCannon.transform.rotation = new Quaternion(35.0f, _waterCannon.transform.rotation.y, _waterCannon.transform.rotation.z, 0);
-            }*/
-
-
-
         }
     }
 }
