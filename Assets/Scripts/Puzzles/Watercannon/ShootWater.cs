@@ -28,19 +28,28 @@ namespace LekAanDek.Puzzles.WaterCannon
         [SerializeField]
         private SteamVR_Input_Sources _rightHand = SteamVR_Input_Sources.RightHand;
 
-        private void Start() => _system.enableEmission = false;
+        private bool _emmiting = false;
+
+        private void Start()
+        {
+            _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+        }
 
         private void Update()
         {
             if (_trigger.GetState(_leftHand) || _trigger.GetState(_rightHand))
                 FiringWater();
             else
-              _system.enableEmission = false;
+                _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
         }
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
         { 
-            _system.enableEmission = (_startedWCPuzzle.Value) ? true : false;
+            _emmiting = (_startedWCPuzzle.Value) ? true : false;
+            if (_emmiting == true)
+                _system.Play(true);
+            else if (_emmiting == false)
+               _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
 
             InitializeIfNeeded();
             // GetParticles is allocation free because we reuse the _particles buffer between updates

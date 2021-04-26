@@ -21,6 +21,9 @@ namespace LekAanDek.Puzzles.WaterCannon
         private Transform _point3;
 
         [SerializeField]
+        private Transform _cannonRot;
+
+        [SerializeField]
         private LineRenderer _lineRenderer;
 
         [SerializeField]

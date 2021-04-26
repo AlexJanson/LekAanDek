@@ -21,6 +21,10 @@ namespace LekAanDek.Puzzles.WaterCannon
         [SerializeField]
         private GameObject _rotationTarget;
 
+        [Range(0.0f, 1.0f)]
+        [SerializeField]
+        private float _posY, _posZ;
+
         [SerializeField]
         private float _rotSpeed = 100.0f;
 
@@ -35,6 +39,8 @@ namespace LekAanDek.Puzzles.WaterCannon
         private SteamVR_Input_Sources _leftHand = SteamVR_Input_Sources.LeftHand;
         [SerializeField]
         private SteamVR_Input_Sources _rightHand = SteamVR_Input_Sources.RightHand;
+
+        private void Start() => _startedWCPuzzle.Value = false;
 
         private void Update()
         {
@@ -53,6 +59,8 @@ namespace LekAanDek.Puzzles.WaterCannon
         private void RotatingCannon()
         {  
             _rotationTarget.transform.position = 0.5f * (_hands[0].transform.position + _hands[1].transform.position);
+
+            _rotationTarget.transform.position = new Vector3(_rotationTarget.transform.position.x, _rotationTarget.transform.position.y - _posY, _rotationTarget.transform.position.z - _posZ);
 
             _direction = (_rotationTarget.transform.position - _waterCannon.transform.position).normalized;
 
