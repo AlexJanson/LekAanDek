@@ -19,9 +19,9 @@ TagManager:
   - 
   - HandColliders
   - CraneControls
-  - 
-  - 
-  - 
+  - Floor
+  - Player
+  - Wall
   - 
   - 
   - 
