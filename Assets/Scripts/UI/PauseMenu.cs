@@ -102,7 +102,7 @@ namespace LekAanDek.UI
             }*/
         }
 
-        public void RestartGame()
+        public void RestartGame(bool _pressed)
         {
             Debug.Log("Game restarted");
         }
