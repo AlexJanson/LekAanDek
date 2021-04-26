@@ -19,7 +19,10 @@ namespace LekAanDek.UI
         [SerializeField]
         private BoolVariable _fading;
 
-        private float _waitingTime = 0.0f;
+        [SerializeField]
+        private float _waitingTime = 2.0f;
+
+        private float _time = 0.0f;
 
         // Start is called before the first frame update
         void Start()
@@ -30,9 +33,9 @@ namespace LekAanDek.UI
 
         private void Update()
         {
-            _waitingTime = _waitingTime + Time.deltaTime;
+            _time = _time + Time.deltaTime;
             
-            if(_waitingTime >= 2)
+            if(_time >= _waitingTime)
             {
                 FadeImageOut();
             }
