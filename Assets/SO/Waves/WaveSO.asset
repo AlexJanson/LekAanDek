@@ -18,5 +18,5 @@ MonoBehaviour:
     _variable: {fileID: 0}
   amplitude:
     _useConstant: 1
-    _constantValue: 0.4
+    _constantValue: 0.1
     _variable: {fileID: 0}
