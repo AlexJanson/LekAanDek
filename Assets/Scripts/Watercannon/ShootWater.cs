@@ -37,10 +37,10 @@ namespace LekAanDek.Puzzles.WaterCannon
 
         private void Update()
         {
-            //if (_trigger.GetState(_leftHand) || _trigger.GetState(_rightHand))
+            if (_trigger.GetState(_leftHand) || _trigger.GetState(_rightHand))
                 FiringWater();
-            //else
-                //_system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+            else
+                _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
         }
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
