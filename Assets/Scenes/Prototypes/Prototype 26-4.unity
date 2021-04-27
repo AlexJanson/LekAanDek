@@ -455,8 +455,8 @@ MonoBehaviour:
   depthBeforeSubmerged: 1
   displacementAmount: 3
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!4 &51535534 stripped
 Transform:
@@ -567,8 +567,8 @@ MonoBehaviour:
   depthBeforeSubmerged: 1
   displacementAmount: 3
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!1001 &69887083
 PrefabInstance:
@@ -1882,10 +1882,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 167599122}
   depthBeforeSubmerged: 1
-  displacementAmount: 3
+  displacementAmount: 5
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!4 &269500145 stripped
 Transform:
@@ -6252,8 +6252,8 @@ MonoBehaviour:
   depthBeforeSubmerged: 1
   displacementAmount: 3
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!4 &1166584998 stripped
 Transform:
@@ -7391,8 +7391,8 @@ MonoBehaviour:
   depthBeforeSubmerged: 1
   displacementAmount: 3
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!1001 &1328738105
 PrefabInstance:
@@ -7672,10 +7672,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 167599122}
   depthBeforeSubmerged: 1
-  displacementAmount: 3
+  displacementAmount: 5
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!4 &1392813829 stripped
 Transform:
@@ -7729,8 +7729,8 @@ MonoBehaviour:
   depthBeforeSubmerged: 1
   displacementAmount: 3
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!1001 &1393763619
 PrefabInstance:
@@ -8697,8 +8697,8 @@ MonoBehaviour:
   depthBeforeSubmerged: 1
   displacementAmount: 3
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!1 &1644691631
 GameObject:
@@ -8747,8 +8747,8 @@ MonoBehaviour:
   depthBeforeSubmerged: 1
   displacementAmount: 3
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!1 &1644883452
 GameObject:
@@ -10669,8 +10669,8 @@ MonoBehaviour:
   depthBeforeSubmerged: 1
   displacementAmount: 3
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!4 &1944613459 stripped
 Transform:
@@ -11099,10 +11099,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 167599122}
   depthBeforeSubmerged: 1
-  displacementAmount: 3
+  displacementAmount: 5
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!1 &2087824132
 GameObject:
@@ -11149,10 +11149,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 167599122}
   depthBeforeSubmerged: 1
-  displacementAmount: 3
+  displacementAmount: 5
   floaterCount: 4
-  waterDrag: 2
-  waterAngularDrag: 2
+  waterDrag: 0.99
+  waterAngularDrag: 1
   waveSo: {fileID: 11400000, guid: ffbb92aaf136a314594a5f7f1b6f2e40, type: 2}
 --- !u!4 &2096077698 stripped
 Transform:
