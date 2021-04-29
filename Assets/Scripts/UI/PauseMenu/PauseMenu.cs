@@ -92,7 +92,7 @@ namespace LekAanDek.UI
             {
                 _testInt++;
 
-                if (_testInt >= 1)
+                if (_testInt == 1)
                 {
                     GamePaused();
                 }
