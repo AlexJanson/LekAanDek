@@ -88,11 +88,11 @@ namespace LekAanDek.UI
         // Update is called once per frame
         void Update()
         {
-            if (_clickAction.GetState(_rightHand) == true)
+            if (_clickAction.GetStateDown(_rightHand) == true)
             {
                 _testInt++;
 
-                if (_testInt == 1)
+                if (_testInt >= 1)
                 {
                     GamePaused();
                 }
@@ -152,11 +152,13 @@ namespace LekAanDek.UI
 
         public void RestartGame()
         {
+            Debug.Log("Restarting game");
             SteamVR_LoadLevel.Begin(_sceneName);
         }
 
         public void ContinueGame()
         {
+            Debug.Log("Continuing game");
             _audio.volume = 1;
             _pauseMenuCs.enabled = false;
             _pausedGame.Raise(false);
@@ -168,6 +170,7 @@ namespace LekAanDek.UI
 
         public void QuitGame()
         {
+            Debug.Log("Quiting game");
             Application.Quit();
         }
     }
