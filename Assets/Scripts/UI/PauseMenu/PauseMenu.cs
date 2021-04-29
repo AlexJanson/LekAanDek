@@ -152,7 +152,7 @@ namespace LekAanDek.UI
 
         public void RestartGame()
         {
-            SceneManager.LoadScene(_sceneName);
+            SteamVR_LoadLevel.Begin(_sceneName);
         }
 
         public void ContinueGame()
