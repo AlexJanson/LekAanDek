@@ -6,6 +6,8 @@ using UnityEngine.UI;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 using LekAanDek.Variables;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
 
 namespace LekAanDek.UI
 {
@@ -43,35 +45,81 @@ namespace LekAanDek.UI
         [SerializeField]
         private BoolEvent _pausedGame;
 
+        [SerializeField]
+        private Collider[] _canvasColliders;
+
+        private int _testInt = 0;
+        
+        [SerializeField]
+        private AudioSource _audio;
+
+        [Range(0, 1)]
+        [SerializeField]
+        private float _minVolume;
+
+        private string _sceneName;
+
+        [SerializeField]
+        private SteamVR_Action_Boolean _clickAction;
+
+        [SerializeField]
+        private SteamVR_Input_Sources _rightHand = SteamVR_Input_Sources.RightHand;
+
         // Start is called before the first frame update
         void Start()
         {
-           /* _joyStickRot = _joyStick.transform.rotation;
-            _hands = FindObjectsOfType<Hand>();
-            _teleport = FindObjectsOfType<Teleport>();
-            _interactable = FindObjectsOfType<Interactable>();*/
+            /* _joyStickRot = _joyStick.transform.rotation;
+             _hands = FindObjectsOfType<Hand>();
+             _teleport = FindObjectsOfType<Teleport>();
+             _interactable = FindObjectsOfType<Interactable>();*/
+
+            _sceneName = SceneManager.GetActiveScene().name;
+
+            _canvasColliders = _pauseMenuCs.GetComponentsInChildren<Collider>();
+
+            foreach (Collider collider in _canvasColliders)
+            {
+                collider.enabled = false;
+            }
+
             _pauseMenuCs.enabled = false;
         }
 
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown("p"))
+            if (_clickAction.GetState(_rightHand) == true)
             {
-                GamePaused();
-            }
+                _testInt++;
 
+                if (_testInt == 1)
+                {
+                    GamePaused();
+                }
+                else if (_testInt == 2)
+                {
+                    ContinueGame();
+                    _testInt = 0;
+                }
+            }
         }
 
         private void GamePaused()
         {
-        
+
+            _audio.volume = _minVolume;
+
             _pausedGame.Raise(true);
             
             //var col = _keyPad.GetComponentsInChildren<Collider>();
 
             //Time.timeScale = 0f;
             _pauseMenuCs.enabled = true;
+
+            foreach(Collider collider in _canvasColliders)
+            {
+                collider.enabled = true;
+            }
 
             /*MonoBehaviour[] keyPadScripts = _keyPad.GetComponents<MonoBehaviour>();
             //keyPadScripts = _keyPad.GetComponentsInChildren<MonoBehaviour>();
@@ -102,9 +150,25 @@ namespace LekAanDek.UI
             }*/
         }
 
-        public void RestartGame(bool _pressed)
+        public void RestartGame()
         {
-            Debug.Log("Game restarted");
+            SceneManager.LoadScene(_sceneName);
+        }
+
+        public void ContinueGame()
+        {
+            _audio.volume = 1;
+            _pauseMenuCs.enabled = false;
+            _pausedGame.Raise(false);
+            foreach (Collider collider in _canvasColliders)
+            {
+                collider.enabled = false;
+            }
+        }
+
+        public void QuitGame()
+        {
+            Application.Quit();
         }
     }
 }
