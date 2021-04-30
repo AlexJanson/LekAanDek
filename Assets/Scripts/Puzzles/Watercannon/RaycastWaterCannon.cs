@@ -57,7 +57,7 @@ namespace LekAanDek.Puzzles.WaterCannon
             _lineRenderer.SetPositions(pointList.ToArray());
         }
 
-        private void OnDrawGizmos()
+        private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.green;
             Gizmos.DrawLine(_point1.position, _point2.position);
