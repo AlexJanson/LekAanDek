@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace LekAanDek.Puzzles.Marlin
@@ -11,5 +12,10 @@ namespace LekAanDek.Puzzles.Marlin
         public GameObject projectilePrefab;
         
         public void Shoot() => Instantiate(projectilePrefab, spawnPosition.position, transform.rotation);
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(UnityEngine.KeyCode.Space)) Shoot();
+        }
     }
 }
