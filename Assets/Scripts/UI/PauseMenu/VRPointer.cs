@@ -10,7 +10,8 @@ namespace LekAanDek
 {
     public class VRPointer : MonoBehaviour
     {
-        public SteamVR_LaserPointer laserPointer;
+        [SerializeField]
+        private SteamVR_LaserPointer _laserPointer;
 
         [SerializeField]
         private Button[] _buttons;
@@ -19,9 +20,9 @@ namespace LekAanDek
 
         void Awake()
         {
-            laserPointer.PointerIn += PointerInside;
-            laserPointer.PointerOut += PointerOutside;
-            laserPointer.PointerClick += PointerClick;
+            _laserPointer.PointerIn += PointerInside;
+            _laserPointer.PointerOut += PointerOutside;
+            _laserPointer.PointerClick += PointerClick;
         }
 
         public void PointerClick(object sender, PointerEventArgs e)
