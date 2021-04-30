@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace LekAanDek
+namespace LekAanDek.Puzzles.Crane
 {
     public class GapCheck : MonoBehaviour
     {
