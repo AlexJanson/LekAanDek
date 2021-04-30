@@ -88,7 +88,7 @@ namespace LekAanDek.UI
         // Update is called once per frame
         void Update()
         {
-            if (_clickAction.GetStateDown(_rightHand) == true)
+            if (_clickAction.GetStateDown(_rightHand) == true || Input.GetKeyDown("p"))
             {
                 _testInt++;
 

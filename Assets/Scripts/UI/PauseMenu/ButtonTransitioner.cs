@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 namespace LekAanDek.UI
 {
@@ -12,9 +13,11 @@ namespace LekAanDek.UI
         [SerializeField]
         private Color32 _normalColor = Color.white;
         [SerializeField]
-        private Color32 _hoverColor = Color.grey;
+        private Color32 _hoverColor = Color.red;
         [SerializeField]
         private Color32 _downColor = Color.white;
+        [SerializeField]
+        private UnityEvent OnClick = new UnityEvent();
 
         private Image _image = null;
 
@@ -46,6 +49,7 @@ namespace LekAanDek.UI
 
         public void OnPointerClick(PointerEventData eventData)
         {
+            OnClick.Invoke();
             _image.color = _hoverColor;
         }
     }
