@@ -1,10 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using Valve.VR.Extras;
-using LekAanDek.Events;
 
 namespace LekAanDek
 {
@@ -16,7 +12,8 @@ namespace LekAanDek
         [SerializeField]
         private Button[] _buttons;
 
-        private Color _color;
+        [SerializeField]
+        private AudioSource _hoverSound;
 
         void Awake()
         {
@@ -46,14 +43,17 @@ namespace LekAanDek
             if (e.target.name == _buttons[0].name)
             {
                 _buttons[0].GetComponent<Image>().color = Color.blue;
+                _hoverSound.Play();
             }
             else if (e.target.name == _buttons[1].name)
             {
                 _buttons[1].GetComponent<Image>().color = Color.blue;
+                _hoverSound.Play();
             }
             else if (e.target.name == _buttons[2].name)
             {
                 _buttons[2].GetComponent<Image>().color = Color.blue;
+                _hoverSound.Play();
             }
         }
 

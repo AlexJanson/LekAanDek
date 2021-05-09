@@ -44,6 +44,8 @@ namespace LekAanDek.UI
         [SerializeField]
         private float _minVolume;
 
+        private float _maxVolume;
+
         private string _sceneName;
 
         [SerializeField]
@@ -88,7 +90,7 @@ namespace LekAanDek.UI
             _canvasTransform.rotation = Quaternion.Euler(_canvasTransform.rotation.x, _camTransform.eulerAngles.y + 90, _canvasTransform.rotation.z);
 
 
-            if (_clickAction.GetStateDown(_rightHand) == true || Input.GetKeyDown("p"))
+            if (_clickAction.GetStateDown(_rightHand) == true)
             {
                 _OnOffInt++;
 
@@ -141,7 +143,7 @@ namespace LekAanDek.UI
         {
             _laserPointer.SetActive(false);
 
-            _audio.volume = 1;
+            _audio.volume = _maxVolume;
 
             _pausedGame.Raise(false);
 
