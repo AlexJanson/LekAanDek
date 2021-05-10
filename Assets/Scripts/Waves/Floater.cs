@@ -29,7 +29,7 @@ namespace LekAanDek.Waves
             // Calculates the force that should be applied to the rigidbody for the buoyancy physics.
             float displacementMultiplier =
                 Mathf.Clamp01((waveHeight - position.y) / depthBeforeSubmerged) * displacementAmount;
-            rigidbody.AddForceAtPosition(new Vector3(0f, Mathf.Abs(Physics.gravity.y) * displacementMultiplier, 0f),
+            rigidbody.AddForceAtPosition(new Vector3(0f, Mathf.Abs(Physics.gravity.y / floaterCount) * displacementMultiplier, 0f),
                 position, ForceMode.Acceleration);
             rigidbody.AddForce(-rigidbody.velocity * (displacementMultiplier * waterDrag * Time.fixedDeltaTime), ForceMode.VelocityChange);
             rigidbody.AddTorque(-rigidbody.angularVelocity * (displacementMultiplier * waterAngularDrag * Time.fixedDeltaTime), ForceMode.VelocityChange);
