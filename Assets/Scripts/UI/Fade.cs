@@ -36,14 +36,14 @@ namespace LekAanDek.UI
         private void FadeTo()
         {
             //set start color
-            SteamVR_Fade.View(Color.clear, 0f);
+            SteamVR_Fade.View(Color.clear, 0);
             //set and start fade to
             SteamVR_Fade.View(Color.black, _fadeDuration);
         }
         private void FadeFrom()
         {
             //set start color
-            SteamVR_Fade.View(Color.black, 1f);
+            SteamVR_Fade.View(Color.black, 0);
             //set and start fade to
             SteamVR_Fade.View(Color.clear, _fadeDuration);
         }
