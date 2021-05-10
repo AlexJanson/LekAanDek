@@ -42,7 +42,7 @@ Material:
     - _Amplitude: 0.1
     - _WaveLength: 50
     m_Colors:
-    - Color_0d735133de7442668fe97cac4df08c05: {r: 0.505651, g: 0.84840953, b: 0.8584906, a: 1}
-    - Color_99c4700e4b9949b4b2b839bc77ecba1f: {r: 0.37753648, g: 0.7253016, b: 0.7924528, a: 0}
-    - Color_c3a8f64018394ec5baa3a2e8393c192b: {r: 0.3372549, g: 1.458824, b: 1.85098, a: 0}
+    - Color_0d735133de7442668fe97cac4df08c05: {r: 0.16078432, g: 0.48627454, b: 0.7411765, a: 1}
+    - Color_99c4700e4b9949b4b2b839bc77ecba1f: {r: 0.16078432, g: 0.48627454, b: 0.7411765, a: 0}
+    - Color_c3a8f64018394ec5baa3a2e8393c192b: {r: 0.2422812, g: 0.597202, b: 0.79129815, a: 0}
   m_BuildTextureStacks: []
