@@ -7679,6 +7679,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1379752129 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3318770412978997907, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
+  m_PrefabInstance: {fileID: 465459664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1391383363
 GameObject:
   m_ObjectHideFlags: 0
@@ -9928,11 +9933,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4204795081231188610, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
   m_PrefabInstance: {fileID: 1831098183}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1832726173 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3318770412979040629, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
-  m_PrefabInstance: {fileID: 465459664}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1833209756
 GameObject:
   m_ObjectHideFlags: 0
@@ -12143,7 +12143,7 @@ MonoBehaviour:
   _clickAction:
     actionPath: /actions/default/in/MenuButton
     needsReinit: 0
-  _camTransform: {fileID: 1832726173}
+  _camTransform: {fileID: 1379752129}
   _canvasTransform: {fileID: 4491284803374148829}
   _rightHand: 2
   _laserPointer: {fileID: 4491284804141973030}
