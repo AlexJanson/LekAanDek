@@ -16,23 +16,9 @@ namespace LekAanDek.UI
         [SerializeField]
         private float _buffer = 1f;
 
-        private bool _startFading = false;
+        private void Start() => StartCoroutine(FadeOutCoroutine());
 
-        [SerializeField]
-        private Camera _camera;
-
-        private void Start()
-        {
-            StartCoroutine(WaitCoroutine());
-        }
-        private void Update()
-        {
-            if(_startFading == true)
-            {
-
-            }
-        }
-
+  
         private void FadeTo()
         {
             //set start color
@@ -40,18 +26,14 @@ namespace LekAanDek.UI
             //set and start fade to
             SteamVR_Fade.View(Color.black, _fadeDuration);
         }
-        private void FadeFrom()
-        {
-            //set start color
-            SteamVR_Fade.View(Color.black, 0);
-            //set and start fade to
-            SteamVR_Fade.View(Color.clear, _fadeDuration);
-        }
 
-        IEnumerator WaitCoroutine()
+        IEnumerator FadeOutCoroutine()
         {
-           yield return new WaitForSeconds(_buffer);
-            FadeFrom();
+            SteamVR_Fade.View(Color.black, 0);
+
+            yield return new WaitForSeconds(_buffer);
+
+            SteamVR_Fade.View(Color.clear, _fadeDuration);
         }
     }
 }
