@@ -9928,6 +9928,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4204795081231188610, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
   m_PrefabInstance: {fileID: 1831098183}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1832726173 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3318770412979040629, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
+  m_PrefabInstance: {fileID: 465459664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1833209756
 GameObject:
   m_ObjectHideFlags: 0
@@ -10586,11 +10591,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!4 &1950414280 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3318770412979065657, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
-  m_PrefabInstance: {fileID: 465459664}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1967085713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12143,7 +12143,7 @@ MonoBehaviour:
   _clickAction:
     actionPath: /actions/default/in/MenuButton
     needsReinit: 0
-  _camTransform: {fileID: 1950414280}
+  _camTransform: {fileID: 1832726173}
   _canvasTransform: {fileID: 4491284803374148829}
   _rightHand: 2
   _laserPointer: {fileID: 4491284804141973030}
