@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using Valve.VR;
 
 namespace LekAanDek.UI
@@ -9,11 +10,15 @@ namespace LekAanDek.UI
     /// </summary>
     public class Fade : MonoBehaviour
     {
+        [SerializeField]
         private float _fadeDuration = 2f;
+
+        [SerializeField]
+        private float _buffer = 1f;
 
         private void Start()
         {
-            FadeFrom();
+            StartCoroutine(WaitCoroutine());
         }
         private void FadeTo()
         {
@@ -28,6 +33,12 @@ namespace LekAanDek.UI
             SteamVR_Fade.Start(Color.black, 1f);
             //set and start fade to
             SteamVR_Fade.Start(Color.clear, _fadeDuration);
+        }
+
+        IEnumerator WaitCoroutine()
+        {
+           yield return new WaitForSeconds(_buffer);
+            FadeFrom();
         }
     }
 }
