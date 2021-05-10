@@ -669,11 +669,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
   m_PrefabInstance: {fileID: 1859959497}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &83189241 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3318770412979064103, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
-  m_PrefabInstance: {fileID: 465459664}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &83339032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -9933,11 +9928,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4204795081231188610, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
   m_PrefabInstance: {fileID: 1831098183}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1832726173 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3318770412979040629, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
-  m_PrefabInstance: {fileID: 465459664}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1833209756
 GameObject:
   m_ObjectHideFlags: 0
@@ -10596,6 +10586,11 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!4 &1950414280 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3318770412979065657, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
+  m_PrefabInstance: {fileID: 465459664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1967085713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12096,12 +12091,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4491284803374148828}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -11.155, y: 4.01, z: 2.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4491284803811270170}
-  m_Father: {fileID: 83189241}
-  m_RootOrder: 6
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &4491284803811270150
 GameObject:
@@ -12148,7 +12143,7 @@ MonoBehaviour:
   _clickAction:
     actionPath: /actions/default/in/MenuButton
     needsReinit: 0
-  _camTransform: {fileID: 1832726173}
+  _camTransform: {fileID: 1950414280}
   _canvasTransform: {fileID: 4491284803374148829}
   _rightHand: 2
   _laserPointer: {fileID: 4491284804141973030}
