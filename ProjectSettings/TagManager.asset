@@ -8,6 +8,7 @@ TagManager:
   - projectile
   - FxTemporaire
   - PlayerHand
+  - WeaponCrate
   layers:
   - Default
   - TransparentFX
@@ -19,10 +20,10 @@ TagManager:
   - 
   - HandColliders
   - CraneControls
-  - 
-  - 
-  - 
-  - 
+  - Floor
+  - Player
+  - Wall
+  - Marlin Targets
   - 
   - 
   - 

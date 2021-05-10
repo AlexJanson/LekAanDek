@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: 
+    path:
     guid: c6fd25327779cc34885be7e2c227ec83
   - enabled: 1
     path: Assets/Scenes/Features/MovementShowcase.unity
