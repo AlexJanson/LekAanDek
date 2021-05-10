@@ -15,6 +15,9 @@ namespace LekAanDek
         [SerializeField]
         private AudioSource _hoverSound;
 
+        [SerializeField]
+        private AudioSource _clickSound;
+
         void Awake()
         {
             _laserPointer.PointerIn += PointerInside;
@@ -27,14 +30,17 @@ namespace LekAanDek
             if (e.target.name == _buttons[0].name)
             {
                 _buttons[0].GetComponent<Button>().onClick.Invoke();
+                _clickSound.Play();
             }
             else if (e.target.name == _buttons[1].name)
             {
                 _buttons[1].GetComponent<Button>().onClick.Invoke();
+                _clickSound.Play();
             }
             else if (e.target.name == _buttons[2].name)
             {
                 _buttons[2].GetComponent<Button>().onClick.Invoke();
+                _clickSound.Play();
             }
         }
 

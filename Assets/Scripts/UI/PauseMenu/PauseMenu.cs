@@ -1,14 +1,9 @@
 using LekAanDek.Events;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 using LekAanDek.Variables;
-using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
-using Valve.VR.Extras;
 
 namespace LekAanDek.UI
 {
