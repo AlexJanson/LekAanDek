@@ -1,6 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
-using LekAanDek.Variables;
 using Valve.VR;
 
 namespace LekAanDek.UI
@@ -15,20 +13,19 @@ namespace LekAanDek.UI
 
         private void Start()
         {
-            FadeToWhite();
-            Invoke("FadeFromWhite", _fadeDuration);
+            FadeFrom();
         }
-        private void FadeToWhite()
+        private void FadeTo()
         {
             //set start color
             SteamVR_Fade.Start(Color.clear, 0f);
             //set and start fade to
             SteamVR_Fade.Start(Color.black, _fadeDuration);
         }
-        private void FadeFromWhite()
+        private void FadeFrom()
         {
             //set start color
-            SteamVR_Fade.Start(Color.black, 0f);
+            SteamVR_Fade.Start(Color.black, 1f);
             //set and start fade to
             SteamVR_Fade.Start(Color.clear, _fadeDuration);
         }
