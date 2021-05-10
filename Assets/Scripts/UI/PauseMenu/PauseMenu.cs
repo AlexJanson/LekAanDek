@@ -66,8 +66,8 @@ namespace LekAanDek.UI
             _sceneName = SceneManager.GetActiveScene().name;
 
             _canvasColliders = _pauseMenuCs.GetComponentsInChildren<Collider>();
-            _teleport = FindObjectsOfType<Teleport>();
             _interactable = FindObjectsOfType<Interactable>();
+            _teleport = FindObjectsOfType<Teleport>();
 
             foreach (Collider collider in _canvasColliders)
             {
@@ -85,7 +85,7 @@ namespace LekAanDek.UI
             _canvasTransform.rotation = Quaternion.Euler(_canvasTransform.rotation.x, _camTransform.eulerAngles.y + 90, _canvasTransform.rotation.z);
 
 
-            if (_clickAction.GetStateDown(_rightHand) == true)
+            if (_clickAction.GetStateDown(_rightHand) == true || Input.GetKeyDown("p"))
             {
                 _OnOffInt++;
 
