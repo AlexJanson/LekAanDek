@@ -81,16 +81,18 @@ namespace LekAanDek.UI
         void Update()
         {
 
-            _canvasTransform.position = new Vector3(_canvasTransform.position.x, _camTransform.position.y - 0.5f, _camTransform.position.z);
-            _canvasTransform.rotation = Quaternion.Euler(_canvasTransform.rotation.x, _camTransform.eulerAngles.y + 90, _canvasTransform.rotation.z);
-
-
             if (_clickAction.GetStateDown(_rightHand) == true || Input.GetKeyDown("p"))
             {
+
                 _OnOffInt++;
 
                 if (_OnOffInt == 1)
                 {
+                    for (int i = 0; i <= 1; i++)
+                    {
+                        _canvasTransform.position = new Vector3(_canvasTransform.position.x, _camTransform.position.y - 0.5f, _camTransform.position.z);
+                        _canvasTransform.rotation = Quaternion.Euler(_canvasTransform.rotation.x, _camTransform.eulerAngles.y + 90, _canvasTransform.rotation.z);
+                    }
                     GamePaused();
                 }
                 else if (_OnOffInt == 2)
