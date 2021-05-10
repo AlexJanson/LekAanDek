@@ -669,6 +669,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
   m_PrefabInstance: {fileID: 1859959497}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &83189241 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3318770412979064103, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
+  m_PrefabInstance: {fileID: 465459664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &83339032 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -2136,6 +2141,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3318770412979254277, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
   m_PrefabInstance: {fileID: 465459664}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &362214347 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3430518555327167813, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
+  m_PrefabInstance: {fileID: 465459664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 362214345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a5fb0ca93b55ef4b8d54b512b103341, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &362214349 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3318770412979056603, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
@@ -7902,11 +7918,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
   m_PrefabInstance: {fileID: 1636173827}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1421968434 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3318770412979016323, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
-  m_PrefabInstance: {fileID: 465459664}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1433257939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3049976687050204631, guid: 579622d595248f44e858874e4cbe8b2a, type: 3}
@@ -12024,7 +12035,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 0
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.1393734, g: 0.19051376, b: 0.8490566, a: 1}
@@ -12089,8 +12100,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4491284803811270170}
-  m_Father: {fileID: 1421968434}
-  m_RootOrder: 7
+  m_Father: {fileID: 83189241}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &4491284803811270150
 GameObject:
@@ -12414,7 +12425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pose: {fileID: 0}
+  pose: {fileID: 362214347}
   interactWithUI:
     actionPath: /actions/default/in/InteractUI
     needsReinit: 0
