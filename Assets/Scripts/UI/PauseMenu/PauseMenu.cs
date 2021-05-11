@@ -88,12 +88,11 @@ namespace LekAanDek.UI
 
                 if (_OnOffInt == 1)
                 {
-                    for (int i = 0; i <= 1; i++)
-                    {
-                        _canvasTransform.position = _camTransform.position + _camTransform.forward * _offset;
-                        _canvasTransform.position = new Vector3(_canvasTransform.position.x, _camTransform.position.y, _canvasTransform.position.z);
-                        _canvasTransform.rotation = Quaternion.Euler(_canvasTransform.rotation.x, _camTransform.eulerAngles.y + 90, _canvasTransform.rotation.z);
-                    }
+    
+                    _canvasTransform.position = _camTransform.position + _camTransform.forward * _offset;
+                    _canvasTransform.position = new Vector3(_canvasTransform.position.x, _camTransform.position.y, _canvasTransform.position.z);
+                    _canvasTransform.rotation = Quaternion.Euler(_canvasTransform.rotation.x, _camTransform.eulerAngles.y + 90, _canvasTransform.rotation.z);
+                   
                     GamePaused();
                 }
                 else if (_OnOffInt == 2)
