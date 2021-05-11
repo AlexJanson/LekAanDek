@@ -66,7 +66,7 @@ namespace LekAanDek.Puzzles.WaterCannon
             Gizmos.DrawLine(_point2.position, _point3.position);
 
             Gizmos.color = Color.red;
-            for (float ratio = 0.5f / _vertexCount;ratio < 1; ratio += 1.0f / _vertexCount)
+            for (float ratio = 0.5f / _vertexCount; ratio < 1; ratio += 1.0f / _vertexCount)
             {
                 Gizmos.DrawLine(Vector3.Lerp(_point1.position, _point2.position, ratio), Vector3.Lerp(_point2.position, _point3.position, ratio));
             }
