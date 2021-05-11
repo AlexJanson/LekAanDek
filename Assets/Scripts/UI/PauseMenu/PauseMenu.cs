@@ -41,8 +41,6 @@ namespace LekAanDek.UI
         private float _maxVolume;
         [SerializeField]
         private float _offset = 1;
-        [SerializeField]
-        private float _canvasHeightPos = 2.25f;
 
         private string _sceneName;
 
@@ -93,7 +91,7 @@ namespace LekAanDek.UI
                     for (int i = 0; i <= 1; i++)
                     {
                         _canvasTransform.position = _camTransform.position + _camTransform.forward * _offset;
-                        _canvasTransform.position = new Vector3(_canvasTransform.position.x, _canvasHeightPos, _canvasTransform.position.z);
+                        _canvasTransform.position = new Vector3(_canvasTransform.position.x, _camTransform.position.y, _canvasTransform.position.z);
                         _canvasTransform.rotation = Quaternion.Euler(_canvasTransform.rotation.x, _camTransform.eulerAngles.y + 90, _canvasTransform.rotation.z);
                     }
                     GamePaused();
