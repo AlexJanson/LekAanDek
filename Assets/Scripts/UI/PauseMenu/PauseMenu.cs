@@ -38,8 +38,11 @@ namespace LekAanDek.UI
         [Range(0, 1)]
         [SerializeField]
         private float _minVolume;
-
         private float _maxVolume;
+        [SerializeField]
+        private float _offset = 1;
+        [SerializeField]
+        private float _canvasHeightPos = 2.25f;
 
         private string _sceneName;
 
@@ -48,7 +51,6 @@ namespace LekAanDek.UI
 
         [SerializeField]
         private Transform _camTransform;
-
         [SerializeField]
         private Transform _canvasTransform;
 
@@ -57,12 +59,6 @@ namespace LekAanDek.UI
 
         [SerializeField]
         private GameObject _laserPointer;
-
-        [SerializeField]
-        private float _offset = 1;
-
-        [SerializeField]
-        private float _canvasHeightPos = 2.25f;
 
         // Start is called before the first frame update
         void Start()
