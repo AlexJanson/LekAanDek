@@ -11557,7 +11557,7 @@ GameObject:
   - component: {fileID: 4491284803056659247}
   - component: {fileID: 4491284803056659246}
   - component: {fileID: 4491284803056659232}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11768,7 +11768,7 @@ GameObject:
   - component: {fileID: 4491284803075497937}
   - component: {fileID: 4491284803075497939}
   - component: {fileID: 4491284803075497938}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11984,7 +11984,7 @@ GameObject:
   - component: {fileID: 4491284803275538995}
   - component: {fileID: 4491284803275538994}
   - component: {fileID: 4491284803275538997}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12076,7 +12076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4491284803374148829}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12112,7 +12112,7 @@ GameObject:
   - component: {fileID: 4491284803811270151}
   - component: {fileID: 4491284803811270173}
   - component: {fileID: 4491284803811270172}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: PauseMenuCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12140,6 +12140,8 @@ MonoBehaviour:
   _canvasColliders: []
   _audio: {fileID: 1379220858}
   _minVolume: 0.2
+  _offset: 1
+  _canvasHeightPos: 2.25
   _clickAction:
     actionPath: /actions/default/in/MenuButton
     needsReinit: 0
@@ -12147,8 +12149,6 @@ MonoBehaviour:
   _canvasTransform: {fileID: 4491284803374148829}
   _rightHand: 2
   _laserPointer: {fileID: 4491284804141973030}
-  distance: 2
-  _offset: 1
 --- !u!114 &4491284803811270168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12256,7 +12256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4491284804066864252}
   - component: {fileID: 4491284804066864253}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: UIHoverAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12614,7 +12614,7 @@ GameObject:
   - component: {fileID: 4491284804160191713}
   - component: {fileID: 4491284804160191712}
   - component: {fileID: 4491284804160191715}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12746,7 +12746,7 @@ GameObject:
   - component: {fileID: 4491284804515178283}
   - component: {fileID: 4491284804515178285}
   - component: {fileID: 4491284804515178284}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12824,7 +12824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4491284804710529554}
   - component: {fileID: 4491284804710529555}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: UIClickAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12957,7 +12957,7 @@ GameObject:
   - component: {fileID: 4491284804846626733}
   - component: {fileID: 4491284804846626735}
   - component: {fileID: 4491284804846626734}
-  m_Layer: 5
+  m_Layer: 14
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
