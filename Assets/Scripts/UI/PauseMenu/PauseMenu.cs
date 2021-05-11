@@ -59,7 +59,10 @@ namespace LekAanDek.UI
         private GameObject _laserPointer;
 
         [SerializeField]
-        private float distance = 2.0f;
+        private float _offset = 1;
+
+        [SerializeField]
+        private float _canvasHeightPos = 2.25f;
 
         // Start is called before the first frame update
         void Start()
@@ -93,7 +96,8 @@ namespace LekAanDek.UI
                 {
                     for (int i = 0; i <= 1; i++)
                     {
-                        _canvasTransform.position = _canvasTransform.position + _camTransform.forward * distance * Time.deltaTime;
+                        _canvasTransform.position = _camTransform.position + _camTransform.forward * _offset;
+                        _canvasTransform.position = new Vector3(_canvasTransform.position.x, _canvasHeightPos, _canvasTransform.position.z);
                         _canvasTransform.rotation = Quaternion.Euler(_canvasTransform.rotation.x, _camTransform.eulerAngles.y + 90, _canvasTransform.rotation.z);
                     }
                     GamePaused();
