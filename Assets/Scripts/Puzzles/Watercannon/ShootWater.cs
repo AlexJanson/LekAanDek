@@ -16,10 +16,8 @@ namespace LekAanDek.Puzzles.WaterCannon
         [SerializeField]
         private ParticleSystem _system;
 
-        private ParticleSystem.Particle[] _particles;
-
         [SerializeField]
-        private float _drift = -0.05f;
+        private ParticleSystem _system2;
 
         [SerializeField]
         private SteamVR_Action_Boolean _trigger;
@@ -33,6 +31,7 @@ namespace LekAanDek.Puzzles.WaterCannon
         private void Start()
         {
             _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+            _system2.Stop(false, ParticleSystemStopBehavior.StopEmitting);
         }
 
         private void Update()
@@ -40,38 +39,22 @@ namespace LekAanDek.Puzzles.WaterCannon
             if (_trigger.GetState(_leftHand) || _trigger.GetState(_rightHand))
                 FiringWater();
             else
-                _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+                _system2.Stop(false, ParticleSystemStopBehavior.StopEmitting);
         }
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
         { 
             _emmiting = (_startedWCPuzzle.Value) ? true : false;
             if (_emmiting == true)
-                _system.Play(true);
-            else if (_emmiting == false)
-               _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
-
-            InitializeIfNeeded();
-            // GetParticles is allocation free because we reuse the _particles buffer between updates
-            int numParticlesAlive = _system.GetParticles(_particles);
-
-            // Change only the particles that are alive
-            for (int i = 0; i < numParticlesAlive; i++)
             {
-                _particles[i].velocity += Vector3.up * _drift;
+                _system.Play(true);
+                _system2.Play(true);
             }
-
-            // Apply the particle changes to the Particle System
-            _system.SetParticles(_particles, numParticlesAlive);
-        }
-
-        void InitializeIfNeeded()
-        {
-            if (_system == null)
-                _system = GetComponent<ParticleSystem>();
-
-            if (_particles == null || _particles.Length < _system.main.maxParticles)
-                _particles = new ParticleSystem.Particle[_system.main.maxParticles];
+            else if (_emmiting == false)
+            {
+                _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+                _system2.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+            }
         }
     }
 }
