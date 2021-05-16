@@ -2,8 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using Valve.VR.Extras;
 
-namespace LekAanDek
+namespace LekAanDek.UI
 {
+
+    /// <summary>
+    /// This script is used to create a pointer 
+    /// </summary>
     public class VRPointer : MonoBehaviour
     {
         [SerializeField]

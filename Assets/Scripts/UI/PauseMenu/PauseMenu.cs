@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 
 namespace LekAanDek.UI
 {
+
+    /// <summary>
+    /// This script is to activate the menu in the canvas and deactivate some things so the player can't interact with stuff while in pause mode
+    /// </summary>
     public class PauseMenu : MonoBehaviour
     {
 
