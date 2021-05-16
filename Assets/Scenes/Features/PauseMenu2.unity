@@ -11469,6 +11469,61 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
+--- !u!114 &3254592206384649513 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1404733743512852248, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
+  m_PrefabInstance: {fileID: 3254592206384649512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3254592206384649514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1404733743763209732, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
+  m_PrefabInstance: {fileID: 3254592206384649512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3254592206384649515 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1404733744809257414, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
+  m_PrefabInstance: {fileID: 3254592206384649512}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &3254592206384649516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1404733742975028014, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
+  m_PrefabInstance: {fileID: 3254592206384649512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3254592206384649517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254592206384649516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbb56e7ecf0c553429e4959ef3dc737e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desiredUIComparison: 8
+  uiElementsToApplyTo:
+  - {fileID: 3254592206384649514}
+  - {fileID: 3254592206384649513}
+  - {fileID: 3254592206384649515}
 --- !u!1 &3318770413421080021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1912810332802570734, guid: 4922f317091d32444854b61cb838da82, type: 3}
