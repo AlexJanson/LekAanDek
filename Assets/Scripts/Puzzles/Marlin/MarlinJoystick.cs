@@ -10,22 +10,6 @@ namespace LekAanDek.Puzzles.Marlin
     /// </summary>
     public class MarlinJoystick : MonoBehaviour
     {
-        //[SerializeField]
-        //private Transform _forwardPoint;
-        //[SerializeField]
-        //private Transform _backwardPoint;
-        //[SerializeField]
-        //private Transform _rightPoint;
-        //[SerializeField]
-        //private Transform _leftPoint;
-        //[SerializeField]
-        //private Transform _forwardRightPoint;
-        //[SerializeField]
-        //private Transform _forwardLeftPoint;
-        //[SerializeField]
-        //private Transform _backwardRightPoint;
-        //[SerializeField]
-        //private Transform _backwardLeftPoint;
 
         [SerializeField]
         private Transform[] _points;
