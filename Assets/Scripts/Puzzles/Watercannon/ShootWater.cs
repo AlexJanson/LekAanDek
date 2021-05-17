@@ -27,7 +27,7 @@ namespace LekAanDek.Puzzles.WaterCannon
 
         private void Start()
         {
-            _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+            _system.Stop(true);
         }
 
         private void Update()
@@ -38,20 +38,20 @@ namespace LekAanDek.Puzzles.WaterCannon
             }
             else
             {
-                _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+                _system.Stop(true);
             }
         }
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
         { 
-            _emmiting = (_startedWCPuzzle.Value) ? true : false;
+            _emmiting = _startedWCPuzzle.Value;
             if (_emmiting == true)
             {
                 _system.Play(true);
             }
-            else if (_emmiting == false)
+            else
             {
-                _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
+                _system.Stop(true);
             }
         }
     }
