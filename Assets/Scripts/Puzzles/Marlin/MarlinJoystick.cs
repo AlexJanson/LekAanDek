@@ -71,7 +71,6 @@ namespace LekAanDek.Puzzles.Marlin
                         _marlinMotor.RotateLeft(_speed / 2);
                         break;
                     default:
-                        Debug.Log("uhhh this shouldn't be possible");
                         break;
                 }
             }
