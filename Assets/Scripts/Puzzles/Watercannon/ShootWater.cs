@@ -17,9 +17,6 @@ namespace LekAanDek.Puzzles.WaterCannon
         private ParticleSystem _system;
 
         [SerializeField]
-        private ParticleSystem _system2;
-
-        [SerializeField]
         private SteamVR_Action_Boolean _trigger;
         [SerializeField]
         private SteamVR_Input_Sources _leftHand = SteamVR_Input_Sources.LeftHand;
@@ -31,7 +28,6 @@ namespace LekAanDek.Puzzles.WaterCannon
         private void Start()
         {
             _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
-            _system2.Stop(false, ParticleSystemStopBehavior.StopEmitting);
         }
 
         private void Update()
@@ -43,7 +39,6 @@ namespace LekAanDek.Puzzles.WaterCannon
             else
             {
                 _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
-                _system2.Stop(false, ParticleSystemStopBehavior.StopEmitting);
             }
         }
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
@@ -53,12 +48,10 @@ namespace LekAanDek.Puzzles.WaterCannon
             if (_emmiting == true)
             {
                 _system.Play(true);
-                _system2.Play(true);
             }
             else if (_emmiting == false)
             {
                 _system.Stop(false, ParticleSystemStopBehavior.StopEmitting);
-                _system2.Stop(false, ParticleSystemStopBehavior.StopEmitting);
             }
         }
     }
