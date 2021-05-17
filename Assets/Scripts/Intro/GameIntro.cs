@@ -27,6 +27,7 @@ namespace LekAanDek.Intro
 
         public void StartIntro() => StartCoroutine(IntroParts());
 
+        // This is to loop over the parts in the SO and play the right animation + audio clip
         IEnumerator IntroParts()
         {
             foreach (var part in gameIntroSo.introParts)
@@ -38,6 +39,7 @@ namespace LekAanDek.Intro
                 _animator.SetInteger(AnimationState,(int)OfficerAnimation.Idle);
             }
 
+            // Reseting the animation to the Idle state
             _animator.SetInteger(AnimationState,(int)OfficerAnimation.Idle);
             gameHasStarted.Value = true;
         }
