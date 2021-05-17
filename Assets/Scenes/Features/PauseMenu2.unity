@@ -11519,8 +11519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb56e7ecf0c553429e4959ef3dc737e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desiredUIComparison: 8
-  uiElementsToApplyTo:
+  _desiredUIComparison: 8
+  _uiElementsToApplyTo:
   - {fileID: 3254592206384649514}
   - {fileID: 3254592206384649513}
   - {fileID: 3254592206384649515}
