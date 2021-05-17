@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace LekAanDek.Intro
 {
+    /// <summary>
+    /// Handles the intro animation and starting the game.
+    /// </summary>
     public class GameIntro : MonoBehaviour
     {
         public GameIntroSO gameIntroSo;

@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace LekAanDek.Intro
 {
+    /// <summary>
+    /// This holds all of the parts for the intro.
+    /// </summary>
     [CreateAssetMenu(fileName = "IntroParts", menuName = "Custom/IntroParts")]
     public class GameIntroSO : ScriptableObject
     {
