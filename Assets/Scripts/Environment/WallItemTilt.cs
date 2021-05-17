@@ -10,10 +10,11 @@ namespace LekAanDek
         [SerializeField]
         bool _keepDownX, _keepDownZ;
 
-        int _defaultOrientation = 0;
+        int _downOrientation = 0;
         void Update()
         {
-            transform.eulerAngles = new Vector3(_keepDownX ? _defaultOrientation : transform.eulerAngles.x, transform.eulerAngles.y, _keepDownZ ? _defaultOrientation : transform.eulerAngles.z);
+            //This check wether the X or Y rotation must be kept down, if not they'll return to default rotation.
+            transform.eulerAngles = new Vector3(_keepDownX ? _downOrientation : transform.eulerAngles.x, transform.eulerAngles.y, _keepDownZ ? _downOrientation : transform.eulerAngles.z);
         }
     }
 }
