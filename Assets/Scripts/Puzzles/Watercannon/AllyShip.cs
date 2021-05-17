@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using LekAanDek.Variables;
+using LekAanDek.Events;
 
 namespace LekAanDek.Puzzles.WaterCannon
 {
@@ -14,6 +12,9 @@ namespace LekAanDek.Puzzles.WaterCannon
         private int _targetsCounter;
 
         private int _targetsActive;
+
+        [SerializeField]
+        private VoidEvent _endGame;
 
         // Start is called before the first frame update
         void Start()
@@ -37,7 +38,7 @@ namespace LekAanDek.Puzzles.WaterCannon
 
             if (_targetsActive == 0)
             {
-                //Game end
+                _endGame.Raise();
             }
         }
     }
