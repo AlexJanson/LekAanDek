@@ -36,7 +36,7 @@ namespace LekAanDek.KeyCode
             "\n────┼──────────┼───────" +
             "\n9338  | 164288833862 | DISABLED" +
             "\n0860  | 493752648792 | ENABLED")]
-        bool _lessDoubles;
+        private bool _lessDoubles;
         [SerializeField]
         [Tooltip("Max index the generation will pick from." +
             "\n\n-Example-" +
@@ -44,7 +44,8 @@ namespace LekAanDek.KeyCode
             "\nLessDoubleEnd: 5" +
             "\n\n-Result-\nUsed numbers on 5>>[20193]4{5678}<<Code shifted back after shuffle.")]
         [Range(0, 9)]
-        int _lessDoublesEnd = 5;
+        private int _lessDoublesEnd = 5;
+
         [Header("- EXPERIMENTAL -")]
         [SerializeField]
         [Tooltip("[!] THIS IS AN EXPERIMENTAL FEATUE AND MAY CAUSE ISSUES, PLEASE ONLY USE THIS WHEN YOU KNOW WHAT YOU'RE DOING." +
@@ -52,12 +53,12 @@ namespace LekAanDek.KeyCode
             "\nIt should work fine as long as you have enough values and colors. (Just don't exeed more than 10 paintings ;) )" +
             "\n\nNote: Keep in mind that if the code itself has a double, that it still will have a double in the scene." +
             "\nSo if you consider using this, be sure to toggle the 'No Duplicates' on the generator!")]
-        bool _noDoubles = false;
+        private bool _noDoubles = false;
         [SerializeField]
         [Tooltip("[!] THIS IS AN EXPERIMENTAL FEATUE AND MAY CAUSE ISSUES, PLEASE ONLY USE THIS WHEN YOU KNOW WHAT YOU'RE DOING." +
             "\n\nThis uses the point as the prefab, this may be handy when building the scene and see them visually." +
             "\nAfter looking at the results, it should work fine as long as the point has a proper structure that equals to the prefab.")]
-        bool _pointIsPrefab = false;
+        private bool _pointIsPrefab = false;
         private List<int> _numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
         void Start()
