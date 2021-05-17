@@ -10673,12 +10673,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 169416101371441351, guid: 5a47174836178b5439e7d1e0fd1f2b59, type: 3}
       propertyPath: locked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 169416101371441368, guid: 5a47174836178b5439e7d1e0fd1f2b59, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 0fe9e4228ebb3bc469ead815cd305d91, type: 2}
+      objectReference: {fileID: 2100000, guid: d2bbbd01c5b7a6b4bb5a1316f21fc1ff, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a47174836178b5439e7d1e0fd1f2b59, type: 3}
 --- !u!4 &2112978344 stripped
@@ -10992,6 +10992,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 259828296514641439, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 259828296514641439, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 259828296514641439, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 259828296514641439, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 259828296514641439, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 259828296514641439, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 549410300127340682, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: _rotationTarget
       value: 
@@ -11007,6 +11031,10 @@ PrefabInstance:
     - target: {fileID: 819246183960018746, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: m_Name
       value: Waterkanon
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201632390222096318, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
+      propertyPath: _trigger.actionPath
+      value: /actions/default/in/InteractUI
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
