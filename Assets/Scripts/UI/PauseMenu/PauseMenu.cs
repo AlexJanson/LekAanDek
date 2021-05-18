@@ -111,7 +111,7 @@ namespace LekAanDek.UI
         {
             _laserPointer.SetActive(true);
 
-            _audio.volume = _minVolume;
+            //_audio.volume = _minVolume;
 
             _pausedGame.Raise(true);
 
