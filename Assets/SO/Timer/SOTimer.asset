@@ -15,6 +15,6 @@ MonoBehaviour:
   startTime: 10
   currentTime: {fileID: 11400000, guid: b9a3df2f545d4854dae70f2d0c1c9f58, type: 2}
   alarmTime: 2
-  countingDown: {fileID: 11400000, guid: f946ca6ab56f2414da1187b0c1ba1143, type: 2}
+  countingDown: {fileID: 11400000, guid: 7cbd3a6f072399943902ce6442d7baf6, type: 2}
   alarmStarted: {fileID: 11400000, guid: 9225560b1dc67294ab3ea84285c14cce, type: 2}
   timerEnd: {fileID: 11400000, guid: 4617fe4cce4bf8e40ab398a0651ba02d, type: 2}
