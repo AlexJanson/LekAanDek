@@ -14,20 +14,20 @@ namespace LekAanDek.UI
         private const string _shaderTestMode = "unity_GUIZTestMode"; //The magic property we need to set
 
         [SerializeField]
-        public UnityEngine.Rendering.CompareFunction desiredUIComparison = UnityEngine.Rendering.CompareFunction.Always; //If you want to try out other effects
+        private UnityEngine.Rendering.CompareFunction _desiredUIComparison = UnityEngine.Rendering.CompareFunction.Always; //If you want to try out other effects
 
         [Tooltip("Set to blank to automatically populate from the child UI elements")]
         [SerializeField]
-        public Graphic[] uiElementsToApplyTo;
+        private Graphic[] _uiElementsToApplyTo;
         //Allows us to reuse materials
         private Dictionary<Material, Material> materialMappings = new Dictionary<Material, Material>();
         protected virtual void Start()
         {
-            if (uiElementsToApplyTo.Length == 0)
+            if (_uiElementsToApplyTo.Length == 0)
             {
-                uiElementsToApplyTo = gameObject.GetComponentsInChildren<Graphic>();
+                _uiElementsToApplyTo = gameObject.GetComponentsInChildren<Graphic>();
             }
-            foreach (var graphic in uiElementsToApplyTo)
+            foreach (var graphic in _uiElementsToApplyTo)
             {
                 Material material = graphic.materialForRendering;
                 if (material == null)
@@ -40,7 +40,7 @@ namespace LekAanDek.UI
                     materialCopy = new Material(material);
                     materialMappings.Add(material, materialCopy);
                 }
-                materialCopy.SetInt(_shaderTestMode, (int)desiredUIComparison);
+                materialCopy.SetInt(_shaderTestMode, (int)_desiredUIComparison);
                 graphic.material = materialCopy;
             }
         }
