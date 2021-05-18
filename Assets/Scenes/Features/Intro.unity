@@ -5687,6 +5687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameIntroSo: {fileID: 11400000, guid: 97f112bceaf1e9944a3446c0979fd9f7, type: 2}
+  gameHasStarted: {fileID: 0}
   _audioSource: {fileID: 61207492}
 --- !u!114 &887261647
 MonoBehaviour:
