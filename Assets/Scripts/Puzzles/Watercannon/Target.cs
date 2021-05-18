@@ -5,6 +5,9 @@ using LekAanDek.Variables;
 
 namespace LekAanDek.Watercannon
 {
+    /// <summary>
+    /// This script calculates the distance between particles and object and changes the size of the object if the particle is too close
+    /// </summary>
     public class Target : MonoBehaviour
     {
         [SerializeField]
