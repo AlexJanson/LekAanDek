@@ -1,3 +1,4 @@
+using LekAanDek.Variables;
 using UnityEngine;
 
 namespace LekAanDek.Environment
@@ -7,23 +8,24 @@ namespace LekAanDek.Environment
     /// </summary>
     public sealed class Door : MonoBehaviour
     {
-        private bool _isOpen;
+        public BoolVariable isOpen;
         private Animator _animator;
         // Cache the property for faster results.
         private static readonly int IsOpen = Animator.StringToHash("isOpen");
 
-        private void Start() => _animator = GetComponent<Animator>();
+        private void Start()
+        {
+            _animator = GetComponent<Animator>();
+            isOpen.OnChange += HandleDoorStateChange;
+        }
 
-        // API functions.
-        public void OpenDoor()
+        private void HandleDoorStateChange(bool state)
         {
-            _isOpen = true;
-            _animator.SetBool(IsOpen, _isOpen);
+            if (state) OpenDoor();
+            else CloseDoor();
         }
-        public void CloseDoor()
-        {
-            _isOpen = false;
-            _animator.SetBool(IsOpen, _isOpen);
-        }
+
+        private void OpenDoor() => _animator.SetBool(IsOpen, isOpen.Value);
+        private void CloseDoor() => _animator.SetBool(IsOpen, isOpen.Value);
     }
 }
