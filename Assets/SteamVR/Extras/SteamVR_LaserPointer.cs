@@ -1,5 +1,6 @@
 ﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
 using UnityEngine;
+using System.Collections;
 
 namespace Valve.VR.Extras
 {
@@ -10,7 +11,7 @@ namespace Valve.VR.Extras
         //public SteamVR_Action_Boolean interactWithUI = SteamVR_Input.__actions_default_in_InteractUI;
         public SteamVR_Action_Boolean interactWithUI = SteamVR_Input.GetBooleanAction("InteractUI");
 
-        public bool state = true;
+        public bool active = true;
         public Color color;
         public float thickness = 0.002f;
         public Color clickColor = Color.green;
@@ -90,9 +91,9 @@ namespace Valve.VR.Extras
 
         private void Update()
         {
-            if (state != isActive)
+            if (active != isActive)
             {
-                isActive = state;
+                isActive = active;
                 pointer?.SetActive(isActive);
             }
             if (!isActive)

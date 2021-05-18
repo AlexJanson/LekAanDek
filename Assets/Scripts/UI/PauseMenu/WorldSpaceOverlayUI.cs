@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,32 +14,33 @@ namespace LekAanDek.UI
         private const string _shaderTestMode = "unity_GUIZTestMode"; //The magic property we need to set
 
         [SerializeField]
-        private UnityEngine.Rendering.CompareFunction _desiredUIComparison = UnityEngine.Rendering.CompareFunction.Always; //If you want to try out other effects
+        public UnityEngine.Rendering.CompareFunction desiredUIComparison = UnityEngine.Rendering.CompareFunction.Always; //If you want to try out other effects
 
         [Tooltip("Set to blank to automatically populate from the child UI elements")]
         [SerializeField]
-        private Graphic[] _uiElementsToApplyTo;
+        public Graphic[] uiElementsToApplyTo;
         //Allows us to reuse materials
-        private Dictionary<Material, Material> _materialMappings = new Dictionary<Material, Material>();
+        private Dictionary<Material, Material> materialMappings = new Dictionary<Material, Material>();
         protected virtual void Start()
         {
-            if (_uiElementsToApplyTo.Length == 0)
+            if (uiElementsToApplyTo.Length == 0)
             {
-                _uiElementsToApplyTo = gameObject.GetComponentsInChildren<Graphic>();
+                uiElementsToApplyTo = gameObject.GetComponentsInChildren<Graphic>();
             }
-            foreach (var graphic in _uiElementsToApplyTo)
+            foreach (var graphic in uiElementsToApplyTo)
             {
                 Material material = graphic.materialForRendering;
                 if (material == null)
                 {
+                    Debug.LogError($"{nameof(WorldSpaceOverlayUI)}: skipping target without material {graphic.name}.{graphic.GetType().Name}");
                     continue;
                 }
-                if (!_materialMappings.TryGetValue(material, out Material materialCopy))
+                if (!materialMappings.TryGetValue(material, out Material materialCopy))
                 {
                     materialCopy = new Material(material);
-                    _materialMappings.Add(material, materialCopy);
+                    materialMappings.Add(material, materialCopy);
                 }
-                materialCopy.SetInt(_shaderTestMode, (int)_desiredUIComparison);
+                materialCopy.SetInt(_shaderTestMode, (int)desiredUIComparison);
                 graphic.material = materialCopy;
             }
         }
