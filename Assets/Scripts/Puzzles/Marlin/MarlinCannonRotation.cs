@@ -47,7 +47,17 @@ namespace LekAanDek.Puzzles.Marlin
         public void RotateLeft(float amount) => RotateYaw(-amount);
         public void RotateUp(float amount) => RotatePitch(-amount);
         public void RotateDown(float amount) => RotatePitch(amount);
-        
+
+        // Temp, please remove.
+        private void Update()
+        {
+            const float speed = 0.1f;
+            if (Input.GetKey(UnityEngine.KeyCode.I)) RotateUp(speed);
+            else if (Input.GetKey(UnityEngine.KeyCode.K)) RotateDown(speed);
+            if (Input.GetKey(UnityEngine.KeyCode.J)) RotateLeft(speed);
+            else if (Input.GetKey(UnityEngine.KeyCode.L)) RotateRight(speed);
+        }
+
         void OnDrawGizmosSelected()
         {
             float rayRange = 5.0f;
