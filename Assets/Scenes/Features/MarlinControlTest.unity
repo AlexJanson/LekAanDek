@@ -1833,12 +1833,6 @@ MonoBehaviour:
   disengageAtPercent: 0.9
   onButtonDown:
     m_PersistentCalls:
-      m_Calls: []
-  onButtonUp:
-    m_PersistentCalls:
-      m_Calls: []
-  onButtonIsPressed:
-    m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 213245313}
         m_TargetAssemblyTypeName: LekAanDek.MarlinShootButton, Assembly-CSharp
@@ -1852,6 +1846,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onButtonUp:
+    m_PersistentCalls:
+      m_Calls: []
+  onButtonIsPressed:
+    m_PersistentCalls:
+      m_Calls: []
   engaged: 0
   buttonDown: 0
   buttonUp: 0
