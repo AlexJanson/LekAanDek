@@ -10,6 +10,9 @@ namespace LekAanDek.Watercannon
         [SerializeField]
         private ParticleSystem _system;
 
+        [SerializeField]
+        private GameObject _fire;
+
         private ParticleSystem.Particle[] _particles;
 
         [SerializeField]
@@ -17,10 +20,20 @@ namespace LekAanDek.Watercannon
         [SerializeField]
         private FloatVariable _damage;
 
+        private float _defaultHealth;
+
         // Update is called once per frame
+        private void Start()
+        {
+            _defaultHealth = _healthFire;
+        }
+
         void Update()
         {
             ExtinguishFire();
+
+            float tmp =_healthFire / _defaultHealth;
+            _fire.transform.localScale = new Vector3(tmp, tmp, tmp);
         }
 
         private void ExtinguishFire()
