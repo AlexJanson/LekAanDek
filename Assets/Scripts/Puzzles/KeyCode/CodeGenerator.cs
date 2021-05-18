@@ -30,7 +30,8 @@ namespace LekAanDek.KeyCode
         private void Awake()
         {
             _colors = shuffle(_colors);
-            _code.Value = generateCode(_noDoubles ? _generationRange.y.ToString().Length : _generationRange.x, _generationRange.y);
+            //For whatever reason I couldn't do the inline statement inside of the generatecode function
+            _code.Value = _noDoubles ? generateCode(_generationRange.y.ToString().Length) : generateCode(_generationRange.x, _generationRange.y);
         }
 
         //Generates random code by picking options that are available

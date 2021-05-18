@@ -42,7 +42,6 @@ namespace LekAanDek.Timer
         private void CountDown()
         {
             _currentTime.Value -= Time.deltaTime;
-            print(_currentTime.Value);
             if (_soundAlarm == false && _currentTime.Value <= _alarmTime)
                 Alarm();
 
