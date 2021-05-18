@@ -1,6 +1,6 @@
 using UnityEngine;
-using UnityEngine.UI;
-using LekAanDek.Variables;
+using System.Collections;
+using Valve.VR;
 
 namespace LekAanDek.UI
 {
@@ -11,39 +11,29 @@ namespace LekAanDek.UI
     public class Fade : MonoBehaviour
     {
         [SerializeField]
-        private Image _fadeImage;
+        private float _fadeDuration = 2f;
 
         [SerializeField]
-        private float _fadeTime;
+        private float _buffer = 1f;
 
-        [SerializeField]
-        private BoolVariable _fading;
+        private void Start() => StartCoroutine(FadeOutCoroutine());
 
-        // Start is called before the first frame update
-        void Start()
+  
+        private void FadeTo()
         {
-            _fading.Value = false;
-            _fadeImage.canvasRenderer.SetAlpha(1.0f);
-            FadeImageOut();
+            //set start color
+            SteamVR_Fade.View(Color.clear, 0);
+            //set and start fade to
+            SteamVR_Fade.View(Color.black, _fadeDuration);
         }
 
-        private void Update()
+        IEnumerator FadeOutCoroutine()
         {
-            if (_fading.Value == true)
-            {
-                FadeImageIn();
-                _fading.Value = false;
-            }
-        }
+            SteamVR_Fade.View(Color.black, 0);
 
-        private void FadeImageOut()
-        {
-            _fadeImage.CrossFadeAlpha(0, _fadeTime, false);
-        }
+            yield return new WaitForSeconds(_buffer);
 
-        public void FadeImageIn()
-        {
-            _fadeImage.CrossFadeAlpha(1, _fadeTime, false);
+            SteamVR_Fade.View(Color.clear, _fadeDuration);
         }
     }
 }
