@@ -15,6 +15,8 @@ namespace LekAanDek.Timer
         private FloatVariable _currentTime;
         private float _alarmTime;
 
+        [SerializeField]
+        private BoolVariable _gameHasStarted;
         private BoolVariable _countingDown;
         private bool _soundAlarm = false;
         private bool _endTime = false;
@@ -23,7 +25,7 @@ namespace LekAanDek.Timer
         void Start()
         {
             _countingDown = _timer.countingDown;
-            _countingDown.Value = false;
+            _countingDown.Value = true;
             _startTime = _timer.startTime * 60;
             _alarmTime = _timer.alarmTime * 60;
             _timer.currentTime.Value = _startTime;
@@ -33,14 +35,14 @@ namespace LekAanDek.Timer
         // Update is called once per frame
         void Update()
         {
-            if (_countingDown.Value == true)
+            if (_countingDown.Value && _gameHasStarted.Value)
                 CountDown();
         }
 
         private void CountDown()
         {
             _currentTime.Value -= Time.deltaTime;
-
+            print(_currentTime.Value);
             if (_soundAlarm == false && _currentTime.Value <= _alarmTime)
                 Alarm();
 
