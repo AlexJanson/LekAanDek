@@ -2346,6 +2346,7 @@ MonoBehaviour:
   - {fileID: 103567238}
   _marlinCannon: {fileID: 683594928063021710}
   _speed: 0.5
+  _joystickRange: 0.125
 --- !u!4 &301442400 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -10058,13 +10059,13 @@ ConfigurableJoint:
   m_RotationDriveMode: 0
   m_AngularXDrive:
     serializedVersion: 3
-    positionSpring: 10
-    positionDamper: 1
+    positionSpring: 20
+    positionDamper: 4
     maximumForce: 3.4028233e+38
   m_AngularYZDrive:
     serializedVersion: 3
-    positionSpring: 10
-    positionDamper: 1
+    positionSpring: 20
+    positionDamper: 4
     maximumForce: 3.4028233e+38
   m_SlerpDrive:
     serializedVersion: 3

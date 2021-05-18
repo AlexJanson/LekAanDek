@@ -17,6 +17,9 @@ namespace LekAanDek.Puzzles.Marlin
         private GameObject _marlinCannon;
         [SerializeField]
         private float _speed = 1f;
+        [SerializeField]
+        [Range(0f, 0.2f)]
+        private float _joystickRange = 0.2f;
 
         private MarlinCannonRotation _marlinMotor;
 
@@ -38,7 +41,7 @@ namespace LekAanDek.Puzzles.Marlin
                     shortestDistance = Vector3.Distance(transform.position, t.transform.position);
                 }
             }
-            if(shortestDistance <= 0.1)
+            if(shortestDistance <= _joystickRange)
             {
                 switch (shortest.gameObject.name)
                 {
