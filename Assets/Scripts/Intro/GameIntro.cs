@@ -1,5 +1,6 @@
 using System.Collections;
 using LekAanDek.Variables;
+using LekAanDek.Events;
 using UnityEngine;
 
 namespace LekAanDek.Intro
@@ -11,6 +12,7 @@ namespace LekAanDek.Intro
     {
         public GameIntroSO gameIntroSo;
         public BoolVariable gameHasStarted;
+        public VoidEvent gameStart;
         
         [Tooltip("Source where the audio clips will be played")]
         [SerializeField]
@@ -42,6 +44,7 @@ namespace LekAanDek.Intro
             // Reseting the animation to the Idle state
             _animator.SetInteger(AnimationState,(int)OfficerAnimation.Idle);
             gameHasStarted.Value = true;
+            gameStart.Raise();
         }
 
         void PlayAudioClip(AudioClip clip)
