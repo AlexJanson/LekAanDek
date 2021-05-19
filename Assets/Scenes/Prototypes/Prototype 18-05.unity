@@ -7021,6 +7021,7 @@ Transform:
   - {fileID: 7387543044167641196}
   - {fileID: 1732194978}
   - {fileID: 664201768}
+  - {fileID: 2116213968}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7095,40 +7096,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
   m_PrefabInstance: {fileID: 551871613}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &919392610
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default UI Material
-  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!4 &922267930 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -9719,6 +9686,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 30.181362, y: 0.22150898, z: 9.849338}
   m_Center: {x: 0, y: -7.402888, z: 0}
+--- !u!114 &1300684450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300684447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b86a1e2a723fa0448034a4825e53199, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targets:
+  - {fileID: 5154339194529412121}
+  - {fileID: 5154339195284151987}
+  - {fileID: 5154339195468176149}
+  - {fileID: 5154339193553339240}
+  _endGame: {fileID: 11400000, guid: deaf1afba9a36ed4ab6d5547b4dcb087, type: 2}
 --- !u!4 &1302456011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -12716,6 +12701,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8574095559703252947, guid: cd1048b6e2b532748880560884a75e0d, type: 3}
   m_PrefabInstance: {fileID: 1732194977}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1735331906
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default UI Material
+  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &1735385705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15284,6 +15303,76 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1001 &2116213967
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 893034319}
+    m_Modifications:
+    - target: {fileID: 183940615938316792, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: a80c0b290ac756a4bbe187027d211034, type: 3}
+    - target: {fileID: 183940615938316793, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_Name
+      value: EndGameManager 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 84.19303
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -9.928665
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 51.639187
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 183940617296374516, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+      propertyPath: m_Text
+      value: Het is je gelukt!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+--- !u!4 &2116213968 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 183940615938316797, guid: 36802de50e05fdf4fb85bb88711f5956, type: 3}
+  m_PrefabInstance: {fileID: 2116213967}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2124267315 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
