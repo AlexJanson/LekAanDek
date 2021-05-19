@@ -47,7 +47,7 @@ namespace LekAanDek.Puzzles.Marlin
         public void RotateLeft(float amount) => RotateYaw(-amount);
         public void RotateUp(float amount) => RotatePitch(-amount);
         public void RotateDown(float amount) => RotatePitch(amount);
-        
+
         void OnDrawGizmosSelected()
         {
             float rayRange = 5.0f;

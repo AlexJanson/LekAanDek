@@ -7,6 +7,7 @@ namespace LekAanDek.Puzzles.Marlin
     /// <summary>
     /// Script that's on the projectiles that the Marlin cannon shoots.
     /// </summary>
+    [RequireComponent(typeof(Rigidbody))]
     public class Projectile : MonoBehaviour
     {
         public FloatReference speed;
