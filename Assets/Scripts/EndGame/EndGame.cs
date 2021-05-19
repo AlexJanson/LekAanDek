@@ -1,6 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR;
+using Valve.VR.InteractionSystem;
+using UnityEngine.SceneManagement;
 
 namespace LekAanDek.EndGame
 {
@@ -12,29 +14,58 @@ namespace LekAanDek.EndGame
         [SerializeField]
         private Animator _animator;
 
-        private bool _hasWon;
+        private bool _won;
 
-        private static readonly int HasWon = Animator.StringToHash("hasWon");
+        private float _durationAudio;
+
+        private static readonly int _hasWon = Animator.StringToHash("hasWon");
+
+        [SerializeField]
+        private Teleport[] _teleport;
+
+        [SerializeField]
+        private Interactable[] _interactable;
 
         [SerializeField]
         private AudioSource _loseAudio;
 
-        // Update is called once per frame
-        void Update()
+        private string _sceneName;
+
+        private void Start()
         {
-        
+            _interactable = FindObjectsOfType<Interactable>();
+            _teleport = FindObjectsOfType<Teleport>();
+            _sceneName = SceneManager.GetActiveScene().name;
         }
 
         public void WonGame()
         {
-            _hasWon = true;
-            _animator.SetBool(HasWon, _hasWon);
+            _won = true;
+            _animator.SetBool(_hasWon, _won);
         }
 
         public void LostGame(AudioClip clip)
         {
+            foreach(Teleport teleport in _teleport)
+            {
+                teleport.enabled = false;
+            }
+            foreach (Interactable interactable in _interactable)
+            {
+                interactable.enabled = false;
+            }
             _loseAudio.clip = clip;
+            _durationAudio = _loseAudio.clip.length;
+            StartCoroutine(GameLost());
+        }
+
+        IEnumerator GameLost()
+        {
             _loseAudio.Play();
+
+            yield return new WaitForSeconds(_durationAudio);
+
+            SteamVR_LoadLevel.Begin(_sceneName);
         }
     }
 }
