@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using LekAanDek.Variables;
+using LekAanDek.Events;
 using UnityEngine;
 
 namespace LekAanDek.Puzzles.Marlin
@@ -10,7 +10,8 @@ namespace LekAanDek.Puzzles.Marlin
     {
         public List<BoolVariable> targets = new List<BoolVariable>();
         public BoolVariable allTargetsHit;
-        
+        public BoolEvent finishedPuzzle;
+        bool _unlocked = false;
         private void Start()
         {
             allTargetsHit.Value = false;
@@ -22,10 +23,14 @@ namespace LekAanDek.Puzzles.Marlin
 
         private void Update()
         {
-            if (AllTargetsHit()) allTargetsHit.Value = true;
+            if (AllTargetsHit) allTargetsHit.Value = true;
+            if (!_unlocked && allTargetsHit.Value) { 
+                finishedPuzzle.Raise(true);
+                _unlocked = true;
+            }
         }
-        
-        private bool AllTargetsHit() => targets.All(target => target.Value);
+
+        private bool AllTargetsHit => targets.All(target => target.Value);
 
     }
 }
