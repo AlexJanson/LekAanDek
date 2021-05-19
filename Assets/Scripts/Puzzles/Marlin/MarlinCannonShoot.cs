@@ -19,10 +19,5 @@ namespace LekAanDek.Puzzles.Marlin
             var projectile = Instantiate(projectilePrefab, spawnPosition.position, marlinGun.transform.rotation);
             Destroy(projectile, lifeTime);
         }
-
-        private void Update()
-        {
-            if (Input.GetKeyDown(UnityEngine.KeyCode.Space)) Shoot();
-        }
     }
 }
