@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FireDamage
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  _value: 10
+  _value: 0.1

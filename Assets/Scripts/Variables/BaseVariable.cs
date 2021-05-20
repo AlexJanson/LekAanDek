@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Type = System.Type;
 
@@ -10,6 +11,8 @@ namespace LekAanDek.Variables
         public string DeveloperDescription = "";
 #endif
 
+        public event Action<T> OnChange;
+
         public virtual T Value
         {
             get
@@ -19,6 +22,7 @@ namespace LekAanDek.Variables
             set
             {
                 _value = SetValue(value);
+                OnChange?.Invoke(value);
             }
         }
 
@@ -45,13 +49,14 @@ namespace LekAanDek.Variables
         [SerializeField]
         protected T _value = default(T);
 
-        public virtual T SetValue(BaseVariable<T> value)
+        public T SetValue(BaseVariable<T> value)
         {
             return SetValue(value.Value);
         }
 
-        public virtual T SetValue(T value)
+        public T SetValue(T value)
         {
+            _value = value;
             return value;
         }
 

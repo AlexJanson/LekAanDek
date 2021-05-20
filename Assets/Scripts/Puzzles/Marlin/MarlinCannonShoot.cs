@@ -10,12 +10,14 @@ namespace LekAanDek.Puzzles.Marlin
     {
         public Transform spawnPosition;
         public GameObject projectilePrefab;
-        
-        public void Shoot() => Instantiate(projectilePrefab, spawnPosition.position, transform.rotation);
+        public GameObject marlinGun;
 
-        private void Update()
+        public float lifeTime = 3.0f;
+        
+        public void Shoot()
         {
-            if (Input.GetKeyDown(UnityEngine.KeyCode.Space)) Shoot();
+            var projectile = Instantiate(projectilePrefab, spawnPosition.position, marlinGun.transform.rotation);
+            Destroy(projectile, lifeTime);
         }
     }
 }

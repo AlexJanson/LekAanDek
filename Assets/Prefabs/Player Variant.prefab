@@ -16,6 +16,7 @@ MonoBehaviour:
   _floorLayer:
     serializedVersion: 2
     m_Bits: 1024
+  _rayLength: 3
 --- !u!114 &1067825022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,10 +30,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _VRHead: {fileID: 3318770412978997907}
+  _saveDistance: 0.18
+  _teleportDistance: 0.12
   _pushBackDistance: 0.06
   _wallLayer:
     serializedVersion: 2
     m_Bits: 4096
+--- !u!114 &4835994479948527043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318770412979462907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef893e8dd65e7e4a8a2e46ec6ad05cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeDuration: 2
+  _buffer: 1
 --- !u!1001 &8399083603761239507
 PrefabInstance:
   m_ObjectHideFlags: 0

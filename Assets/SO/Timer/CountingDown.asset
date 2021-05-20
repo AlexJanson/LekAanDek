@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CountingDown
   m_EditorClassIdentifier: 
   DeveloperDescription: 
-  _value: 0
+  _value: 1

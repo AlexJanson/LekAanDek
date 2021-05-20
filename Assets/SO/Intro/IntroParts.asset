@@ -14,20 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   introParts:
   - clip: {fileID: 8300000, guid: a63fd83702095184eb202dd4fcbb3057, type: 3}
-    waitDuration: 2
+    waitDuration: 0
     animation: 1
   - clip: {fileID: 8300000, guid: 015cbc039f68bff46824bd3362f07047, type: 3}
-    waitDuration: 2
+    waitDuration: 0
     animation: 1
   - clip: {fileID: 8300000, guid: ffae396bc91f5b94584b0a30052dfbba, type: 3}
-    waitDuration: 2
+    waitDuration: 0.3
     animation: 2
   - clip: {fileID: 8300000, guid: 43ffdaf10f2a0754dbe0a190f0d7e0ee, type: 3}
-    waitDuration: 2
+    waitDuration: 0
     animation: 1
   - clip: {fileID: 8300000, guid: 829c7fa9c9635234d914df348ef778ab, type: 3}
-    waitDuration: 2
+    waitDuration: 0
     animation: 1
   - clip: {fileID: 8300000, guid: 6e191fe9060ba014a85c5a84d04f1556, type: 3}
-    waitDuration: 2
-    animation: 1
+    waitDuration: 0
+    animation: 2

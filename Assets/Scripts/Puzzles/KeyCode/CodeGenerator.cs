@@ -30,7 +30,8 @@ namespace LekAanDek.KeyCode
         private void Awake()
         {
             _colors = shuffle(_colors);
-            _code.Value = generateCode(_noDoubles ? _generationRange.y.ToString().Length : _generationRange.x, _generationRange.y);
+            //For whatever reason I couldn't do the inline statement inside of the generatecode function
+            _code.Value = _noDoubles ? generateCode(_generationRange.y.ToString().Length) : generateCode(_generationRange.x, _generationRange.y);
         }
 
         //Generates random code by picking options that are available
@@ -38,11 +39,11 @@ namespace LekAanDek.KeyCode
         {
             string result = "";
             List<int> numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-            for(int i = 0; i < digits; i++)
+            for (int i = 0; i < digits; i++)
             {
                 int selectedNum = Random.Range(0, numbers.Count);
                 result += numbers[selectedNum];
-                numbers.Remove(selectedNum);
+                numbers.RemoveAt(selectedNum);
             }
             return result;
         }
