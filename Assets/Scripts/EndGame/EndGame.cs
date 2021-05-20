@@ -3,6 +3,7 @@ using UnityEngine;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
 using UnityEngine.SceneManagement;
+using LekAanDek.Variables;
 
 namespace LekAanDek.EndGame
 {
@@ -31,6 +32,9 @@ namespace LekAanDek.EndGame
 
         private string _sceneName;
 
+        [SerializeField]
+        private BoolVariable _countingDown;
+
         private void Start()
         {
             _interactable = FindObjectsOfType<Interactable>();
@@ -40,6 +44,7 @@ namespace LekAanDek.EndGame
 
         public void WonGame()
         {
+            _countingDown.Value = false;
             _won = true;
             _animator.SetBool(_hasWon, _won);
         }
