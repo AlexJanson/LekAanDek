@@ -1760,6 +1760,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0311bca521f2218478fd2226e9e1055c, type: 3}
   m_PrefabInstance: {fileID: 177357382}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &199720850
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default UI Material
+  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &200798525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1906,31 +1940,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4773367813300199196, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8536027
+      value: 0.9542494
       objectReference: {fileID: 0}
     - target: {fileID: 4773367813300199196, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.072266564
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4773367813300199196, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.50097734
+      value: 0.29901198
       objectReference: {fileID: 0}
     - target: {fileID: 4773367813300199196, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.12313324
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4773367813300199196, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -14.285
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4773367813300199196, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 59.791
+      value: 34.797
       objectReference: {fileID: 0}
     - target: {fileID: 4773367813300199196, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 8.175
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5022870112780866070, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
       propertyPath: _hands.Array.data[0]
@@ -10629,40 +10663,6 @@ MonoBehaviour:
   - {fileID: 5154339195468176149}
   - {fileID: 5154339193553339240}
   _endGame: {fileID: 11400000, guid: deaf1afba9a36ed4ab6d5547b4dcb087, type: 2}
---- !u!21 &1301578178
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default UI Material
-  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!4 &1302456011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -27433,7 +27433,6 @@ MonoBehaviour:
   _system: {fileID: 217455358}
   _fire: {fileID: 6812854197217405528}
   _healthFire: 100
-  _damage: {fileID: 11400000, guid: 065af3042edebb7459efd57e034f5967, type: 2}
   _damageToFire: 10
 --- !u!1 &5154339194529412121
 GameObject:
@@ -27482,7 +27481,6 @@ MonoBehaviour:
   _system: {fileID: 217455358}
   _fire: {fileID: 7853370039374809696}
   _healthFire: 100
-  _damage: {fileID: 11400000, guid: 065af3042edebb7459efd57e034f5967, type: 2}
   _damageToFire: 10
 --- !u!114 &5154339195284151944
 MonoBehaviour:
@@ -27499,7 +27497,6 @@ MonoBehaviour:
   _system: {fileID: 217455358}
   _fire: {fileID: 4994229319165614542}
   _healthFire: 100
-  _damage: {fileID: 11400000, guid: 065af3042edebb7459efd57e034f5967, type: 2}
   _damageToFire: 10
 --- !u!1 &5154339195284151987
 GameObject:
@@ -27563,7 +27560,6 @@ MonoBehaviour:
   _system: {fileID: 217455358}
   _fire: {fileID: 4435248900977103499}
   _healthFire: 100
-  _damage: {fileID: 11400000, guid: 065af3042edebb7459efd57e034f5967, type: 2}
   _damageToFire: 10
 --- !u!1 &5154339195468176149
 GameObject:
