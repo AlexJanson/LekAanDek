@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4465543814638578478, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 0.80060446
+      objectReference: {fileID: 0}
+    - target: {fileID: 4465543814638578478, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: -0.27167004
+      objectReference: {fileID: 0}
     - target: {fileID: 4465543815134283335, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
       propertyPath: m_Name
       value: CranePuzzle
