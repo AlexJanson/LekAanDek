@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using LekAanDek.Variables;
+
 
 namespace LekAanDek.Watercannon
 {
@@ -20,8 +18,9 @@ namespace LekAanDek.Watercannon
 
         [SerializeField]
         private float _healthFire;
+
         [SerializeField]
-        private FloatVariable _damage;
+        private float _damageToFire = 0.1f;
 
         private float _defaultHealth;
 
@@ -50,7 +49,7 @@ namespace LekAanDek.Watercannon
                 float distance = Vector3.Distance(_particles[i].position, transform.position);
                 if (distance < 1 && distance > -1)
                 {
-                    _healthFire -= _damage;
+                    _healthFire -= _damageToFire;
                 }
             }
 
@@ -60,7 +59,7 @@ namespace LekAanDek.Watercannon
             }
         }
 
-        void InitializeIfNeeded()
+        private void InitializeIfNeeded()
         {
             if (_system == null)
                 _system = GetComponent<ParticleSystem>();
