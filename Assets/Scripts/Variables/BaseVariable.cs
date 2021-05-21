@@ -6,11 +6,6 @@ namespace LekAanDek.Variables
 {
     public class BaseVariable<T> : ScriptableObject
     {
-#if UNITY_EDITOR
-        [Multiline]
-        public string DeveloperDescription = "";
-#endif
-
         public event Action<T> OnChange;
 
         public virtual T Value
