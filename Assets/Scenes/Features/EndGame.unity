@@ -2904,6 +2904,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
+--- !u!114 &465459665 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4835994479948527043, guid: ca88d41a725ecb84b8383acdce20b4e6, type: 3}
+  m_PrefabInstance: {fileID: 465459664}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cef893e8dd65e7e4a8a2e46ec6ad05cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &475571137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11134,6 +11145,34 @@ PrefabInstance:
     - target: {fileID: 6301410879771306372, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
       propertyPath: m_Name
       value: EndGameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301410879771306373, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301410879771306373, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301410879771306373, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 465459665}
+    - target: {fileID: 6301410879771306373, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301410879771306373, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: FadeTo
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301410879771306373, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LekAanDek.UI.Fade, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301410879771306373, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
+      propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
