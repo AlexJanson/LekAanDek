@@ -9,20 +9,20 @@ namespace LekAanDek.Puzzles.Marlin
     {
 
         [SerializeField]
-        private BoolVariable _targetHit;
+        private BoolVariable[] _targetsHit;
         [SerializeField]
         private BoolVariable _allTargetsHit;
 
         [SerializeField]
-        private Light _fireLight;
+        private Light[] _fireLight;
 
         [SerializeField]
         private Light _bigFireLight;
 
         [SerializeField]
-        private ParticleSystem _fireSystem;
+        private ParticleSystem[] _fireSystem;
         [SerializeField]
-        private ParticleSystem _explosionSystem;
+        private ParticleSystem[] _explosionSystem;
         [SerializeField]
         private ParticleSystem _bigFireSystem;
         [SerializeField]
@@ -33,16 +33,27 @@ namespace LekAanDek.Puzzles.Marlin
         [SerializeField]
         private AudioSource _fireAudio;
 
-        private bool smallDamage = false;
+        private bool[] _hitTarget = new bool[4];
+        private bool _shipDestroyed = false;
+
+        private int _targetNumber;
+
+        [SerializeField]
+        private float _waitForSinking;
         // Start is called before the first frame update
         void Start()
         {
-            _fireLight.enabled = false;
+            for (int i = 0; i < _targetsHit.Length; i++)
+            {
+                _hitTarget[i] = false;
+                _fireLight[i].enabled = false;
+                _fireSystem[i].Stop();
+                _explosionSystem[i].Stop();
+            }
+
             _bigFireLight.enabled = false;
-            _fireSystem.Stop();
             _bigFireSystem.Stop();
             _bigExplosionSystem.Stop();
-            _explosionSystem.Stop();
         }
 
         private void Update()
@@ -52,51 +63,63 @@ namespace LekAanDek.Puzzles.Marlin
 
         private void TargetDestroyed()
         {
-         
-            if (_targetHit.Value)
-            {
-                _explosion.transform.parent = null;
-                _explosionSystem.transform.parent = null;
-                _fireAudio.transform.parent = null;
-                _fireSystem.transform.parent = null;
-                _fireLight.transform.parent = null;
 
+            if (_targetsHit[0].Value && !_hitTarget[0])
+                _targetNumber = 0;
+
+            if (_targetsHit[1].Value && !_hitTarget[1])
+                _targetNumber = 1;
+
+            if (_targetsHit[2].Value && !_hitTarget[2])
+                _targetNumber = 2;
+
+            if (_targetsHit[3].Value && !_hitTarget[3])
+                _targetNumber = 3;
+
+
+            if (_targetsHit[_targetNumber].Value && !_hitTarget[_targetNumber])
+            {
                 _explosion.Play();
-                _explosionSystem.Play();
+                _explosionSystem[_targetNumber].Play();
                 StartCoroutine(DelayFire());
+                _hitTarget[_targetNumber] = true;
             }
 
-            if (Input.GetKeyDown("b"))
-            {
-                _allTargetsHit.Value = true;
-                if (_allTargetsHit)
-                {
-                    _explosion.Play();
-                    _bigExplosionSystem.Play();
-                    StartCoroutine(DelayBigFire());
-                }
-            }
+            if (_allTargetsHit)
+                StartCoroutine(DelaySinkingShip());
         }
 
         private void ShipDestroyed()
         {
-
+            if (_allTargetsHit && !_shipDestroyed)
+            {
+                _explosion.Play();
+                _bigExplosionSystem.Play();
+                StartCoroutine(DelayBigFire());
+                _shipDestroyed = true;
+            }
         }
 
         IEnumerator DelayFire()
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.5f);
             _fireAudio.Play();
-            _fireSystem.Play();
-            _fireLight.enabled = true;
+            _fireSystem[_targetNumber].Play();
+            _fireLight[_targetNumber].enabled = true;
         }
 
         IEnumerator DelayBigFire()
         {
-            yield return new WaitForSeconds(0.2f);
+            yield return new WaitForSeconds(0.5f);
             _fireAudio.Play();
             _bigFireSystem.Play();
             _bigFireLight.enabled = true;
+        }
+
+        IEnumerator DelaySinkingShip()
+        {
+            yield return new WaitForSeconds(_waitForSinking);
+            ShipDestroyed();
         }
     }
 }
