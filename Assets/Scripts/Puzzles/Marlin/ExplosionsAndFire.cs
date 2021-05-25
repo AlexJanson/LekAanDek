@@ -81,7 +81,9 @@ namespace LekAanDek.Puzzles.Marlin
             {
                 _explosion.Play();
                 _explosionSystem[_targetNumber].Play();
-                StartCoroutine(DelayFire());
+                _fireAudio.Play();
+                _fireSystem[_targetNumber].Play();
+                _fireLight[_targetNumber].enabled = true;
                 _hitTarget[_targetNumber] = true;
             }
 
@@ -95,25 +97,11 @@ namespace LekAanDek.Puzzles.Marlin
             {
                 _explosion.Play();
                 _bigExplosionSystem.Play();
-                StartCoroutine(DelayBigFire());
+                _fireAudio.Play();
+                _bigFireSystem.Play();
+                _bigFireLight.enabled = true;
                 _shipDestroyed = true;
             }
-        }
-
-        IEnumerator DelayFire()
-        {
-            yield return new WaitForSeconds(0.5f);
-            _fireAudio.Play();
-            _fireSystem[_targetNumber].Play();
-            _fireLight[_targetNumber].enabled = true;
-        }
-
-        IEnumerator DelayBigFire()
-        {
-            yield return new WaitForSeconds(0.5f);
-            _fireAudio.Play();
-            _bigFireSystem.Play();
-            _bigFireLight.enabled = true;
         }
 
         IEnumerator DelaySinkingShip()
