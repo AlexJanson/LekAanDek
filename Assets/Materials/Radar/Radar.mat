@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MarlinCameraMaterial
+  m_Name: Radar
   m_Shader: {fileID: -6465566751694194690, guid: 4bbaf417e769c934fa6af72d63bfd715, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -65,7 +65,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 8400000, guid: f0b03c74a417a364c981babcfa4a6903, type: 2}
+        m_Texture: {fileID: 2800000, guid: 82aa59685c1874f4b9deaf1c9c8c5122, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -106,7 +106,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_33bd4e32c49940728399f1493716ca9d: 0.1
-    - Vector1_ce663269e3e34b828bf1d4acdc03a217: 2
+    - Vector1_ce663269e3e34b828bf1d4acdc03a217: 0.5
     - Vector1_d07a11422a3c4b9aafa3c82146eef898: 5
     - _AlphaClip: 0
     - _Blend: 0
@@ -135,8 +135,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Vector2_6d6af00da22a4cdc9e2d400cc81016de: {r: 307.2, g: 172.8, b: 0, a: 0}
-    - Vector2_b9848e6b15854a599c9a61558a4f31a2: {r: 307.2, g: 172.8, b: 0, a: 0}
+    - Vector2_6d6af00da22a4cdc9e2d400cc81016de: {r: 1024, g: 512, b: 0, a: 0}
+    - Vector2_b9848e6b15854a599c9a61558a4f31a2: {r: 1024, g: 512, b: 0, a: 0}
     - Vector2_b9848e6b15854a599c9a61558a4f31a2_1: {r: 34, g: 19.2, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

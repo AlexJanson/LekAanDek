@@ -48,7 +48,7 @@ MonoBehaviour:
   interactWithUI:
     actionPath: /actions/default/in/InteractUI
     needsReinit: 0
-  state: 1
+  active: 1
   color: {r: 0.02264148, g: 0.8911247, b: 1, a: 0}
   thickness: 0.002
   clickColor: {r: 0, g: 1, b: 0, a: 1}
@@ -1430,7 +1430,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4160749567
+    m_Bits: 843575
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1696,7 +1696,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 319287
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1920,7 +1920,7 @@ MonoBehaviour:
   _floorLayer:
     serializedVersion: 2
     m_Bits: 1024
-  _rayLength: 3
+  _rayLength: 5
 --- !u!114 &3633522337518383103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2521,6 +2521,7 @@ GameObject:
   - component: {fileID: 2045330547180940870}
   - component: {fileID: 2045330547173463264}
   - component: {fileID: 2045330547172627038}
+  - component: {fileID: 3093965247265428084}
   m_Layer: 11
   m_Name: BodyCollider
   m_TagString: Untagged
@@ -2551,7 +2552,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 2045330547167441452}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.25
   m_Height: 1.5
   m_Direction: 1
@@ -2585,6 +2586,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &3093965247265428084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045330547167441452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3be917a80086a48b97933694257f09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2045330547167445822
 GameObject:
   m_ObjectHideFlags: 0
