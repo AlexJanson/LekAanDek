@@ -5,6 +5,9 @@ using LekAanDek.Variables;
 
 namespace LekAanDek.Puzzles.Marlin
 {
+    /// <summary>
+    /// This script is used to activate the fire and explosion particle when a target is hit
+    /// </summary>
     public class ExplosionsAndFire : MonoBehaviour
     {
 
