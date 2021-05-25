@@ -16,6 +16,9 @@ namespace LekAanDek.Puzzles.WaterCannon
         [SerializeField]
         private VoidEvent _endGame;
 
+        [SerializeField]
+        private AudioSource _fire;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -38,6 +41,7 @@ namespace LekAanDek.Puzzles.WaterCannon
 
             if (_targetsActive == 0)
             {
+                _fire.Stop();
                 _endGame.Raise();
             }
         }
