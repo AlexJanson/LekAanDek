@@ -19,7 +19,7 @@ namespace LekAanDek.UI
         private void Start() => StartCoroutine(FadeOutCoroutine());
 
   
-        private void FadeTo()
+        public void FadeTo()
         {
             //set start color
             SteamVR_Fade.View(Color.clear, 0);

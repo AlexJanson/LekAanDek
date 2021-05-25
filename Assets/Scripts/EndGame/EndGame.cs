@@ -59,15 +59,22 @@ namespace LekAanDek.EndGame
             {
                 interactable.enabled = false;
             }
-            _loseAudio.clip = clip;
-            _durationAudio = _loseAudio.clip.length;
+
+            if(_loseAudio != null)
+            {
+                _loseAudio.clip = clip;
+                _durationAudio = _loseAudio.clip.length;
+            }
+       
             StartCoroutine(GameLost());
         }
 
         IEnumerator GameLost()
         {
-            _loseAudio.Play();
-
+            if (_loseAudio != null)
+            {
+                _loseAudio.Play();
+            }
             yield return new WaitForSeconds(_durationAudio);
 
             SteamVR_LoadLevel.Begin(_sceneName);
