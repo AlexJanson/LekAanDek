@@ -21,8 +21,13 @@ namespace LekAanDek.Watercannon
 
         [SerializeField]
         private float _damageToFire = 0.1f;
+        [SerializeField]
+        private float _hittingRange;
 
         private float _defaultHealth;
+
+        [SerializeField]
+        private int _roundEveryNumberParticle;
 
         // Update is called once per frame
         private void Start()
@@ -44,10 +49,10 @@ namespace LekAanDek.Watercannon
 
             int numParticlesAlive = _system.GetParticles(_particles);
 
-            for (int i = 0; i < numParticlesAlive; i++)
+            for (int i = 0; i < numParticlesAlive; i += 5)
             {
                 float distance = Vector3.Distance(_particles[i].position, transform.position);
-                if (distance < 1 && distance > -1)
+                if (distance < _hittingRange && distance > -_hittingRange)
                 {
                     _healthFire -= _damageToFire;
                 }
