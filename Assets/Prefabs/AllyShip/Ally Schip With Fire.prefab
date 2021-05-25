@@ -10123,7 +10123,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -20238,6 +20238,7 @@ MonoBehaviour:
   - {fileID: 3048112449079524651}
   - {fileID: 3048112447229175126}
   _endGame: {fileID: 11400000, guid: deaf1afba9a36ed4ab6d5547b4dcb087, type: 2}
+  _fire: {fileID: 4936155016779261874}
 --- !u!1 &6992858762559334020
 GameObject:
   m_ObjectHideFlags: 0
