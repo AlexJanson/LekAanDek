@@ -32,18 +32,18 @@ namespace LekAanDek.Puzzles.WaterCannon
         }
 
         private void CountingTargets()
-        {
-            if (_targets[_targetsCounter] == null)
-            {
-                _targetsActive -= 1;
-                _targetsCounter++;
-            }
+        {   
+                if (_targets[_targetsCounter] == null)
+                {
+                    _targetsActive -= 1;
+                    _targetsCounter++;
+                }
 
-            if (_targetsActive == 0)
-            {
-                _fire.Stop();
-                _endGame.Raise();
-            }
+                if (_targetsActive == 0)
+                {
+                    _fire.Stop();
+                    _endGame.Raise();
+                }
         }
     }
 }

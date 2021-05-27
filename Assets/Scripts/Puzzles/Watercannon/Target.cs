@@ -23,7 +23,9 @@ namespace LekAanDek.Watercannon
         private float _damageToFire = 0.1f;
         [SerializeField]
         private float _hittingRange;
-
+        [Range(0.0f, 0.5f)]
+        [SerializeField]
+        private float _minSize;
         private float _defaultHealth;
 
         [SerializeField]
@@ -38,13 +40,17 @@ namespace LekAanDek.Watercannon
         void Update()
         {
             ExtinguishFire();
-
-            float tmp =_healthFire / _defaultHealth;
-            _fire.transform.localScale = new Vector3(tmp, tmp, tmp);
         }
 
         private void ExtinguishFire()
         {
+
+            float tmp = _healthFire / _defaultHealth;
+            _fire.transform.localScale = new Vector3(tmp, tmp, tmp);
+
+            if (_fire.transform.localScale.x <= _minSize && _fire.transform.localScale.y <= _minSize && _fire.transform.localScale.z <= _minSize)
+                _fire.transform.localScale = new Vector3(_minSize, _minSize, _minSize);
+
             InitializeIfNeeded();
 
             int numParticlesAlive = _system.GetParticles(_particles);

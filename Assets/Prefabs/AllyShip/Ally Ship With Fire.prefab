@@ -20115,7 +20115,7 @@ GameObject:
   - component: {fileID: 7911406378270505119}
   - component: {fileID: 7911406378270505116}
   m_Layer: 0
-  m_Name: Ally Schip With Fire
+  m_Name: Ally Ship With Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
