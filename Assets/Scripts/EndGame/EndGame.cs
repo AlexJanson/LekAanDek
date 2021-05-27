@@ -28,6 +28,8 @@ namespace LekAanDek.EndGame
         private Interactable[] _interactable;
 
         [SerializeField]
+        private AudioSource _winAudio;
+        [SerializeField]
         private AudioSource _loseAudio;
 
         private string _sceneName;
@@ -47,9 +49,12 @@ namespace LekAanDek.EndGame
             _countingDown.Value = false;
             _won = true;
             _animator.SetBool(_hasWon, _won);
+            if(_winAudio != null)
+                _durationAudio = _winAudio.clip.length;
+            StartCoroutine(GameWon());
         }
 
-        public void LostGame(AudioClip clip)
+        public void LostGame()
         {
             foreach(Teleport teleport in _teleport)
             {
@@ -62,11 +67,21 @@ namespace LekAanDek.EndGame
 
             if(_loseAudio != null)
             {
-                _loseAudio.clip = clip;
                 _durationAudio = _loseAudio.clip.length;
             }
        
             StartCoroutine(GameLost());
+        }
+
+        IEnumerator GameWon()
+        {
+            if (_winAudio != null)
+            {
+                _winAudio.Play();
+            }
+            yield return new WaitForSeconds(_durationAudio);
+
+            SteamVR_LoadLevel.Begin(_sceneName);
         }
 
         IEnumerator GameLost()
