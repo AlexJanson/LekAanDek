@@ -11098,6 +11098,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4908921280909745289, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: d98f6a30d45c4cc42ab6da4d56838d64, type: 3}
     - target: {fileID: 6301410879771306368, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -11174,6 +11178,10 @@ PrefabInstance:
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6301410879822025017, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: b3e484e10a5bbc24285e82b12b71eb3a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
 --- !u!1001 &8693543780249772092
