@@ -13,21 +13,24 @@ MonoBehaviour:
   m_Name: IntroParts
   m_EditorClassIdentifier: 
   introParts:
-  - clip: {fileID: 8300000, guid: a63fd83702095184eb202dd4fcbb3057, type: 3}
+  - clip: {fileID: 8300000, guid: e7f26f6f334e0944e9f9161d0892c826, type: 3}
     waitDuration: 0
     animation: 1
-  - clip: {fileID: 8300000, guid: 015cbc039f68bff46824bd3362f07047, type: 3}
+  - clip: {fileID: 8300000, guid: 9a20920664556b0479cefa342ba232b4, type: 3}
     waitDuration: 0
     animation: 1
-  - clip: {fileID: 8300000, guid: ffae396bc91f5b94584b0a30052dfbba, type: 3}
+  - clip: {fileID: 8300000, guid: 2a7fe7b24066bdf499157191cdd8db25, type: 3}
     waitDuration: 0.3
     animation: 2
-  - clip: {fileID: 8300000, guid: 43ffdaf10f2a0754dbe0a190f0d7e0ee, type: 3}
+  - clip: {fileID: 8300000, guid: 5c6dbf54a0b07804784167ac289cefc4, type: 3}
     waitDuration: 0
     animation: 1
-  - clip: {fileID: 8300000, guid: 829c7fa9c9635234d914df348ef778ab, type: 3}
+  - clip: {fileID: 8300000, guid: 678f6efe8e4a5144f82d123006009d76, type: 3}
     waitDuration: 0
     animation: 1
-  - clip: {fileID: 8300000, guid: 6e191fe9060ba014a85c5a84d04f1556, type: 3}
+  - clip: {fileID: 8300000, guid: 01e64a2f7d2b5944d926850e8489ff68, type: 3}
+    waitDuration: 0
+    animation: 1
+  - clip: {fileID: 8300000, guid: 0ca9460ead090d64e9185538fa04dfda, type: 3}
     waitDuration: 0
     animation: 2

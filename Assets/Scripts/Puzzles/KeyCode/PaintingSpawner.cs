@@ -48,17 +48,31 @@ namespace LekAanDek.KeyCode
 
         [Header("- EXPERIMENTAL -")]
         [SerializeField]
-        [Tooltip("[!] THIS IS AN EXPERIMENTAL FEATUE AND MAY CAUSE ISSUES, PLEASE ONLY USE THIS WHEN YOU KNOW WHAT YOU'RE DOING." +
+        [Tooltip("[!] THIS IS AN EXPERIMENTAL FEATURE AND MAY CAUSE ISSUES, PLEASE ONLY USE THIS WHEN YOU KNOW WHAT YOU'RE DOING." +
             "\n\nThis will remove the value from the local list and thus making it unable to ever appear again." +
             "\nIt should work fine as long as you have enough values and colors. (Just don't exeed more than 10 paintings ;) )" +
             "\n\nNote: Keep in mind that if the code itself has a double, that it still will have a double in the scene." +
             "\nSo if you consider using this, be sure to toggle the 'No Duplicates' on the generator!")]
         private bool _noDoubles = false;
         [SerializeField]
-        [Tooltip("[!] THIS IS AN EXPERIMENTAL FEATUE AND MAY CAUSE ISSUES, PLEASE ONLY USE THIS WHEN YOU KNOW WHAT YOU'RE DOING." +
+        [Tooltip("[!] THIS IS AN EXPERIMENTAL FEATURE AND MAY CAUSE ISSUES, PLEASE ONLY USE THIS WHEN YOU KNOW WHAT YOU'RE DOING." +
             "\n\nThis uses the point as the prefab, this may be handy when building the scene and see them visually." +
             "\nAfter looking at the results, it should work fine as long as the point has a proper structure that equals to the prefab.")]
         private bool _pointIsPrefab = false;
+        [Space(10)]
+        [SerializeField]
+        [Tooltip("[!] THIS IS AN EXPERIMENTAL FEATURE." +
+            "\n\nThis colours the borders of the painting." +
+            "\nPlease assign the border texture that the script needs to look for as well as the border index.")]
+        private bool _colorBorders = false;
+        [SerializeField]
+        [Tooltip("[!] THIS IS AN EXPERIMENTAL FEATURE." +
+            "\n\nWhat texture needs to be recoloured.")]
+        private Material _borderTexture;
+        [SerializeField]
+        [Tooltip("[!] THIS IS AN EXPERIMENTAL FEATURE." +
+            "\n\nWhat the index of the borders are.")]
+        private int _borderIndex = 4; //Maybe add a way for auto index findings?
         private List<int> _numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
         void Start()
@@ -90,12 +104,18 @@ namespace LekAanDek.KeyCode
             {
                 selectedPoint = Random.Range(0, _points.Count);//Pick random spawnpoint
                 GameObject obj = _pointIsPrefab ? _points[selectedPoint].gameObject : Instantiate(_prefab, _points[selectedPoint]);
+                if (_colorBorders && _borderTexture != null) //Not the best way of fixing this, but it'll do. Had to be done since the border has multiple marterial references.
+                {
+                    Material[] paintings = obj.transform.GetChild(_borderIndex).GetComponent<MeshRenderer>().materials;
+                    foreach (Material mat in paintings)
+                        if (mat.name.Contains(_borderTexture.name)) mat.color = _colors[i];
+                }
                 obj.transform.GetChild(0).GetComponent<MeshRenderer>().material.color = _colors[i];
                 if (_correctInput.Value.Length < i + 1) //Check if we passed the spawning of the correct paintings
                 {
-                        generatedNumber = _lessDoubles ? _numbers[Random.Range(0, !_noDoubles ? _lessDoublesEnd : _numbers.Count)] : _numbers[Random.Range(0, _numbers.Count)];
-                        if (_numbers.IndexOf(generatedNumber) != -1) _numbers.RemoveAt(_numbers.IndexOf(generatedNumber));
-                        if (!_noDoubles) _numbers.Add(generatedNumber);
+                    generatedNumber = _lessDoubles ? _numbers[Random.Range(0, !_noDoubles ? _lessDoublesEnd : _numbers.Count)] : _numbers[Random.Range(0, _numbers.Count)];
+                    if (_numbers.IndexOf(generatedNumber) != -1) _numbers.RemoveAt(_numbers.IndexOf(generatedNumber));
+                    if (!_noDoubles) _numbers.Add(generatedNumber);
                 }
                 obj.transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>().sprite = _paintingTextures[_correctInput.Value.Length > i ? int.Parse(_correctInput.Value[i].ToString()) : generatedNumber];
                 _points.RemoveAt(selectedPoint); //Remove possible spawn point

@@ -22,6 +22,9 @@ namespace LekAanDek.UI
         [SerializeField]
         private AudioSource _clickSound;
 
+        [SerializeField]
+        private Color _hoverColor = Color.gray;
+
         void Awake()
         {
             _laserPointer.PointerIn += PointerInside;
@@ -52,17 +55,17 @@ namespace LekAanDek.UI
         {
             if (e.target.name == _buttons[0].name)
             {
-                _buttons[0].GetComponent<Image>().color = Color.blue;
+                _buttons[0].GetComponent<Image>().color = _hoverColor;
                 _hoverSound.Play();
             }
             else if (e.target.name == _buttons[1].name)
             {
-                _buttons[1].GetComponent<Image>().color = Color.blue;
+                _buttons[1].GetComponent<Image>().color = _hoverColor;
                 _hoverSound.Play();
             }
             else if (e.target.name == _buttons[2].name)
             {
-                _buttons[2].GetComponent<Image>().color = Color.blue;
+                _buttons[2].GetComponent<Image>().color = _hoverColor;
                 _hoverSound.Play();
             }
         }
