@@ -50,5 +50,11 @@ namespace LekAanDek.Puzzles.Crane
                 Debug.Log("crane puzzle completed");
             }
         }
+
+        private void OnDrawGizmos()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawCube(gameObject.transform.position, boxSize);
+        }
     }
 }
