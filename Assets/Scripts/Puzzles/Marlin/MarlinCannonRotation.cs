@@ -1,13 +1,14 @@
 using System;
 using LekAanDek.Variables;
 using UnityEngine;
+using LekAanDek.Controls;
 
 namespace LekAanDek.Puzzles.Marlin
 {
     /// <summary>
     /// Handles the rotation of the Marlin cannon.
     /// </summary>
-    public class MarlinCannonRotation : MonoBehaviour
+    public class MarlinCannonRotation : JoystickControllable
     {
         public FloatReference rotateSpeed;
 
@@ -19,8 +20,9 @@ namespace LekAanDek.Puzzles.Marlin
         public float verticalMaxFov;
 
         // Rotates the object around the y-axis.
-        private void RotateYaw(float amount)
+        public override void RotateYaw(float amount)
         {
+            //Debug.Log(amount);
             // Checking if the amount we want to move next is inside the maximum horizontal fov.
             if (!(transform.eulerAngles.y + amount > 360f - horizontalMaxFov / 2.0f ||
                  transform.eulerAngles.y + amount < horizontalMaxFov / 2.0f)) return;
@@ -31,7 +33,7 @@ namespace LekAanDek.Puzzles.Marlin
         }
 
         // Rotates the object around the x-axis.
-        private void RotatePitch(float amount)
+        public override void RotatePitch(float amount)
         {
             // Checking if the amount we want to move next is inside the maximum vertical fov.
             if (!(transform.eulerAngles.x + amount > 360f - verticalMaxFov / 2.0f ||
@@ -41,12 +43,6 @@ namespace LekAanDek.Puzzles.Marlin
             Quaternion to = Quaternion.Euler(transform.eulerAngles + new Vector3(amount, 0f, 0f));
             transform.rotation = Quaternion.Lerp(from, to, Time.time * rotateSpeed);
         }
-
-        // API functions.
-        public void RotateRight(float amount) => RotateYaw(amount);
-        public void RotateLeft(float amount) => RotateYaw(-amount);
-        public void RotateUp(float amount) => RotatePitch(-amount);
-        public void RotateDown(float amount) => RotatePitch(amount);
 
         void OnDrawGizmosSelected()
         {

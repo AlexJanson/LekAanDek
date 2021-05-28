@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LekAanDek.Controls;
 
 namespace LekAanDek.Puzzles.Crane
 {
     /// <summary>
     /// This class controls the left and right rotation of the crane
     /// </summary>
-    public class CraneController : MonoBehaviour
+    public class CraneController : JoystickControllable
     {
         [Range(0.0f, 10f)]
         [SerializeField]
@@ -21,10 +22,9 @@ namespace LekAanDek.Puzzles.Crane
             _crane = this.GetComponent<Transform>();
         }
 
-        // Rotates the crane left
-        public void RotateLeft(float inputSpeed) => _crane.Rotate(new Vector3(0, -_speed, 0));
-
-        // Rotates the crane right
-        public void RotateRight(float inputSpeed) => _crane.Rotate(new Vector3(0, _speed, 0));
+        public override void RotateYaw(float amount)
+        {
+            _crane.Rotate(new Vector3(0, _speed * Time.deltaTime * amount, 0));
+        }
     }
 }
