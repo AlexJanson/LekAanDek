@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace LekAanDek.Trackers
+namespace LekAanDek.Triggers
 {
     /// <summary>
     /// This script allows for executing things in certain trigger zones
@@ -32,7 +32,7 @@ namespace LekAanDek.Trackers
         [Tooltip("Possible functions that could be executed when hint appeared.")]
         private UnityEvent _hintResponse;
         private bool _hintTracking, _hintNeeded = true;
-        public float _time;
+        private float _time;
         [SerializeField]
         [Tooltip("Target time before audio is being played in seconds.")]
         private float _timeBeforeHint = 30;
