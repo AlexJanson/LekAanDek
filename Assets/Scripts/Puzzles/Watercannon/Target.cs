@@ -17,6 +17,9 @@ namespace LekAanDek.Watercannon
         private ParticleSystem.Particle[] _particles;
 
         [SerializeField]
+        AudioSource _audio;
+
+        [SerializeField]
         private float _healthFire;
 
         [SerializeField]
@@ -66,6 +69,7 @@ namespace LekAanDek.Watercannon
 
             if(_healthFire <= 0)
             {
+                _audio.Play();
                 Destroy(this.gameObject);
             }
         }

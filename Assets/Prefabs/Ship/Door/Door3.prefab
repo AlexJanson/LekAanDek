@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 817259666802685002}
   - component: {fileID: 817259666802685047}
   - component: {fileID: 817259666802685044}
-  - component: {fileID: 817259666802685045}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Glass (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,19 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &817259666802685045
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817259666802685003}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &817259667198691262
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,8 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 817259667198691257}
-  - component: {fileID: 817259667198691256}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,27 +104,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817259667198691262}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 8.264999, y: 2.165, z: -0.704}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6017500460997110981}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &817259667198691256
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817259667198691262}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1, y: 2.2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &6055315875844828299
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +122,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6055315875844828292}
   - component: {fileID: 6055315875844828293}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -278,7 +250,7 @@ GameObject:
   - component: {fileID: 6055315876019354391}
   - component: {fileID: 6055315876019354384}
   - component: {fileID: 817259665810731489}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,7 +342,7 @@ GameObject:
   - component: {fileID: 6017500460997110981}
   - component: {fileID: 7218618590695809888}
   - component: {fileID: 4884532118772029354}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Deur_border (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +424,8 @@ GameObject:
   - component: {fileID: 6017500462105807868}
   - component: {fileID: 7218618589591356505}
   - component: {fileID: 4884532119882117267}
-  m_Layer: 0
+  - component: {fileID: 219715372}
+  m_Layer: 12
   m_Name: Deur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,3 +497,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &219715372
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6397825500917567814}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1391329, y: 2.2144113, z: 0.17109501}
+  m_Center: {x: 0, y: 0, z: 0.0013490766}
