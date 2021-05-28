@@ -11,7 +11,7 @@ namespace LekAanDek.Puzzles.Crane
     {
         [Range(0.0f, 10f)]
         [SerializeField]
-        private float _speed = 1f;
+        private float _speed = 1.5f;
 
         private Transform _crane;
 
