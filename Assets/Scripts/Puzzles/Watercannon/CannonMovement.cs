@@ -1,4 +1,5 @@
 using LekAanDek.Variables;
+using LekAanDek.Events;
 using UnityEngine;
 using Valve.VR;
 
@@ -9,6 +10,8 @@ namespace LekAanDek.Puzzles.WaterCannon
     /// </summary>
     public class CannonMovement : MonoBehaviour
     {
+        [SerializeField]
+        private VoidEvent _startedPuzzle;
         [SerializeField]
         private BoolVariable _startedWCPuzzle;
 
@@ -42,6 +45,8 @@ namespace LekAanDek.Puzzles.WaterCannon
 
         private void Start() => _startedWCPuzzle.Value = false;
 
+        private bool _started;
+
         private void Update()
         {
             float _leftDist = Vector3.Distance(_hands[0].transform.position, _handles[0].transform.position);
@@ -57,7 +62,13 @@ namespace LekAanDek.Puzzles.WaterCannon
         // in this function an gameobject will be placed between the left and the right hand and it wil stay in between them
         // the water cannon wil rotate towards the gameobject so that it will look like you are rotating the cannon with your hands
         private void RotatingCannon()
-        {  
+        {
+            if (!_started)
+            {
+                _started = true;
+                _startedPuzzle.Raise();
+            }
+
             _rotationTarget.transform.position = 0.5f * (_hands[0].transform.position + _hands[1].transform.position);
 
             _rotationTarget.transform.position = new Vector3(_rotationTarget.transform.position.x, _rotationTarget.transform.position.y - _posY, _rotationTarget.transform.position.z - _posZ);

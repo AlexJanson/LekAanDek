@@ -17,7 +17,8 @@ namespace LekAanDek.EndGame
 
         private bool _won;
 
-        private float _durationAudio;
+        [SerializeField]
+        private float _waitForReset = 10.0f;
 
         private static readonly int _hasWon = Animator.StringToHash("hasWon");
 
@@ -27,6 +28,8 @@ namespace LekAanDek.EndGame
         [SerializeField]
         private Interactable[] _interactable;
 
+        [SerializeField]
+        private AudioSource _winAudio;
         [SerializeField]
         private AudioSource _loseAudio;
 
@@ -47,9 +50,10 @@ namespace LekAanDek.EndGame
             _countingDown.Value = false;
             _won = true;
             _animator.SetBool(_hasWon, _won);
+            StartCoroutine(GameWon());
         }
 
-        public void LostGame(AudioClip clip)
+        public void LostGame()
         {
             foreach(Teleport teleport in _teleport)
             {
@@ -59,16 +63,28 @@ namespace LekAanDek.EndGame
             {
                 interactable.enabled = false;
             }
-            _loseAudio.clip = clip;
-            _durationAudio = _loseAudio.clip.length;
+            
             StartCoroutine(GameLost());
+        }
+
+        IEnumerator GameWon()
+        {
+            if (_winAudio != null)
+            {
+                _winAudio.Play();
+            }
+            yield return new WaitForSeconds(_waitForReset);
+
+            SteamVR_LoadLevel.Begin(_sceneName);
         }
 
         IEnumerator GameLost()
         {
-            _loseAudio.Play();
-
-            yield return new WaitForSeconds(_durationAudio);
+            if (_loseAudio != null)
+            {
+                _loseAudio.Play();
+            }
+            yield return new WaitForSeconds(_waitForReset);
 
             SteamVR_LoadLevel.Begin(_sceneName);
         }
