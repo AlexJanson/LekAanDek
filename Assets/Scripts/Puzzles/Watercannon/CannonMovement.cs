@@ -11,6 +11,8 @@ namespace LekAanDek.Puzzles.WaterCannon
     public class CannonMovement : MonoBehaviour
     {
         [SerializeField]
+        private VoidEvent _startedPuzzle;
+        [SerializeField]
         private BoolVariable _startedWCPuzzle;
 
         [SerializeField]
