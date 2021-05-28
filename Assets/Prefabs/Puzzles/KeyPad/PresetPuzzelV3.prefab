@@ -155,6 +155,9 @@ MonoBehaviour:
   _lessDoublesEnd: 2
   _noDoubles: 1
   _pointIsPrefab: 1
+  _colorBorders: 1
+  _borderTexture: {fileID: 2100000, guid: ec39a06c9d4a47145a99778ba033b71d, type: 2}
+  _borderIndex: 4
 --- !u!1 &6575904369694690889
 GameObject:
   m_ObjectHideFlags: 0
