@@ -30,6 +30,7 @@ TagManager:
   - 
   - Nessie
   - Teleports
+  - GapColliders
   - 
   - 
   - 
@@ -40,8 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Triggers
   m_SortingLayers:
   - name: Default
     uniqueID: 0
