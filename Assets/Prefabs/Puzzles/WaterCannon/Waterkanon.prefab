@@ -210,7 +210,7 @@ MonoBehaviour:
   _startedWCPuzzle: {fileID: 11400000, guid: 851c89749ead36540b02216c970256b4, type: 2}
   _system: {fileID: 4178913121361576894}
   _trigger:
-    actionPath: /actions/default/in/GrabPinch
+    actionPath: /actions/default/in/InteractUI
     needsReinit: 0
   _leftHand: 1
   _rightHand: 2
@@ -5399,6 +5399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e4b148f8124d4a4c931fdd2cd1694bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startedPuzzle: {fileID: 0}
   _startedWCPuzzle: {fileID: 11400000, guid: 851c89749ead36540b02216c970256b4, type: 2}
   _hands:
   - {fileID: 0}
