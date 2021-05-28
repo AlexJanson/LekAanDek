@@ -6380,6 +6380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: {fileID: 11400000, guid: 8d26013ea49b44c44853fa56fb76c22c, type: 2}
   animator: {fileID: 856490989}
+  source: {fileID: 0}
 --- !u!1001 &857330122
 PrefabInstance:
   m_ObjectHideFlags: 0
