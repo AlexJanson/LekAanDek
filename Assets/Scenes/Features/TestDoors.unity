@@ -7486,6 +7486,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 08c0f66b9b8c1884a99e490721959c9a, type: 3}
   m_PrefabInstance: {fileID: 1144424102}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1147557751
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default UI Material
+  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!4 &1150993850 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -15103,7 +15137,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door3
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 817259666802685045, guid: 6da0b829cafcbb04e8741f2339af8c17, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6da0b829cafcbb04e8741f2339af8c17, type: 3}
 --- !u!1 &919132147652702855
 GameObject:
@@ -15194,7 +15229,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1974564990695921845, guid: 3a7349b1d0cd53c4d8652404ffac0097, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3a7349b1d0cd53c4d8652404ffac0097, type: 3}
 --- !u!1001 &2096279524732661630
 PrefabInstance:
@@ -15251,7 +15287,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2096279525794375850, guid: 51a592443fc5e2f46a33d9ee645a8276, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 51a592443fc5e2f46a33d9ee645a8276, type: 3}
 --- !u!4 &2359287140355661262
 Transform:
