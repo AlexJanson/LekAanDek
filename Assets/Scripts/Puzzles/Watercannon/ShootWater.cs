@@ -7,7 +7,6 @@ namespace LekAanDek.Puzzles.WaterCannon
     /// <summary>
     /// This class checks if the player is pressing the trigger button and shoots water if he does
     /// </summary>
-    [RequireComponent(typeof(ParticleSystem))]
     public class ShootWater : MonoBehaviour
     {
         [SerializeField]
@@ -43,7 +42,7 @@ namespace LekAanDek.Puzzles.WaterCannon
         }
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
         private void FiringWater()
-        { 
+        {
             _emmiting = _startedWCPuzzle.Value;
             if (_emmiting == true)
             {
