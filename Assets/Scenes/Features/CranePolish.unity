@@ -1988,11 +1988,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4773367813300199196, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
   m_PrefabInstance: {fileID: 217455356}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &217455358 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-  m_PrefabInstance: {fileID: 217455356}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &217884361
 GameObject:
   m_ObjectHideFlags: 0
@@ -6502,6 +6497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isOpen: {fileID: 11400000, guid: 8d26013ea49b44c44853fa56fb76c22c, type: 2}
+  animator: {fileID: 0}
+  source: {fileID: 0}
 --- !u!1001 &857330122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8362,6 +8359,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0311bca521f2218478fd2226e9e1055c, type: 3}
   m_PrefabInstance: {fileID: 1118099601}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1124202474
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default UI Material
+  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1001 &1132638336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9745,6 +9776,7 @@ MonoBehaviour:
   - {fileID: 5154339195468176149}
   - {fileID: 5154339193553339240}
   _endGame: {fileID: 11400000, guid: deaf1afba9a36ed4ab6d5547b4dcb087, type: 2}
+  _fire: {fileID: 0}
 --- !u!4 &1302456011 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -12509,40 +12541,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
   m_PrefabInstance: {fileID: 1291799229}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1687492261
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default UI Material
-  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1001 &1688828693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15356,10 +15354,10 @@ PrefabInstance:
     - target: {fileID: -8995732047597422380, guid: a16c09c84424ef347b2901a2af70845f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbbb1a6ecade37446a06b7fa7d5162dc, type: 2}
+      objectReference: {fileID: 2100000, guid: 03b04a93e4ac4044188b5e085a15fe24, type: 2}
     - target: {fileID: -8679921383154817045, guid: a16c09c84424ef347b2901a2af70845f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a16c09c84424ef347b2901a2af70845f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15428,7 +15426,7 @@ PrefabInstance:
     - target: {fileID: 426915225038308439, guid: a16c09c84424ef347b2901a2af70845f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbbb1a6ecade37446a06b7fa7d5162dc, type: 2}
+      objectReference: {fileID: 2100000, guid: 9b35fb1eddbc71a43961788a11b59e37, type: 2}
     - target: {fileID: 919132149155446097, guid: a16c09c84424ef347b2901a2af70845f, type: 3}
       propertyPath: m_Name
       value: Enemy_schip
@@ -15448,7 +15446,7 @@ PrefabInstance:
     - target: {fileID: 8239865038235516021, guid: a16c09c84424ef347b2901a2af70845f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bbbb1a6ecade37446a06b7fa7d5162dc, type: 2}
+      objectReference: {fileID: 2100000, guid: 03b04a93e4ac4044188b5e085a15fe24, type: 2}
     - target: {fileID: 9001740959370447829, guid: a16c09c84424ef347b2901a2af70845f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -26342,10 +26340,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8cbf9cadac9e245978e8dee1c0d2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _system: {fileID: 217455358}
+  _system: {fileID: 0}
   _fire: {fileID: 6812854197217405528}
+  _audio: {fileID: 0}
   _healthFire: 100
   _damageToFire: 0.1
+  _hittingRange: 0
+  _minSize: 0
+  _roundEveryNumberParticle: 0
 --- !u!1 &5154339194529412121
 GameObject:
   m_ObjectHideFlags: 0
@@ -26390,10 +26392,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8cbf9cadac9e245978e8dee1c0d2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _system: {fileID: 217455358}
+  _system: {fileID: 0}
   _fire: {fileID: 7853370039374809696}
+  _audio: {fileID: 0}
   _healthFire: 100
   _damageToFire: 0.1
+  _hittingRange: 0
+  _minSize: 0
+  _roundEveryNumberParticle: 0
 --- !u!114 &5154339195284151944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26406,10 +26412,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8cbf9cadac9e245978e8dee1c0d2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _system: {fileID: 217455358}
+  _system: {fileID: 0}
   _fire: {fileID: 4994229319165614542}
+  _audio: {fileID: 0}
   _healthFire: 100
   _damageToFire: 0.1
+  _hittingRange: 0
+  _minSize: 0
+  _roundEveryNumberParticle: 0
 --- !u!1 &5154339195284151987
 GameObject:
   m_ObjectHideFlags: 0
@@ -26469,10 +26479,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8cbf9cadac9e245978e8dee1c0d2ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _system: {fileID: 217455358}
+  _system: {fileID: 0}
   _fire: {fileID: 4435248900977103499}
+  _audio: {fileID: 0}
   _healthFire: 100
   _damageToFire: 0.1
+  _hittingRange: 0
+  _minSize: 0
+  _roundEveryNumberParticle: 0
 --- !u!1 &5154339195468176149
 GameObject:
   m_ObjectHideFlags: 0
