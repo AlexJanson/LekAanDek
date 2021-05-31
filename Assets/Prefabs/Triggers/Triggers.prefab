@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 355657948}
   - component: {fileID: 355657947}
   m_Layer: 31
-  m_Name: PressStart
+  m_Name: PressStartTracker
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -250,13 +250,11 @@ GameObject:
   - component: {fileID: 1820545761926401474}
   - component: {fileID: 1820545761926401475}
   - component: {fileID: 1820545761926401486}
-  - component: {fileID: 1820545761926401480}
   - component: {fileID: 1820545761926401472}
-  - component: {fileID: 1820545761926401487}
   m_Layer: 31
   m_Name: KeypadTracker
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -285,8 +283,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.143874, y: 1, z: 0.38523826}
+  m_Center: {x: -0.07193633, y: 0, z: -0.30738175}
 --- !u!114 &1820545761926401474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +307,7 @@ MonoBehaviour:
   _hintResponse:
     m_PersistentCalls:
       m_Calls: []
-  _timeBeforeHint: 60
+  _timeBeforeHint: 150
   _hintClip: {fileID: 8300000, guid: 44436e51c1ae3d244860a3ee035641f2, type: 3}
 --- !u!82 &1820545761926401475
 AudioSource:
@@ -419,34 +417,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3be917a80086a48b97933694257f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1820545761926401480
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820545761926401482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d34784388dde6641a6c7e2b44d5d1fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 8ae5696fe316bbc478536eda676c3013, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1820545761926401474}
-        m_TargetAssemblyTypeName: LekAanDek.Trackers.EventTrigger, Assembly-CSharp
-        m_MethodName: ConditionsMet
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1820545761926401472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,35 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a12c81e1b2d7c24d9e2165be682315a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 8718fa490e9ec63439f27e4bb4f65b6c, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1820545761926401474}
-        m_TargetAssemblyTypeName: LekAanDek.Trackers.EventTrigger, Assembly-CSharp
-        m_MethodName: ConditionsMet
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1820545761926401487
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820545761926401482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a12c81e1b2d7c24d9e2165be682315a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 5bcc4270e1ee7ba4d8bd457f9585c5c6, type: 2}
+  Event: {fileID: 11400000, guid: 6e9d36867db890248b70be91fab9cd2d, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -520,7 +462,7 @@ GameObject:
   m_Layer: 31
   m_Name: WatercanonTracker
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -724,12 +666,11 @@ GameObject:
   - component: {fileID: 1820545762383887090}
   - component: {fileID: 1820545762383887091}
   - component: {fileID: 1820545762383887083}
-  - component: {fileID: 1820545762383887092}
-  - component: {fileID: 1820545762383887093}
+  - component: {fileID: 1576053980}
   m_Layer: 31
   m_Name: CraneTracker
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -758,8 +699,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.77898574, y: 1, z: 1}
+  m_Center: {x: 0.11050722, y: 0, z: 0}
 --- !u!114 &1820545762383887090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,7 +833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3be917a80086a48b97933694257f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1820545762383887092
+--- !u!114 &1576053980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -901,43 +842,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1820545762383887100}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddb645d6bc45ff142a8a10fb0399c1d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 8a12c81e1b2d7c24d9e2165be682315a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 2286ba3042806ac46a33492a6be84fe0, type: 2}
+  Event: {fileID: 11400000, guid: c80e1b105b8bd4543bb245777fbec465, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1820545762383887090}
-        m_TargetAssemblyTypeName: LekAanDek.Trackers.EventTrigger, Assembly-CSharp
-        m_MethodName: ConditionsMet
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1820545762383887093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820545762383887100}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddb645d6bc45ff142a8a10fb0399c1d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: d527bedad226a5a40be98dc0144fad20, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1820545762383887090}
-        m_TargetAssemblyTypeName: LekAanDek.Trackers.EventTrigger, Assembly-CSharp
+        m_TargetAssemblyTypeName: LekAanDek.Triggers.EventTrigger, Assembly-CSharp
         m_MethodName: ConditionsMet
         m_Mode: 1
         m_Arguments:
@@ -996,10 +909,11 @@ GameObject:
   - component: {fileID: 1820545763005324036}
   - component: {fileID: 1820545763005324037}
   - component: {fileID: 1820545763005324032}
+  - component: {fileID: 1791022282}
   m_Layer: 31
   m_Name: MerlincanonTracker
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1047,7 +961,7 @@ MonoBehaviour:
       m_Calls: []
   _audio: {fileID: 1820545763005324037}
   _triggerClip: {fileID: 8300000, guid: 2840b609f3e36644c896ead0f1cf349c, type: 3}
-  _hintEnabled: 0
+  _hintEnabled: 1
   _repeat: 0
   _hintResponse:
     m_PersistentCalls:
@@ -1162,3 +1076,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc3be917a80086a48b97933694257f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1791022282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820545763005324044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a12c81e1b2d7c24d9e2165be682315a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: f6ea8ed5f7a1caa4cb6f6b498df49b18, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1820545763005324036}
+        m_TargetAssemblyTypeName: LekAanDek.Triggers.EventTrigger, Assembly-CSharp
+        m_MethodName: ConditionsMet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

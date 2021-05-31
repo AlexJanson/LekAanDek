@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EnemySchipZeil
+  m_Shader: {fileID: -6465566751694194690, guid: d73d0cd1ddc9e1641b74a7bebb2c4043, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Texture2D_03a952b517a04582ab67453f869fabde:
+        m_Texture: {fileID: 2800000, guid: d28b6d098b7ef2e43aaaf16824998762, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_3570d889bac9413093835e598169abee:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_8d08e1b8326943dcbf08b9d3bbbcc9b0:
+        m_Texture: {fileID: 2800000, guid: 3cf99f33eccdad444a6116ec4ed89706, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_7ea2bfa9183a4d8caebc56ccf082b9b6_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 781a1564e9cf835469da7499beb09f46, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_67127e65d9c04f1eafd2eff8631f84f7: 0.05
+    - Vector1_c129c0df4f944f9d9df441fae14ad729: 1.2
+    - Vector1_c8806af1eee94e6987347b1aa3aa9d99: 1.07
+    m_Colors: []
+  m_BuildTextureStacks: []

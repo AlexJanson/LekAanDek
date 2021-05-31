@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1917902743177164375}
   - component: {fileID: 3256694031049914866}
   - component: {fileID: 781074087434620216}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Deur_border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,8 @@ GameObject:
   - component: {fileID: 1917902744274456942}
   - component: {fileID: 3256694029931699915}
   - component: {fileID: 781074088530946561}
-  m_Layer: 0
+  - component: {fileID: 1129399485}
+  m_Layer: 12
   m_Name: Deur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,6 +166,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1129399485
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285235423668964308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1391329, y: 2.2144113, z: 0.17109501}
+  m_Center: {x: 0, y: 0, z: 0.0013490766}
 --- !u!1 &2096279524695452874
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,8 +188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2096279524695452875}
-  - component: {fileID: 2096279524695452872}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +202,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2096279524695452874}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.91739225, y: 0.7800001, z: 2.7296767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -197,19 +210,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2096279524695452872
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096279524695452874}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1, y: 2.2, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2096279525794375852
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,8 +221,7 @@ GameObject:
   - component: {fileID: 2096279525794375853}
   - component: {fileID: 2096279525794375848}
   - component: {fileID: 2096279525794375851}
-  - component: {fileID: 2096279525794375850}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Glass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,19 +291,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &2096279525794375850
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2096279525794375852}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2096279525899548185
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2096279525899548182}
   - component: {fileID: 2096279525899548183}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Audio Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +429,7 @@ GameObject:
   - component: {fileID: 2096279526203171205}
   - component: {fileID: 2096279526203171203}
   - component: {fileID: 2096279526203171202}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Anchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

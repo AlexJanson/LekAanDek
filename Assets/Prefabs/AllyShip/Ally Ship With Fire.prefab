@@ -9924,9 +9924,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _system: {fileID: 0}
   _fire: {fileID: 3694896613823106150}
+  _audio: {fileID: 0}
   _healthFire: 100
   _damageToFire: 0.1
   _hittingRange: 2
+  _minSize: 0
   _roundEveryNumberParticle: 5
 --- !u!1 &3048112448408654375
 GameObject:
@@ -9974,9 +9976,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _system: {fileID: 0}
   _fire: {fileID: 87310423362497630}
+  _audio: {fileID: 0}
   _healthFire: 100
   _damageToFire: 0.1
   _hittingRange: 2
+  _minSize: 0
   _roundEveryNumberParticle: 5
 --- !u!1 &3048112449079524651
 GameObject:
@@ -10024,9 +10028,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _system: {fileID: 0}
   _fire: {fileID: 5784835579602203829}
+  _audio: {fileID: 0}
   _healthFire: 100
   _damageToFire: 0.1
   _hittingRange: 2
+  _minSize: 0
   _roundEveryNumberParticle: 5
 --- !u!1 &3048112449264597133
 GameObject:
@@ -10074,9 +10080,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _system: {fileID: 0}
   _fire: {fileID: 2919994152007598064}
+  _audio: {fileID: 0}
   _healthFire: 100
   _damageToFire: 0.1
   _hittingRange: 2
+  _minSize: 0
   _roundEveryNumberParticle: 5
 --- !u!1 &3537363439484771770
 GameObject:
@@ -20114,6 +20122,7 @@ GameObject:
   - component: {fileID: 7911406378270505118}
   - component: {fileID: 7911406378270505119}
   - component: {fileID: 7911406378270505116}
+  - component: {fileID: 4745636595775495016}
   m_Layer: 0
   m_Name: Ally Ship With Fire
   m_TagString: Untagged
@@ -20239,6 +20248,102 @@ MonoBehaviour:
   - {fileID: 3048112447229175126}
   _endGame: {fileID: 11400000, guid: deaf1afba9a36ed4ab6d5547b4dcb087, type: 2}
   _fire: {fileID: 4936155016779261874}
+--- !u!82 &4745636595775495016
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6992858762488808946}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 44aa47223db83c14d8e1ac2dd5a9bdd5, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.4
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6992858762559334020
 GameObject:
   m_ObjectHideFlags: 0

@@ -98,7 +98,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed:
     _useConstant: 1
-    _constantValue: 200
+    _constantValue: 100
     _variable: {fileID: 0}
 --- !u!54 &1453316059227266261
 Rigidbody:
