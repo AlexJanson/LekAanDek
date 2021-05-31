@@ -429,6 +429,7 @@ GameObject:
   - component: {fileID: 2096279526203171205}
   - component: {fileID: 2096279526203171203}
   - component: {fileID: 2096279526203171202}
+  - component: {fileID: 387523054}
   m_Layer: 12
   m_Name: Anchor
   m_TagString: Untagged
@@ -463,7 +464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dde098028afae048aaa3d5d00630e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOpen: {fileID: 11400000, guid: 7cbd3a6f072399943902ce6442d7baf6, type: 2}
   animator: {fileID: 2096279526203171202}
   source: {fileID: 2096279525899548183}
 --- !u!95 &2096279526203171202
@@ -485,3 +485,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &387523054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096279526203171204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a12c81e1b2d7c24d9e2165be682315a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 3c2811087b9bec843b819cde2650b4c1, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2096279526203171203}
+        m_TargetAssemblyTypeName: LekAanDek.Environment.Door, Assembly-CSharp
+        m_MethodName: OpenDoor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2

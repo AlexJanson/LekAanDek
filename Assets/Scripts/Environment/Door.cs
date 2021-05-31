@@ -8,28 +8,21 @@ namespace LekAanDek.Environment
     /// </summary>
     public sealed class Door : MonoBehaviour
     {
-        public BoolVariable isOpen;
         public Animator animator;
         public AudioSource source;
         // Cache the property for faster results.
         private static readonly int IsOpen = Animator.StringToHash("isOpen");
         private bool _audioPlayed;
 
-        private void Start() => isOpen.OnChange += HandleDoorStateChange;
-
-        private void HandleDoorStateChange(bool state)
-        {
-            if (state) OpenDoor();
-        }
-
-        private void OpenDoor()
+        public void OpenDoor(bool state)
         {
             if (!_audioPlayed)
             {
                 source.Play();
                 _audioPlayed = true;
             }
-            animator.SetBool(IsOpen, isOpen.Value);
+            
+            animator.SetBool(IsOpen, state);
         }
     }
 }
