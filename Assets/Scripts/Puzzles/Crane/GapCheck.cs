@@ -47,7 +47,6 @@ namespace LekAanDek.Puzzles.Crane
             {
                 _triggered = true;
                 _cranePuzzleCompleted.Raise(true);
-                Debug.Log("crane puzzle completed");
             }
         }
     }
