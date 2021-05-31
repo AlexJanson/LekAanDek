@@ -2114,7 +2114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6055315875844828293, guid: 6da0b829cafcbb04e8741f2339af8c17, type: 3}
       propertyPath: m_Volume
-      value: 0.03
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6da0b829cafcbb04e8741f2339af8c17, type: 3}
@@ -2773,7 +2773,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.03
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4925,7 +4925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2767916c4051cc94a990490c64420da0, type: 3}
---- !u!21 &589124858
+--- !u!21 &584937494
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -5806,10 +5806,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893034319}
     m_Modifications:
-    - target: {fileID: 4908921280909745289, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
-      propertyPath: m_Volume
-      value: 0.03
-      objectReference: {fileID: 0}
     - target: {fileID: 6301410879771306368, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -5857,10 +5853,6 @@ PrefabInstance:
     - target: {fileID: 6301410879771306372, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
       propertyPath: m_Name
       value: EndGameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6301410879822025017, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
-      propertyPath: m_Volume
-      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7edb1d77cc24f644980e29ce0f2a1755, type: 3}
@@ -7362,40 +7354,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
   m_PrefabInstance: {fileID: 1209731515}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &1022737916
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default UI Material
-  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!1 &1022870335
 GameObject:
   m_ObjectHideFlags: 0
@@ -8195,7 +8153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2096279525899548183, guid: 51a592443fc5e2f46a33d9ee645a8276, type: 3}
       propertyPath: m_Volume
-      value: 0.03
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 51a592443fc5e2f46a33d9ee645a8276, type: 3}
@@ -10512,7 +10470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4915855496643829150, guid: 3a7349b1d0cd53c4d8652404ffac0097, type: 3}
       propertyPath: m_Volume
-      value: 0.03
+      value: 0.05
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a7349b1d0cd53c4d8652404ffac0097, type: 3}
@@ -10782,23 +10740,23 @@ PrefabInstance:
     - target: {fileID: 2285002661907084351, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 589124858}
+      objectReference: {fileID: 584937494}
     - target: {fileID: 2898077038317325611, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 589124858}
+      objectReference: {fileID: 584937494}
     - target: {fileID: 8495917416619331520, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 589124858}
+      objectReference: {fileID: 584937494}
     - target: {fileID: 8495917417597818882, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 1022737916}
+      objectReference: {fileID: 1494011023}
     - target: {fileID: 8495917417915805982, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 589124858}
+      objectReference: {fileID: 584937494}
     - target: {fileID: 8495917417943031794, guid: c541cafacc2e744499c582a57bfabed1, type: 3}
       propertyPath: m_Name
       value: PauseMenu
@@ -11376,6 +11334,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
   m_PrefabInstance: {fileID: 210238155}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &1494011023
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default UI Material
+  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!4 &1499117808 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -11557,10 +11549,6 @@ PrefabInstance:
     - target: {fileID: 6685865579608284016, guid: fc196680e168b64409199fea537257af, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7109946413439784965, guid: fc196680e168b64409199fea537257af, type: 3}
-      propertyPath: m_Volume
-      value: 0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc196680e168b64409199fea537257af, type: 3}

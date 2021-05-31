@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80d1bcc013a93eb4aa335e8fcc06f677, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   _animator: {fileID: 6301410879771306369}
   _waitForReset: 10
   _teleport: []
@@ -160,8 +160,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a12c81e1b2d7c24d9e2165be682315a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Event: {fileID: 11400000, guid: deaf1afba9a36ed4ab6d5547b4dcb087, type: 2}
   Response:
     m_PersistentCalls:
@@ -175,7 +175,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &6301410879771306373
@@ -188,8 +188,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a12c81e1b2d7c24d9e2165be682315a, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   Event: {fileID: 11400000, guid: 4617fe4cce4bf8e40ab398a0651ba02d, type: 2}
   Response:
     m_PersistentCalls:
@@ -203,7 +203,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument:
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!95 &6301410879771306369
@@ -221,7 +221,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
-  m_WarningMessage:
+  m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
@@ -285,7 +285,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c2ccc4e336d2a204f8219853216476a1, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -496,7 +496,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 52888ea61e12e2148b07bf1f0da68658, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.03
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -609,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2795710645703969549, guid: 69cd71d36cd78d54cbe274f9ca53b640, type: 3}
       propertyPath: Event
-      value:
+      value: 
       objectReference: {fileID: 11400000, guid: deaf1afba9a36ed4ab6d5547b4dcb087, type: 2}
     - target: {fileID: 2795710645703969549, guid: 69cd71d36cd78d54cbe274f9ca53b640, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -699,7 +699,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2795710645703969549, guid: 69cd71d36cd78d54cbe274f9ca53b640, type: 3}
       propertyPath: Event
-      value:
+      value: 
       objectReference: {fileID: 11400000, guid: deaf1afba9a36ed4ab6d5547b4dcb087, type: 2}
     - target: {fileID: 2795710645703969549, guid: 69cd71d36cd78d54cbe274f9ca53b640, type: 3}
       propertyPath: Response.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
