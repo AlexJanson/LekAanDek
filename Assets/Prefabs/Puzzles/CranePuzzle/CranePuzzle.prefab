@@ -358,22 +358,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &650313040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7156262037915200404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d16d7f60c837604399e21544332ab91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cranePuzzleCompleted: {fileID: 11400000, guid: 7aa21b58f54d0ae4a831a79e9d4a04a1, type: 2}
-  cranePuzzleLayers:
-    serializedVersion: 2
-    m_Bits: 1048576
 --- !u!82 &482200328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -498,6 +482,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &650313040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156262037915200404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d16d7f60c837604399e21544332ab91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cranePuzzleCompleted: {fileID: 11400000, guid: 7aa21b58f54d0ae4a831a79e9d4a04a1, type: 2}
+  cranePuzzleLayers:
+    serializedVersion: 2
+    m_Bits: 1048576
 --- !u!1001 &650688606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -812,6 +812,10 @@ PrefabInstance:
       propertyPath: _speed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 4465543814738228665, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
+      propertyPath: _turningSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 6737b90b1998567499a7a1dcd60ff03e, type: 3}
     - target: {fileID: 4465543815134283335, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
       propertyPath: m_Name
       value: CranePuzzle
@@ -822,15 +826,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4465543815134283352, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2070003
+      value: -1.35
       objectReference: {fileID: 0}
     - target: {fileID: 4465543815134283352, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.6690001
+      value: 3.676
       objectReference: {fileID: 0}
     - target: {fileID: 4465543815134283352, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.54000044
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 4465543815134283352, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
       propertyPath: m_LocalRotation.w
