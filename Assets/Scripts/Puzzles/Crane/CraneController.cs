@@ -16,15 +16,20 @@ namespace LekAanDek.Puzzles.Crane
 
         private Transform _crane;
 
+        private AudioSource _audioSource;
+
         // Start is called before the first frame update
         void Start()
         {
-            _crane = this.GetComponent<Transform>();
+            _crane = GetComponent<Transform>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         public override void RotateYaw(float amount)
         {
+            _audioSource.Play();
             _crane.Rotate(new Vector3(0, _speed * Time.deltaTime * amount, 0));
+            
         }
     }
 }
