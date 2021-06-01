@@ -75,6 +75,7 @@ MonoBehaviour:
   - {fileID: 0}
   _hoverSound: {fileID: 0}
   _clickSound: {fileID: 0}
+  _hoverColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!1 &2045184854441637418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,7 +1431,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 843575
+    m_Bits: 319287
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

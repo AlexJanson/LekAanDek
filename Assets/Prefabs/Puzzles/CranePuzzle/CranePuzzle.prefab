@@ -166,22 +166,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &650313040
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7156262037915200404}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d16d7f60c837604399e21544332ab91, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _cranePuzzleCompleted: {fileID: 11400000, guid: 7aa21b58f54d0ae4a831a79e9d4a04a1, type: 2}
-  cranePuzzleLayers:
-    serializedVersion: 2
-    m_Bits: 1048576
 --- !u!82 &482200328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -306,6 +290,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &650313040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156262037915200404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d16d7f60c837604399e21544332ab91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cranePuzzleCompleted: {fileID: 11400000, guid: 7aa21b58f54d0ae4a831a79e9d4a04a1, type: 2}
+  cranePuzzleLayers:
+    serializedVersion: 2
+    m_Bits: 1048576
 --- !u!1001 &650688606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -357,6 +357,10 @@ PrefabInstance:
       propertyPath: _controlledObject
       value: 
       objectReference: {fileID: 5938422484954450045}
+    - target: {fileID: 4658169968885869331, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
+      propertyPath: _interactedInformer
+      value: 
+      objectReference: {fileID: 11400000, guid: c80e1b105b8bd4543bb245777fbec465, type: 2}
     - target: {fileID: 4658169968885869331, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
       propertyPath: _trigger.actionPath
       value: /actions/default/in/GrabGrip
