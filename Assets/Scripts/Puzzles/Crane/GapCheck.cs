@@ -47,14 +47,7 @@ namespace LekAanDek.Puzzles.Crane
             {
                 _triggered = true;
                 _cranePuzzleCompleted.Raise(true);
-                Debug.Log("crane puzzle completed");
             }
-        }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawCube(gameObject.transform.position, boxSize);
         }
     }
 }
