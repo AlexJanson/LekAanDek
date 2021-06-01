@@ -117,12 +117,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 921682706}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.18500021, z: 0}
-  m_LocalScale: {x: 0.12540002, y: 0.2823001, z: 1}
+  m_LocalRotation: {x: -0.7053843, y: -0.049325272, z: -0.049325272, w: 0.7053843}
+  m_LocalPosition: {x: 0.005752623, y: 0.034719627, z: -0.003916841}
+  m_LocalScale: {x: 0.012540005, y: 0.028230017, z: 0.100000024}
   m_Children: []
-  m_Father: {fileID: 5661624533507487201}
-  m_RootOrder: 1
+  m_Father: {fileID: 7357727301587660270}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!212 &921682708
 SpriteRenderer:
@@ -175,6 +175,35 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &383629263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3637685345968100719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2f288d2d6bedfb4bb404c35410acd00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 7aa21b58f54d0ae4a831a79e9d4a04a1, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3637685345979224585}
+        m_TargetAssemblyTypeName: Valve.VR.InteractionSystem.TeleportMarkerBase,
+          SteamVR
+        m_MethodName: SetLocked
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1991252247
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,12 +228,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991252247}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.185, z: 0.06}
-  m_LocalScale: {x: 0.12541565, y: 0.28228945, z: 1}
+  m_LocalRotation: {x: 0.7053843, y: -0.049325272, z: 0.049325272, w: 0.7053843}
+  m_LocalPosition: {x: 0.0021705476, y: 0.034719627, z: 0.00091037125}
+  m_LocalScale: {x: 0.012541567, y: 0.028228948, z: 0.100000024}
   m_Children: []
-  m_Father: {fileID: 1166344155918934508}
-  m_RootOrder: 1
+  m_Father: {fileID: 4730620851738889290}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &1991252249
 SpriteRenderer:
@@ -301,35 +330,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.47979712, y: 0.33921552, z: 4.6983185}
   m_Center: {x: -1.072132, y: 0.33039224, z: -0.22985268}
---- !u!114 &383629263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3637685345968100719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f288d2d6bedfb4bb404c35410acd00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 7aa21b58f54d0ae4a831a79e9d4a04a1, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3637685345979224585}
-        m_TargetAssemblyTypeName: Valve.VR.InteractionSystem.TeleportMarkerBase,
-          SteamVR
-        m_MethodName: SetLocked
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!82 &482200328
 AudioSource:
   m_ObjectHideFlags: 0
@@ -909,19 +909,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4211557304025460920, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
   m_PrefabInstance: {fileID: 8039294469369839044}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1166344155918934508 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9205041448639765544, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
-  m_PrefabInstance: {fileID: 8039294469369839044}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4730620851738889290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3330347191121146254, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
-  m_PrefabInstance: {fileID: 8039294469369839044}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &5661624533507487201 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2378866238883661861, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
   m_PrefabInstance: {fileID: 8039294469369839044}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &7357727301587660270 stripped
