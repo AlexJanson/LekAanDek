@@ -9903,7 +9903,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3048112447229175126}
   m_LocalRotation: {x: -0, y: 0.67465705, z: -0, w: 0.7381314}
-  m_LocalPosition: {x: -5.41, y: -1.63, z: 4.74}
+  m_LocalPosition: {x: -5.28, y: -2.651, z: 5.11}
   m_LocalScale: {x: 1, y: 2, z: 2}
   m_Children:
   - {fileID: 3694896613823106147}
@@ -9924,12 +9924,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _system: {fileID: 0}
   _fire: {fileID: 3694896613823106150}
-  _audio: {fileID: 0}
+  _audio: {fileID: 4745636595775495016}
   _healthFire: 100
   _damageToFire: 0.1
-  _hittingRange: 2
-  _minSize: 0
-  _roundEveryNumberParticle: 5
+  _hittingRange: 3
+  _minSize: 0.25
+  _roundEveryNumberParticle: 10
 --- !u!1 &3048112448408654375
 GameObject:
   m_ObjectHideFlags: 0
@@ -9976,12 +9976,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _system: {fileID: 0}
   _fire: {fileID: 87310423362497630}
-  _audio: {fileID: 0}
+  _audio: {fileID: 4745636595775495016}
   _healthFire: 100
   _damageToFire: 0.1
-  _hittingRange: 2
-  _minSize: 0
-  _roundEveryNumberParticle: 5
+  _hittingRange: 3
+  _minSize: 0.25
+  _roundEveryNumberParticle: 10
 --- !u!1 &3048112449079524651
 GameObject:
   m_ObjectHideFlags: 0
@@ -10028,12 +10028,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _system: {fileID: 0}
   _fire: {fileID: 5784835579602203829}
-  _audio: {fileID: 0}
+  _audio: {fileID: 4745636595775495016}
   _healthFire: 100
   _damageToFire: 0.1
-  _hittingRange: 2
-  _minSize: 0
-  _roundEveryNumberParticle: 5
+  _hittingRange: 3
+  _minSize: 0.25
+  _roundEveryNumberParticle: 10
 --- !u!1 &3048112449264597133
 GameObject:
   m_ObjectHideFlags: 0
@@ -10080,12 +10080,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _system: {fileID: 0}
   _fire: {fileID: 2919994152007598064}
-  _audio: {fileID: 0}
+  _audio: {fileID: 4745636595775495016}
   _healthFire: 100
   _damageToFire: 0.1
-  _hittingRange: 2
-  _minSize: 0
-  _roundEveryNumberParticle: 5
+  _hittingRange: 3
+  _minSize: 0.25
+  _roundEveryNumberParticle: 10
 --- !u!1 &3537363439484771770
 GameObject:
   m_ObjectHideFlags: 0
@@ -10129,7 +10129,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c0852382a48c63347a37e5e61b0ab194, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -20137,7 +20137,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6992858762488808946}
-  m_LocalRotation: {x: -0, y: -0.8184258, z: -0, w: 0.5746123}
+  m_LocalRotation: {x: 0, y: -0.81842566, z: 0, w: 0.57461256}
   m_LocalPosition: {x: 37.26, y: 6.1, z: 9.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -20260,7 +20260,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 44aa47223db83c14d8e1ac2dd5a9bdd5, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
