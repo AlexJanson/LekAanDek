@@ -19,17 +19,25 @@ namespace LekAanDek.Puzzles.Crane
         [SerializeField]
         private float _speed = 1f;
 
+        // Sound
+        [SerializeField]
+        private AudioClip _raisingSound;
+        [SerializeField]
+        private AudioClip _loweringSound;
+
         private bool _raising = false;
         private bool _lowering = false;
 
         LineRenderer _lr;
         ConfigurableJoint _joint;
+        AudioSource _audioSource;
 
         // Start is called before the first frame update
         void Start()
         {
-            _lr = this.GetComponent<LineRenderer>();
+            _lr = GetComponent<LineRenderer>();
             _joint = _attachedObject.GetComponent<ConfigurableJoint>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         // Update is called once per frame
@@ -38,6 +46,10 @@ namespace LekAanDek.Puzzles.Crane
             // Raises the winch
             if (_raising)
             {
+                // Audio
+                if (!_audioSource.isPlaying)
+                    _audioSource.PlayOneShot(_raisingSound);
+
                 SoftJointLimit limit = _joint.linearLimit;
                 limit.limit = limit.limit -= _speed;
                 // Limits the winch to a specified length
@@ -45,10 +57,19 @@ namespace LekAanDek.Puzzles.Crane
                 {
                     _joint.linearLimit = limit;
                 }
+                else
+                {
+                    StopWinching();
+                    Debug.Log("wut");
+                }
             }
             // Lowers the winch
             else if (_lowering)
             {
+                // Audio
+                if (!_audioSource.isPlaying)
+                    _audioSource.PlayOneShot(_loweringSound);
+
                 SoftJointLimit limit = _joint.linearLimit;
                 limit.limit = limit.limit += _speed;
                 // Limits the winch to a specified length
@@ -56,6 +77,15 @@ namespace LekAanDek.Puzzles.Crane
                 {
                     _joint.linearLimit = limit;
                 }
+                else
+                {
+                    StopWinching();
+                    Debug.Log("wut");
+                }
+            }
+            else
+            {
+                _audioSource.Stop();
             }
 
             UpdateLine();
@@ -65,12 +95,14 @@ namespace LekAanDek.Puzzles.Crane
         {
             _raising = true;
             _lowering = false;
+            _audioSource.Stop();
         }
 
         public void StartLowering()
         {
             _raising = false;
             _lowering = true;
+            _audioSource.Stop();
         }
 
         public void StopWinching()
