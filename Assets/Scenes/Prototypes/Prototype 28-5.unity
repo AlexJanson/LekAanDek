@@ -2085,41 +2085,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waterkanon
       objectReference: {fileID: 0}
-    - target: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.b
-      value: 0.19607845
+    - target: {fileID: 8255714516549584821, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.g
-      value: 0.10980393
-      objectReference: {fileID: 0}
-    - target: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key0.r
-      value: 0.007843138
-      objectReference: {fileID: 0}
-    - target: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.b
-      value: 0.29803923
-      objectReference: {fileID: 0}
-    - target: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.g
-      value: 0.2509804
-      objectReference: {fileID: 0}
-    - target: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key1.r
-      value: 0.20392159
-      objectReference: {fileID: 0}
-    - target: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.b
-      value: 0.24313727
-      objectReference: {fileID: 0}
-    - target: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.g
-      value: 0.17254902
-      objectReference: {fileID: 0}
-    - target: {fileID: 6955607503364053890, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
-      propertyPath: ColorModule.gradient.maxGradient.key2.r
-      value: 0.09411766
+    - target: {fileID: 8255714516549584821, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e545d1cb38b0c734a825405617d7c942, type: 3}
@@ -5269,40 +5241,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
   m_PrefabInstance: {fileID: 1504104521}
   m_PrefabAsset: {fileID: 0}
---- !u!21 &598933467
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default UI Material
-  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!4 &601186033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
@@ -5595,6 +5533,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3748135953987480760, guid: 2767916c4051cc94a990490c64420da0, type: 3}
   m_PrefabInstance: {fileID: 1636406952}
   m_PrefabAsset: {fileID: 0}
+--- !u!21 &661037970
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default UI Material
+  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!1 &664201767
 GameObject:
   m_ObjectHideFlags: 0
@@ -8029,6 +8001,40 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2767916c4051cc94a990490c64420da0, type: 3}
+--- !u!21 &1047799657
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Default UI Material
+  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _ColorMask: 15
+    - _Stencil: 0
+    - _StencilComp: 8
+    - _StencilOp: 0
+    - _StencilReadMask: 255
+    - _StencilWriteMask: 255
+    - _UseUIAlphaClip: 0
+    m_Colors:
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!4 &1049629900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6815704934873908137, guid: 93de4dd98a41ceb4cbcd93b159c5a065, type: 3}
@@ -10250,40 +10256,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2767916c4051cc94a990490c64420da0, type: 3}
---- !u!21 &1317058722
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Default UI Material
-  m_Shader: {fileID: 10770, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - _ColorMask: 15
-    - _Stencil: 0
-    - _StencilComp: 8
-    - _StencilOp: 0
-    - _StencilReadMask: 255
-    - _StencilWriteMask: 255
-    - _UseUIAlphaClip: 0
-    m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-  m_BuildTextureStacks: []
 --- !u!4 &1323459414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5938422484814052252, guid: 62b5aa115f2dd084984d9281a55d7c22, type: 3}
@@ -15207,17 +15179,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 106209846}
     m_Modifications:
     - target: {fileID: 54993789225095618, guid: 3d9d0e030f8d4d54d9bdc5a7d36a0637, type: 3}
-      propertyPath: _speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 54993789225095618, guid: 3d9d0e030f8d4d54d9bdc5a7d36a0637, type: 3}
       propertyPath: _controlledObject
       value: 
       objectReference: {fileID: 992835651}
-    - target: {fileID: 54993789225095618, guid: 3d9d0e030f8d4d54d9bdc5a7d36a0637, type: 3}
-      propertyPath: _interactedInformer
-      value: 
-      objectReference: {fileID: 11400000, guid: f6ea8ed5f7a1caa4cb6f6b498df49b18, type: 2}
     - target: {fileID: 8098963201278177998, guid: 3d9d0e030f8d4d54d9bdc5a7d36a0637, type: 3}
       propertyPath: m_Name
       value: MarlinControl

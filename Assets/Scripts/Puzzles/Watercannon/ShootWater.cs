@@ -24,9 +24,12 @@ namespace LekAanDek.Puzzles.WaterCannon
 
         private bool _emmiting = false;
 
+        private AudioSource _audioSource;
+
         private void Start()
         {
             _system.Stop(true);
+            _audioSource = GetComponent<AudioSource>();
         }
 
         private void Update()
@@ -38,6 +41,7 @@ namespace LekAanDek.Puzzles.WaterCannon
             else
             {
                 _system.Stop(true);
+                _audioSource.Stop();
             }
         }
         //In this function the particle system wil be called to play and fire particles that with go down at a given speed
@@ -47,6 +51,8 @@ namespace LekAanDek.Puzzles.WaterCannon
             if (_emmiting == true)
             {
                 _system.Play(true);
+                if(!_audioSource.isPlaying)
+                    _audioSource.Play();
             }
             else
             {

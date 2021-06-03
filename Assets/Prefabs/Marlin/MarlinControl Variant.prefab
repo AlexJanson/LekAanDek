@@ -1297,6 +1297,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8876204210615822452}
     m_Modifications:
+    - target: {fileID: 758651952990714670, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4452584849569909969, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
       propertyPath: m_Name
       value: Joystick
@@ -1304,6 +1308,10 @@ PrefabInstance:
     - target: {fileID: 4658169968885869331, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
       propertyPath: _type
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4658169968885869331, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
+      propertyPath: _speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4658169968885869331, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
       propertyPath: _controlledObject
@@ -1316,6 +1324,10 @@ PrefabInstance:
     - target: {fileID: 4658169968885869331, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
       propertyPath: _trigger.actionPath
       value: /actions/default/in/GrabGrip
+      objectReference: {fileID: 0}
+    - target: {fileID: 6858429673969293811, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7687070579636567109, guid: d06b4a6cfc506354aa6f80ec74aafd03, type: 3}
       propertyPath: m_RootOrder
