@@ -1141,6 +1141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ff7186446cc0c6488366419b8ec392f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5938422484905558632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4465543814654738348, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
+  m_PrefabInstance: {fileID: 8039294469369839044}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6188854858547629436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4211557304025460920, guid: 5606442f9a8e28b4bbbca7942cc7c309, type: 3}
