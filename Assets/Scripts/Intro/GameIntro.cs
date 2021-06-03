@@ -37,6 +37,10 @@ namespace LekAanDek.Intro
                 PlayAudioClip(part.clip);
                 _animator.SetInteger(AnimationState,(int)part.animation);
                 yield return new WaitWhile(() => _audioSource.isPlaying);
+
+                // Raise event if the intro part has one assigned
+                if (part.partCompletedEvent != null) part.partCompletedEvent.Raise();
+
                 yield return new WaitForSeconds(part.waitDuration);
                 _animator.SetInteger(AnimationState,(int)OfficerAnimation.Idle);
             }

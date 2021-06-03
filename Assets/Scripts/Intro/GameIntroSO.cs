@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using LekAanDek.Events;
 
 namespace LekAanDek.Intro
 {
@@ -23,5 +24,6 @@ namespace LekAanDek.Intro
         public AudioClip clip;
         public float waitDuration;
         public OfficerAnimation animation;
+        public VoidEvent partCompletedEvent;
     }
 }
