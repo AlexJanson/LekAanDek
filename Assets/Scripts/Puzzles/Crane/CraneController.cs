@@ -14,17 +14,25 @@ namespace LekAanDek.Puzzles.Crane
         [SerializeField]
         private float _speed = 1.5f;
 
-        private Transform _crane;
+        Transform _crane;
+
+        AudioSource _audioSource;
+        [SerializeField]
+        private AudioClip _turningSound;
 
         // Start is called before the first frame update
         void Start()
         {
-            _crane = this.GetComponent<Transform>();
+            _crane = GetComponent<Transform>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         public override void RotateYaw(float amount)
         {
+            if (!_audioSource.isPlaying)
+                _audioSource.PlayOneShot(_turningSound);
             _crane.Rotate(new Vector3(0, _speed * Time.deltaTime * amount, 0));
+            
         }
     }
 }
