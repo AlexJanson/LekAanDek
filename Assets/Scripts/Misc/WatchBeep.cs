@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.XR;
 using Valve.VR;
 
 
@@ -26,6 +27,7 @@ namespace LekAanDek.Haptics
 
         public void BeepMe()
         {
+            if (!_hapticSystem.active) return;
             _hapticSystem.Execute(_delay, _duration, _frequency, _amplitude, _bodyPart);
             if(_audio) _audio.Play();
         }
