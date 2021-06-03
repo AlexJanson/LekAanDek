@@ -5,6 +5,8 @@
 Lek aan dek is a short experience in which the user needs to get to the end of the level within a short timeframe.
 Throughout the level there are a few challanges which the player has to overcome.
 The game's goal is to get people interested in the marine.
+You can take a look at the game in this cool video [right here](https://www.youtube.com/watch?v=ZjVVfgfvyxg&feature=youtu.be)!
+
 
 We also use Ryan Hipples’ game architecture with scriptable objects to achieve a truly independent workflow.
 
