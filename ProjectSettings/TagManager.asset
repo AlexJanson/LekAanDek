@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - anchor
+  - projectile
+  - FxTemporaire
+  - PlayerHand
+  - WeaponCrate
   layers:
   - Default
   - TransparentFX
@@ -13,6 +18,19 @@ TagManager:
   - UI
   - 
   - 
+  - HandColliders
+  - CraneControls
+  - Floor
+  - Player
+  - Wall
+  - Marlin Targets
+  - PauseMenu
+  - Pipes
+  - 
+  - 
+  - Nessie
+  - Teleports
+  - GapColliders
   - 
   - 
   - 
@@ -23,20 +41,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Triggers
   m_SortingLayers:
   - name: Default
     uniqueID: 0
