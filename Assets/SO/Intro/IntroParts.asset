@@ -34,7 +34,7 @@ MonoBehaviour:
     animation: 1
     partCompletedEvent: {fileID: 0}
   - clip: {fileID: 8300000, guid: 01e64a2f7d2b5944d926850e8489ff68, type: 3}
-    waitDuration: 0.5
+    waitDuration: 1.5
     animation: 1
     partCompletedEvent: {fileID: 11400000, guid: 0e3aa2b68c97b3c4480c451bc9359c52, type: 2}
   - clip: {fileID: 8300000, guid: 0ca9460ead090d64e9185538fa04dfda, type: 3}
