@@ -20,7 +20,7 @@ We also use Ryan Hipples’ game architecture with scriptable objects to achieve
 **These are the main goals we want to achieve with this specific project:**
 
 - Bring some attention to the marine.
-- Providing the player with a fun time but challanging.
+- Providing the player with a fun but challanging time.
 
 
 
